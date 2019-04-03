@@ -11,7 +11,8 @@
     <context:component-scan base-package="com.erp"/>
 
     <!--druid连接池-->
-    <bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource">
+
+   <bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource">
         <property name="driverClassName" value="com.mysql.cj.jdbc.Driver"/>
         <property name="url" value="jdbc:mysql://localhost:3306/production_ssm?serverTimezone=GMT"/>
         <property name="username" value="root"/>
@@ -27,7 +28,7 @@
 
     <!--mybatis-->
     <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
-        <property name="typeAliasesPackage" value="com.cskaoyan.bean"/>
+        <property name="typeAliasesPackage" value="com.erp.web4j.bean"/>
         <property name="dataSource" ref="dataSource"/>
     </bean>
     <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
