@@ -37,6 +37,24 @@
     from technology
     where technology_id = #{technologyId,jdbcType=VARCHAR}
   </select>
+
+  <select id="searchByPrimaryKey" resultMap="BaseResultMap">
+    select
+
+    <include refid="Base_Column_List" />
+    from technology
+
+    where technology_id=#{searchValue} limit #{rows} offset #{offset}
+  </select>
+
+  <select id="searchByName" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from technology
+
+    where technology_name like #{searchValue} limit #{rows} offset #{offset}
+  </select>
+
   <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
     <!--
       WARNING - @mbg.generated
@@ -179,4 +197,20 @@
       overfulfil_capacity = #{overfulfilCapacity,jdbcType=INTEGER}
     where technology_id = #{technologyId,jdbcType=VARCHAR}
   </update>
+
+  <!--查询所有工艺或者根据公艺编号和工艺名称来查询工艺-->
+  <select id="findTechnology" resultMap="BaseResultMap">
+      select <include refid="Base_Column_List"/> from technology limit #{rows} offset #{offset}
+     <!-- <where>
+              <if test="technology != null">
+                      <if test="technology.technologyId != null">
+                        technology_id = #{technology.technologyId}
+                      </if>
+                     <if test="technology.technologyName != null">
+                        technology_name = #{technology.technologyName}
+                     </if>
+              </if>
+      </where>-->
+
+  </select>
 </mapper>
