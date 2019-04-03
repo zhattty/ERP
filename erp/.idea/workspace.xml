@@ -6,1008 +6,117 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="401d14a5-b661-480d-9c1f-96f6e5ecd6a2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/erp_war.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/erp_war_exploded.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__aopalliance_aopalliance_1_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_alibaba_druid_1_0_9.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_fileupload_commons_fileupload_1_3_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_io_commons_io_2_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_servlet_javax_servlet_api_3_1_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_servlet_jsp_jsp_api_2_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_servlet_jsp_jstl_jstl_api_1_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_servlet_servlet_api_2_5.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_12.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__log4j_log4j_1_2_17.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_aspectj_aspectjweaver_1_6_8_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_mybatis_3_4_6.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_mybatis_spring_1_3_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aop_5_1_0_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_beans_5_1_0_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_5_1_0_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_core_5_1_0_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_expression_5_1_0_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jcl_5_1_0_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jdbc_5_1_0_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_test_5_1_0_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_tx_5_1_0_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_web_5_1_0_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_webmvc_5_1_0_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__taglibs_standard_1_1_2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="d01713c4-25d1-459e-b967-f6221638282e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_beanutils_commons_beanutils_1_9_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_collections_commons_collections_3_2_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__jstl_jstl_1_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_shiro_shiro_cache_1_4_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_shiro_shiro_config_core_1_4_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_shiro_shiro_config_ogdl_1_4_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_shiro_shiro_core_1_4_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_shiro_shiro_crypto_cipher_1_4_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_shiro_shiro_crypto_core_1_4_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_shiro_shiro_crypto_hash_1_4_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_shiro_shiro_event_1_4_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_shiro_shiro_lang_1_4_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_21.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/erp/web4j/controller/LoginController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/erp/web4j/controller/technologyController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/log4j.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/erp/web4j/mapper/CustomMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/erp/web4j/mapper/CustomOrderMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/erp/web4j/mapper/DepartmentMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/erp/web4j/mapper/DeviceCheckMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/erp/web4j/mapper/DeviceFaultMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/erp/web4j/mapper/DeviceMaintainMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/erp/web4j/mapper/DeviceMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/erp/web4j/mapper/DeviceTypeMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/erp/web4j/mapper/EmployeeMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/erp/web4j/mapper/FinalCountCheckMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/erp/web4j/mapper/FinalMeasuretCheckMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/erp/web4j/mapper/ManufactureMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/erp/web4j/mapper/MaterialConsumeMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/erp/web4j/mapper/MaterialMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/erp/web4j/mapper/MaterialReceiveMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/erp/web4j/mapper/ProcessCountCheckMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/erp/web4j/mapper/ProcessMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/erp/web4j/mapper/ProcessMeasureCheckMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/erp/web4j/mapper/ProductMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/erp/web4j/mapper/SysUserMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/erp/web4j/mapper/TaskMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/erp/web4j/mapper/TechnologyMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/erp/web4j/mapper/TechnologyPlanMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/erp/web4j/mapper/TechnologyRequirementMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/erp/web4j/mapper/UnqualifyApplyMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/erp/web4j/mapper/WorkMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/log4j.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/erp/WEB-INF/classes/com/erp/web4j/mapper/CustomMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/erp/WEB-INF/classes/com/erp/web4j/mapper/CustomOrderMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/erp/WEB-INF/classes/com/erp/web4j/mapper/DepartmentMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/erp/WEB-INF/classes/com/erp/web4j/mapper/DeviceCheckMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/erp/WEB-INF/classes/com/erp/web4j/mapper/DeviceFaultMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/erp/WEB-INF/classes/com/erp/web4j/mapper/DeviceMaintainMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/erp/WEB-INF/classes/com/erp/web4j/mapper/DeviceMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/erp/WEB-INF/classes/com/erp/web4j/mapper/DeviceTypeMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/erp/WEB-INF/classes/com/erp/web4j/mapper/EmployeeMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/erp/WEB-INF/classes/com/erp/web4j/mapper/FinalCountCheckMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/erp/WEB-INF/classes/com/erp/web4j/mapper/FinalMeasuretCheckMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/erp/WEB-INF/classes/com/erp/web4j/mapper/ManufactureMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/erp/WEB-INF/classes/com/erp/web4j/mapper/MaterialConsumeMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/erp/WEB-INF/classes/com/erp/web4j/mapper/MaterialMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/erp/WEB-INF/classes/com/erp/web4j/mapper/MaterialReceiveMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/erp/WEB-INF/classes/com/erp/web4j/mapper/ProcessCountCheckMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/erp/WEB-INF/classes/com/erp/web4j/mapper/ProcessMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/erp/WEB-INF/classes/com/erp/web4j/mapper/ProcessMeasureCheckMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/erp/WEB-INF/classes/com/erp/web4j/mapper/ProductMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/erp/WEB-INF/classes/com/erp/web4j/mapper/SysUserMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/erp/WEB-INF/classes/com/erp/web4j/mapper/TaskMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/erp/WEB-INF/classes/com/erp/web4j/mapper/TechnologyMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/erp/WEB-INF/classes/com/erp/web4j/mapper/TechnologyPlanMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/erp/WEB-INF/classes/com/erp/web4j/mapper/TechnologyRequirementMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/erp/WEB-INF/classes/com/erp/web4j/mapper/UnqualifyApplyMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/erp/WEB-INF/classes/com/erp/web4j/mapper/WorkMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/erp/WEB-INF/classes/log4j.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/erp_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/erp_war_exploded.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/erp.iml" beforeDir="false" afterPath="$PROJECT_DIR$/erp.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/erp/web4j/mapper/CustomMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/erp/web4j/mapper/CustomOrderMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/erp/web4j/mapper/DepartmentMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/erp/web4j/mapper/DeviceCheckMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/erp/web4j/mapper/DeviceFaultMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/erp/web4j/mapper/DeviceMaintainMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/erp/web4j/mapper/DeviceMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/erp/web4j/mapper/DeviceTypeMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/erp/web4j/mapper/EmployeeMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/erp/web4j/mapper/FinalCountCheckMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/erp/web4j/mapper/FinalMeasuretCheckMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/erp/web4j/mapper/ManufactureMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/erp/web4j/mapper/MaterialConsumeMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/erp/web4j/mapper/MaterialMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/erp/web4j/mapper/MaterialReceiveMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/erp/web4j/mapper/ProcessCountCheckMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/erp/web4j/mapper/ProcessMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/erp/web4j/mapper/ProcessMeasureCheckMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/erp/web4j/mapper/ProductMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/erp/web4j/mapper/SysUserMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/erp/web4j/mapper/TaskMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/erp/web4j/mapper/TechnologyMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/erp/web4j/mapper/TechnologyPlanMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/erp/web4j/mapper/TechnologyRequirementMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/erp/web4j/mapper/UnqualifyApplyMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/erp/web4j/mapper/WorkMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application-web.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/404.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/500.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/META-INF/MANIFEST.MF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/classes/application-web.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/classes/application.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/css/login/reset.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/css/login/style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/css/taotao.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/css/uploadfile.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/common.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/datagrid-filter.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/changelog.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/accordion/_content.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/accordion/actions.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/accordion/ajax.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/accordion/basic.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/accordion/datagrid_data1.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/accordion/expandable.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/accordion/fluid.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/accordion/multiple.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/accordion/tools.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/calendar/basic.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/calendar/custom.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/calendar/disabledate.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/calendar/firstday.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/calendar/fluid.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/combo/animation.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/combo/basic.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/combobox/actions.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/combobox/basic.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/combobox/combobox_data1.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/combobox/combobox_data2.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/combobox/customformat.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/combobox/dynamicdata.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/combobox/fluid.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/combobox/group.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/combobox/icons.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/combobox/multiline.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/combobox/multiple.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/combobox/navigation.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/combobox/remotedata.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/combobox/remotejsonp.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/combogrid/actions.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/combogrid/basic.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/combogrid/datagrid_data1.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/combogrid/fluid.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/combogrid/initvalue.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/combogrid/multiple.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/combogrid/navigation.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/combotree/actions.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/combotree/basic.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/combotree/fluid.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/combotree/initvalue.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/combotree/multiple.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/combotree/tree_data1.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/datagrid/aligncolumns.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/datagrid/basic.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/datagrid/cacheeditor.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/datagrid/cellediting.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/datagrid/cellstyle.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/datagrid/checkbox.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/datagrid/clientpagination.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/datagrid/columngroup.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/datagrid/complextoolbar.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/datagrid/contextmenu.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/datagrid/custompager.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/datagrid/datagrid_data1.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/datagrid/datagrid_data2.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/datagrid/fluid.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/datagrid/footer.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/datagrid/formatcolumns.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/datagrid/frozencolumns.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/datagrid/frozenrows.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/datagrid/mergecells.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/datagrid/multisorting.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/datagrid/products.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/datagrid/rowborder.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/datagrid/rowediting.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/datagrid/rowstyle.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/datagrid/selection.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/datagrid/simpletoolbar.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/datagrid/transform.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/datebox/basic.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/datebox/buttons.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/datebox/dateformat.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/datebox/events.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/datebox/fluid.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/datebox/restrict.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/datebox/sharedcalendar.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/datebox/validate.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/datetimebox/basic.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/datetimebox/fluid.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/datetimebox/initvalue.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/datetimebox/showseconds.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/datetimespinner/basic.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/datetimespinner/clearicon.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/datetimespinner/fluid.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/datetimespinner/format.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/demo.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/dialog/basic.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/dialog/complextoolbar.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/dialog/fluid.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/dialog/toolbarbuttons.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/draggable/basic.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/draggable/constrain.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/draggable/snap.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/droppable/accept.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/droppable/basic.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/droppable/sort.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/easyloader/basic.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/filebox/basic.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/filebox/buttonalign.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/filebox/fluid.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/form/basic.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/form/form_data1.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/form/load.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/form/validateonsubmit.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/layout/_content.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/layout/addremove.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/layout/autoheight.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/layout/basic.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/layout/complex.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/layout/datagrid_data1.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/layout/fluid.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/layout/full.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/layout/nestedlayout.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/layout/nocollapsible.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/layout/propertygrid_data1.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/layout/tree_data1.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/linkbutton/basic.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/linkbutton/fluid.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/linkbutton/group.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/linkbutton/iconalign.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/linkbutton/plain.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/linkbutton/size.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/linkbutton/style.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/linkbutton/toggle.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/menu/basic.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/menu/customitem.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/menu/events.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/menubutton/actions.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/menubutton/alignment.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/menubutton/basic.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/messager/alert.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/messager/basic.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/messager/interactive.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/messager/position.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/numberbox/basic.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/numberbox/fluid.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/numberbox/format.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/numberbox/range.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/numberspinner/basic.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/numberspinner/fluid.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/numberspinner/increment.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/numberspinner/range.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/pagination/attaching.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/pagination/basic.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/pagination/custombuttons.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/pagination/layout.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/pagination/links.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/pagination/simple.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/panel/_content.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/panel/basic.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/panel/customtools.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/panel/fluid.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/panel/footer.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/panel/loadcontent.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/panel/nestedpanel.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/panel/paneltools.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/progressbar/basic.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/progressbar/fluid.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/propertygrid/basic.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/propertygrid/customcolumns.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/propertygrid/groupformat.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/propertygrid/propertygrid_data1.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/resizable/basic.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/searchbox/basic.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/searchbox/category.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/searchbox/fluid.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/slider/basic.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/slider/fluid.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/slider/formattip.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/slider/nonlinear.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/slider/rule.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/slider/vertical.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/splitbutton/actions.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/splitbutton/basic.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/tabs/_content.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/tabs/autoheight.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/tabs/basic.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/tabs/dropdown.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/tabs/fixedwidth.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/tabs/fluid.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/tabs/hover.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/tabs/images/modem.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/tabs/images/pda.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/tabs/images/scanner.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/tabs/images/tablet.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/tabs/nestedtabs.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/tabs/striptools.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/tabs/tabimage.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/tabs/tabposition.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/tabs/tabstools.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/tabs/tree_data1.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/textbox/basic.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/textbox/button.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/textbox/clearicon.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/textbox/custom.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/textbox/fluid.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/textbox/icons.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/textbox/multiline.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/textbox/size.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/timespinner/actions.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/timespinner/basic.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/timespinner/fluid.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/timespinner/range.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/tooltip/_content.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/tooltip/_dialog.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/tooltip/ajax.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/tooltip/basic.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/tooltip/customcontent.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/tooltip/customstyle.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/tooltip/position.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/tooltip/toolbar.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/tooltip/tooltipdialog.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/tree/actions.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/tree/animation.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/tree/basic.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/tree/checkbox.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/tree/contextmenu.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/tree/dnd.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/tree/editable.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/tree/formatting.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/tree/icons.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/tree/lazyload.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/tree/lines.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/tree/tree_data1.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/tree/tree_data2.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/treegrid/actions.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/treegrid/basic.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/treegrid/clientpagination.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/treegrid/contextmenu.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/treegrid/editable.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/treegrid/fluid.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/treegrid/footer.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/treegrid/lines.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/treegrid/reports.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/treegrid/treegrid_data1.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/treegrid/treegrid_data2.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/treegrid/treegrid_data3.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/validatebox/basic.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/validatebox/customtooltip.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/validatebox/validateonblur.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/window/basic.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/window/customtools.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/window/fluid.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/window/footer.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/window/inlinewindow.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/window/modalwindow.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/demo/window/windowlayout.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/easyloader.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/jquery.easyui.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/jquery.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/licence_gpl.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/locale/easyui-lang-af.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/locale/easyui-lang-am.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/locale/easyui-lang-ar.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/locale/easyui-lang-bg.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/locale/easyui-lang-ca.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/locale/easyui-lang-cs.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/locale/easyui-lang-cz.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/locale/easyui-lang-da.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/locale/easyui-lang-de.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/locale/easyui-lang-el.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/locale/easyui-lang-en.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/locale/easyui-lang-es.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/locale/easyui-lang-fr.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/locale/easyui-lang-it.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/locale/easyui-lang-jp.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/locale/easyui-lang-nl.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/locale/easyui-lang-pl.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/locale/easyui-lang-pt_BR.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/locale/easyui-lang-ru.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/locale/easyui-lang-sv_SE.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/locale/easyui-lang-tr.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/locale/easyui-lang-zh_CN.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/locale/easyui-lang-zh_TW.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/plugins/jquery.accordion.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/plugins/jquery.calendar.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/plugins/jquery.combo.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/plugins/jquery.combobox.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/plugins/jquery.combogrid.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/plugins/jquery.combotree.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/plugins/jquery.datagrid.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/plugins/jquery.datebox.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/plugins/jquery.datetimebox.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/plugins/jquery.datetimespinner.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/plugins/jquery.dialog.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/plugins/jquery.draggable.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/plugins/jquery.droppable.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/plugins/jquery.filebox.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/plugins/jquery.form.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/plugins/jquery.layout.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/plugins/jquery.linkbutton.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/plugins/jquery.menu.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/plugins/jquery.menubutton.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/plugins/jquery.messager.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/plugins/jquery.numberbox.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/plugins/jquery.numberspinner.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/plugins/jquery.pagination.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/plugins/jquery.panel.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/plugins/jquery.parser.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/plugins/jquery.progressbar.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/plugins/jquery.propertygrid.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/plugins/jquery.resizable.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/plugins/jquery.searchbox.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/plugins/jquery.slider.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/plugins/jquery.spinner.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/plugins/jquery.splitbutton.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/plugins/jquery.tabs.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/plugins/jquery.textbox.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/plugins/jquery.timespinner.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/plugins/jquery.tooltip.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/plugins/jquery.tree.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/plugins/jquery.treegrid.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/plugins/jquery.validatebox.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/plugins/jquery.window.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/readme.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/src/easyloader.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/src/jquery.accordion.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/src/jquery.calendar.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/src/jquery.combobox.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/src/jquery.datebox.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/src/jquery.draggable.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/src/jquery.droppable.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/src/jquery.form.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/src/jquery.linkbutton.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/src/jquery.menu.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/src/jquery.parser.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/src/jquery.progressbar.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/src/jquery.propertygrid.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/src/jquery.resizable.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/src/jquery.slider.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/src/jquery.tabs.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/src/jquery.window.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/black/accordion.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/black/calendar.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/black/combo.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/black/combobox.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/black/datagrid.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/black/datebox.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/black/dialog.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/black/easyui.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/black/filebox.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/black/images/accordion_arrows.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/black/images/blank.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/black/images/calendar_arrows.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/black/images/combo_arrow.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/black/images/datagrid_icons.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/black/images/datebox_arrow.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/black/images/layout_arrows.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/black/images/linkbutton_bg.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/black/images/loading.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/black/images/menu_arrows.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/black/images/messager_icons.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/black/images/pagination_icons.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/black/images/panel_tools.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/black/images/searchbox_button.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/black/images/slider_handle.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/black/images/spinner_arrows.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/black/images/tabs_icons.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/black/images/tree_icons.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/black/images/validatebox_warning.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/black/layout.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/black/linkbutton.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/black/menu.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/black/menubutton.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/black/messager.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/black/numberbox.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/black/pagination.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/black/panel.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/black/progressbar.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/black/propertygrid.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/black/searchbox.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/black/slider.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/black/spinner.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/black/splitbutton.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/black/tabs.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/black/textbox.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/black/tooltip.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/black/tree.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/black/validatebox.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/black/window.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/bootstrap/accordion.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/bootstrap/calendar.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/bootstrap/combo.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/bootstrap/combobox.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/bootstrap/datagrid.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/bootstrap/datebox.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/bootstrap/dialog.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/bootstrap/easyui.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/bootstrap/filebox.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/bootstrap/images/accordion_arrows.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/bootstrap/images/blank.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/bootstrap/images/calendar_arrows.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/bootstrap/images/combo_arrow.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/bootstrap/images/datagrid_icons.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/bootstrap/images/datebox_arrow.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/bootstrap/images/layout_arrows.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/bootstrap/images/linkbutton_bg.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/bootstrap/images/loading.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/bootstrap/images/menu_arrows.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/bootstrap/images/messager_icons.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/bootstrap/images/pagination_icons.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/bootstrap/images/panel_tools.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/bootstrap/images/searchbox_button.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/bootstrap/images/slider_handle.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/bootstrap/images/spinner_arrows.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/bootstrap/images/tabs_icons.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/bootstrap/images/tree_icons.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/bootstrap/images/validatebox_warning.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/bootstrap/layout.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/bootstrap/linkbutton.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/bootstrap/menu.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/bootstrap/menubutton.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/bootstrap/messager.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/bootstrap/numberbox.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/bootstrap/pagination.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/bootstrap/panel.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/bootstrap/progressbar.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/bootstrap/propertygrid.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/bootstrap/searchbox.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/bootstrap/slider.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/bootstrap/spinner.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/bootstrap/splitbutton.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/bootstrap/tabs.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/bootstrap/textbox.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/bootstrap/tooltip.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/bootstrap/tree.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/bootstrap/validatebox.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/bootstrap/window.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/color.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/default/accordion.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/default/calendar.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/default/combo.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/default/combobox.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/default/datagrid.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/default/datebox.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/default/dialog.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/default/easyui.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/default/filebox.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/default/images/accordion_arrows.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/default/images/blank.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/default/images/calendar_arrows.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/default/images/combo_arrow.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/default/images/datagrid_icons.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/default/images/datebox_arrow.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/default/images/layout_arrows.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/default/images/linkbutton_bg.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/default/images/loading.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/default/images/menu_arrows.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/default/images/messager_icons.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/default/images/pagination_icons.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/default/images/panel_tools.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/default/images/searchbox_button.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/default/images/slider_handle.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/default/images/spinner_arrows.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/default/images/tabs_icons.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/default/images/tree_icons.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/default/images/validatebox_warning.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/default/layout.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/default/linkbutton.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/default/menu.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/default/menubutton.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/default/messager.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/default/numberbox.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/default/pagination.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/default/panel.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/default/progressbar.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/default/propertygrid.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/default/searchbox.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/default/slider.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/default/spinner.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/default/splitbutton.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/default/tabs.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/default/textbox.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/default/tooltip.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/default/tree.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/default/validatebox.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/default/window.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/gray/accordion.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/gray/calendar.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/gray/combo.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/gray/combobox.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/gray/datagrid.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/gray/datebox.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/gray/dialog.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/gray/easyui.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/gray/filebox.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/gray/images/accordion_arrows.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/gray/images/blank.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/gray/images/calendar_arrows.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/gray/images/combo_arrow.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/gray/images/datagrid_icons.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/gray/images/datebox_arrow.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/gray/images/layout_arrows.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/gray/images/linkbutton_bg.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/gray/images/loading.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/gray/images/menu_arrows.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/gray/images/messager_icons.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/gray/images/pagination_icons.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/gray/images/panel_tools.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/gray/images/searchbox_button.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/gray/images/slider_handle.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/gray/images/spinner_arrows.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/gray/images/tabs_icons.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/gray/images/tree_icons.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/gray/images/validatebox_warning.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/gray/layout.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/gray/linkbutton.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/gray/menu.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/gray/menubutton.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/gray/messager.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/gray/numberbox.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/gray/pagination.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/gray/panel.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/gray/progressbar.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/gray/propertygrid.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/gray/searchbox.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/gray/slider.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/gray/spinner.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/gray/splitbutton.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/gray/tabs.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/gray/textbox.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/gray/tooltip.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/gray/tree.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/gray/validatebox.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/gray/window.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/icon.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/icons/back.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/icons/blank.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/icons/cancel.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/icons/clear.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/icons/cut.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/icons/edit_add.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/icons/edit_remove.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/icons/filesave.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/icons/filter.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/icons/help.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/icons/large_chart.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/icons/large_clipart.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/icons/large_picture.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/icons/large_shapes.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/icons/large_smartart.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/icons/lock.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/icons/man.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/icons/mini_add.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/icons/mini_edit.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/icons/mini_refresh.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/icons/no.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/icons/ok.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/icons/pencil.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/icons/print.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/icons/redo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/icons/reload.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/icons/search.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/icons/sum.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/icons/tip.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/icons/undo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/metro/accordion.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/metro/calendar.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/metro/combo.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/metro/combobox.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/metro/datagrid.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/metro/datebox.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/metro/dialog.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/metro/easyui.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/metro/filebox.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/metro/images/accordion_arrows.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/metro/images/blank.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/metro/images/calendar_arrows.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/metro/images/combo_arrow.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/metro/images/datagrid_icons.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/metro/images/datebox_arrow.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/metro/images/layout_arrows.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/metro/images/linkbutton_bg.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/metro/images/loading.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/metro/images/menu_arrows.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/metro/images/messager_icons.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/metro/images/pagination_icons.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/metro/images/panel_tools.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/metro/images/searchbox_button.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/metro/images/slider_handle.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/metro/images/spinner_arrows.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/metro/images/tabs_icons.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/metro/images/tree_icons.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/metro/images/validatebox_warning.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/metro/layout.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/metro/linkbutton.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/metro/menu.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/metro/menubutton.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/metro/messager.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/metro/numberbox.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/metro/pagination.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/metro/panel.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/metro/progressbar.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/metro/propertygrid.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/metro/searchbox.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/metro/slider.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/metro/spinner.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/metro/splitbutton.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/metro/tabs.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/metro/textbox.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/metro/tooltip.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/metro/tree.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/metro/validatebox.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery-easyui-1.4.1/themes/metro/window.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery.easyui.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery.uploadfile.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/jquery.uploadfile.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/kindeditor-4.1.10/kindeditor-all-min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/kindeditor-4.1.10/kindeditor-all.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/kindeditor-4.1.10/kindeditor-min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/kindeditor-4.1.10/kindeditor.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/kindeditor-4.1.10/lang/ar.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/kindeditor-4.1.10/lang/en.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/kindeditor-4.1.10/lang/ko.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/kindeditor-4.1.10/lang/zh_CN.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/kindeditor-4.1.10/lang/zh_TW.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/kindeditor-4.1.10/license.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/kindeditor-4.1.10/plugins/anchor/anchor.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/kindeditor-4.1.10/plugins/autoheight/autoheight.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/kindeditor-4.1.10/plugins/baidumap/baidumap.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/kindeditor-4.1.10/plugins/baidumap/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/kindeditor-4.1.10/plugins/baidumap/map.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/kindeditor-4.1.10/plugins/clearhtml/clearhtml.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/kindeditor-4.1.10/plugins/code/code.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/kindeditor-4.1.10/plugins/code/prettify.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/kindeditor-4.1.10/plugins/code/prettify.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/kindeditor-4.1.10/plugins/emoticons/emoticons.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/kindeditor-4.1.10/plugins/emoticons/images/0.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/kindeditor-4.1.10/plugins/emoticons/images/1.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/kindeditor-4.1.10/plugins/emoticons/images/10.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/kindeditor-4.1.10/plugins/emoticons/images/100.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/kindeditor-4.1.10/plugins/emoticons/images/101.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/kindeditor-4.1.10/plugins/emoticons/images/102.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/kindeditor-4.1.10/plugins/emoticons/images/103.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/kindeditor-4.1.10/plugins/emoticons/images/104.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/kindeditor-4.1.10/plugins/emoticons/images/105.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/kindeditor-4.1.10/plugins/emoticons/images/106.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/kindeditor-4.1.10/plugins/emoticons/images/107.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/kindeditor-4.1.10/plugins/emoticons/images/108.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/kindeditor-4.1.10/plugins/emoticons/images/109.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/kindeditor-4.1.10/plugins/emoticons/images/11.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/kindeditor-4.1.10/plugins/emoticons/images/110.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/kindeditor-4.1.10/plugins/emoticons/images/111.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/kindeditor-4.1.10/plugins/emoticons/images/112.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/kindeditor-4.1.10/plugins/emoticons/images/113.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/kindeditor-4.1.10/plugins/emoticons/images/114.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/kindeditor-4.1.10/plugins/emoticons/images/115.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/kindeditor-4.1.10/plugins/emoticons/images/116.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/kindeditor-4.1.10/plugins/emoticons/images/117.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/kindeditor-4.1.10/plugins/emoticons/images/118.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/kindeditor-4.1.10/plugins/emoticons/images/119.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/kindeditor-4.1.10/plugins/emoticons/images/12.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/kindeditor-4.1.10/plugins/emoticons/images/120.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/kindeditor-4.1.10/plugins/emoticons/images/121.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/kindeditor-4.1.10/plugins/emoticons/images/122.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/kindeditor-4.1.10/plugins/emoticons/images/123.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/kindeditor-4.1.10/plugins/emoticons/images/124.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/kindeditor-4.1.10/plugins/emoticons/images/125.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/kindeditor-4.1.10/plugins/emoticons/images/126.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/kindeditor-4.1.10/plugins/emoticons/images/127.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/kindeditor-4.1.10/plugins/emoticons/images/128.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/kindeditor-4.1.10/plugins/emoticons/images/129.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/kindeditor-4.1.10/plugins/emoticons/images/13.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/kindeditor-4.1.10/plugins/emoticons/images/130.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/kindeditor-4.1.10/plugins/emoticons/images/131.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/kindeditor-4.1.10/plugins/emoticons/images/132.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/kindeditor-4.1.10/plugins/emoticons/images/133.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/kindeditor-4.1.10/plugins/emoticons/images/134.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/kindeditor-4.1.10/plugins/emoticons/images/14.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/kindeditor-4.1.10/plugins/emoticons/images/15.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/kindeditor-4.1.10/plugins/emoticons/images/16.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/kindeditor-4.1.10/plugins/emoticons/images/17.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/kindeditor-4.1.10/plugins/emoticons/images/18.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/kindeditor-4.1.10/plugins/emoticons/images/19.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/kindeditor-4.1.10/plugins/emoticons/images/2.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/kindeditor-4.1.10/plugins/emoticons/images/20.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/kindeditor-4.1.10/plugins/emoticons/images/21.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/kindeditor-4.1.10/plugins/emoticons/images/22.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/kindeditor-4.1.10/plugins/emoticons/images/23.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/kindeditor-4.1.10/plugins/emoticons/images/24.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/kindeditor-4.1.10/plugins/emoticons/images/25.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/kindeditor-4.1.10/plugins/emoticons/images/26.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/kindeditor-4.1.10/plugins/emoticons/images/27.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/kindeditor-4.1.10/plugins/emoticons/images/28.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/kindeditor-4.1.10/plugins/emoticons/images/29.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/kindeditor-4.1.10/plugins/emoticons/images/3.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/kindeditor-4.1.10/plugins/emoticons/images/30.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/kindeditor-4.1.10/plugins/emoticons/images/31.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/kindeditor-4.1.10/plugins/emoticons/images/32.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/kindeditor-4.1.10/plugins/emoticons/images/33.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/kindeditor-4.1.10/plugins/emoticons/images/34.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/kindeditor-4.1.10/plugins/emoticons/images/35.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/kindeditor-4.1.10/plugins/emoticons/images/36.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/kindeditor-4.1.10/plugins/emoticons/images/37.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/kindeditor-4.1.10/plugins/emoticons/images/38.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/kindeditor-4.1.10/plugins/emoticons/images/39.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/kindeditor-4.1.10/plugins/emoticons/images/4.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/kindeditor-4.1.10/plugins/emoticons/images/40.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/kindeditor-4.1.10/plugins/emoticons/images/41.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/kindeditor-4.1.10/plugins/emoticons/images/42.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/kindeditor-4.1.10/plugins/emoticons/images/43.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/kindeditor-4.1.10/plugins/emoticons/images/44.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/kindeditor-4.1.10/plugins/emoticons/images/45.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/kindeditor-4.1.10/plugins/emoticons/images/46.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/kindeditor-4.1.10/plugins/emoticons/images/47.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/kindeditor-4.1.10/plugins/emoticons/images/48.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/kindeditor-4.1.10/plugins/emoticons/images/49.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/kindeditor-4.1.10/plugins/emoticons/images/5.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/kindeditor-4.1.10/plugins/emoticons/images/50.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/kindeditor-4.1.10/plugins/emoticons/images/51.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/kindeditor-4.1.10/plugins/emoticons/images/52.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/kindeditor-4.1.10/plugins/emoticons/images/53.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/kindeditor-4.1.10/plugins/emoticons/images/54.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/kindeditor-4.1.10/plugins/emoticons/images/55.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/kindeditor-4.1.10/plugins/emoticons/images/56.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/kindeditor-4.1.10/plugins/emoticons/images/57.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/kindeditor-4.1.10/plugins/emoticons/images/58.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/kindeditor-4.1.10/plugins/emoticons/images/59.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/kindeditor-4.1.10/plugins/emoticons/images/6.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/kindeditor-4.1.10/plugins/emoticons/images/60.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/kindeditor-4.1.10/plugins/emoticons/images/61.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/kindeditor-4.1.10/plugins/emoticons/images/62.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/kindeditor-4.1.10/plugins/emoticons/images/63.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/kindeditor-4.1.10/plugins/emoticons/images/64.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/kindeditor-4.1.10/plugins/emoticons/images/65.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/kindeditor-4.1.10/plugins/emoticons/images/66.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/kindeditor-4.1.10/plugins/emoticons/images/67.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/kindeditor-4.1.10/plugins/emoticons/images/68.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/kindeditor-4.1.10/plugins/emoticons/images/69.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/kindeditor-4.1.10/plugins/emoticons/images/7.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/kindeditor-4.1.10/plugins/emoticons/images/70.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/kindeditor-4.1.10/plugins/emoticons/images/71.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/kindeditor-4.1.10/plugins/emoticons/images/72.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/kindeditor-4.1.10/plugins/emoticons/images/73.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/kindeditor-4.1.10/plugins/emoticons/images/74.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/kindeditor-4.1.10/plugins/emoticons/images/75.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/kindeditor-4.1.10/plugins/emoticons/images/76.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/kindeditor-4.1.10/plugins/emoticons/images/77.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/kindeditor-4.1.10/plugins/emoticons/images/78.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/kindeditor-4.1.10/plugins/emoticons/images/79.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/kindeditor-4.1.10/plugins/emoticons/images/8.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/kindeditor-4.1.10/plugins/emoticons/images/80.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/kindeditor-4.1.10/plugins/emoticons/images/81.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/kindeditor-4.1.10/plugins/emoticons/images/82.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/kindeditor-4.1.10/plugins/emoticons/images/83.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/kindeditor-4.1.10/plugins/emoticons/images/84.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/kindeditor-4.1.10/plugins/emoticons/images/85.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/kindeditor-4.1.10/plugins/emoticons/images/86.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/kindeditor-4.1.10/plugins/emoticons/images/87.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/kindeditor-4.1.10/plugins/emoticons/images/88.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/kindeditor-4.1.10/plugins/emoticons/images/89.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/kindeditor-4.1.10/plugins/emoticons/images/9.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/kindeditor-4.1.10/plugins/emoticons/images/90.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/kindeditor-4.1.10/plugins/emoticons/images/91.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/kindeditor-4.1.10/plugins/emoticons/images/92.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/kindeditor-4.1.10/plugins/emoticons/images/93.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/kindeditor-4.1.10/plugins/emoticons/images/94.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/kindeditor-4.1.10/plugins/emoticons/images/95.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/kindeditor-4.1.10/plugins/emoticons/images/96.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/kindeditor-4.1.10/plugins/emoticons/images/97.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/kindeditor-4.1.10/plugins/emoticons/images/98.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/kindeditor-4.1.10/plugins/emoticons/images/99.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/kindeditor-4.1.10/plugins/emoticons/images/static.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/kindeditor-4.1.10/plugins/filemanager/filemanager.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/kindeditor-4.1.10/plugins/filemanager/images/file-16.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/kindeditor-4.1.10/plugins/filemanager/images/file-64.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/kindeditor-4.1.10/plugins/filemanager/images/folder-16.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/kindeditor-4.1.10/plugins/filemanager/images/folder-64.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/kindeditor-4.1.10/plugins/filemanager/images/go-up.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/kindeditor-4.1.10/plugins/flash/flash.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/kindeditor-4.1.10/plugins/image/image.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/kindeditor-4.1.10/plugins/image/images/align_left.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/kindeditor-4.1.10/plugins/image/images/align_right.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/kindeditor-4.1.10/plugins/image/images/align_top.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/kindeditor-4.1.10/plugins/image/images/refresh.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/kindeditor-4.1.10/plugins/insertfile/insertfile.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/kindeditor-4.1.10/plugins/lineheight/lineheight.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/kindeditor-4.1.10/plugins/link/link.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/kindeditor-4.1.10/plugins/map/map.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/kindeditor-4.1.10/plugins/map/map.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/kindeditor-4.1.10/plugins/media/media.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/kindeditor-4.1.10/plugins/multiimage/images/image.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/kindeditor-4.1.10/plugins/multiimage/images/select-files-en.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/kindeditor-4.1.10/plugins/multiimage/images/select-files-zh_CN.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/kindeditor-4.1.10/plugins/multiimage/images/swfupload.swf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/kindeditor-4.1.10/plugins/multiimage/multiimage.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/kindeditor-4.1.10/plugins/pagebreak/pagebreak.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/kindeditor-4.1.10/plugins/plainpaste/plainpaste.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/kindeditor-4.1.10/plugins/preview/preview.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/kindeditor-4.1.10/plugins/quickformat/quickformat.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/kindeditor-4.1.10/plugins/table/table.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/kindeditor-4.1.10/plugins/template/html/1.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/kindeditor-4.1.10/plugins/template/html/2.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/kindeditor-4.1.10/plugins/template/html/3.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/kindeditor-4.1.10/plugins/template/template.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/kindeditor-4.1.10/plugins/wordpaste/wordpaste.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/kindeditor-4.1.10/themes/common/anchor.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/kindeditor-4.1.10/themes/common/blank.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/kindeditor-4.1.10/themes/common/flash.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/kindeditor-4.1.10/themes/common/loading.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/kindeditor-4.1.10/themes/common/media.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/kindeditor-4.1.10/themes/common/rm.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/kindeditor-4.1.10/themes/default/background.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/kindeditor-4.1.10/themes/default/default.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/kindeditor-4.1.10/themes/default/default.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/kindeditor-4.1.10/themes/qq/editor.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/kindeditor-4.1.10/themes/qq/qq.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/kindeditor-4.1.10/themes/simple/simple.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/login/belatedpng.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/login/placeholder.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/js/malsup.github.iojquery.form.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/jsp/commons/common_css.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/jsp/commons/common_js.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/jsp/custom_add.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/jsp/custom_edit.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/jsp/custom_list.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/jsp/department_add.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/jsp/department_edit.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/jsp/department_list.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/jsp/deviceCheck.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/jsp/deviceCheck_add.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/jsp/deviceCheck_edit.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/jsp/deviceFault.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/jsp/deviceFault_add.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/jsp/deviceFault_edit.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/jsp/deviceList.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/jsp/deviceList_add.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/jsp/deviceList_edit.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/jsp/deviceMaintain.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/jsp/deviceMaintain_add.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/jsp/deviceMaintain_edit.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/jsp/deviceType.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/jsp/deviceType_add.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/jsp/deviceType_edit.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/jsp/employee_add.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/jsp/employee_edit.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/jsp/employee_list.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/jsp/f_count_check_add.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/jsp/f_count_check_edit.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/jsp/f_count_check_list.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/jsp/home.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/jsp/login.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/jsp/manufacture_add.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/jsp/manufacture_edit.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/jsp/manufacture_list.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/jsp/materialConsume_add.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/jsp/materialConsume_edit.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/jsp/materialConsume_list.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/jsp/materialReceive_add.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/jsp/materialReceive_edit.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/jsp/materialReceive_list.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/jsp/material_add.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/jsp/material_edit.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/jsp/material_list.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/jsp/measurement_add.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/jsp/measurement_edit.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/jsp/measurement_list.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/jsp/order_add.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/jsp/order_edit.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/jsp/order_list.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/jsp/p_count_check_add.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/jsp/p_count_check_edit.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/jsp/p_count_check_list.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/jsp/p_measure_check_add.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/jsp/p_measure_check_edit.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/jsp/p_measure_check_list.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/jsp/process_add.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/jsp/process_edit.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/jsp/process_list.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/jsp/product_add.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/jsp/product_edit.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/jsp/product_list.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/jsp/task_add.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/jsp/task_edit.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/jsp/task_list.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/jsp/technologyPlan_add.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/jsp/technologyPlan_edit.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/jsp/technologyPlan_list.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/jsp/technologyRequirement_add.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/jsp/technologyRequirement_edit.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/jsp/technologyRequirement_list.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/jsp/technology_add.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/jsp/technology_edit.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/jsp/technology_list.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/jsp/unqualify_add.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/jsp/unqualify_edit.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/jsp/unqualify_list.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/jsp/user_add.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/jsp/user_edit.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/jsp/user_list.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/jsp/user_role_edit.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/jsp/work_add.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/jsp/work_edit.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/jsp/work_list.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/lib/aopalliance-1.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/lib/aspectjweaver-1.6.8.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/lib/commons-fileupload-1.3.3.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/lib/commons-io-2.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/lib/druid-1.0.9.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/lib/jstl-api-1.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/lib/log4j-1.2.17.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/lib/mybatis-3.4.6.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/lib/mybatis-spring-1.3.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/lib/servlet-api-2.5.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/lib/spring-aop-5.1.0.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/lib/spring-beans-5.1.0.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/lib/spring-context-5.1.0.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/lib/spring-core-5.1.0.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/lib/spring-expression-5.1.0.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/lib/spring-jcl-5.1.0.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/lib/spring-jdbc-5.1.0.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/lib/spring-test-5.1.0.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/lib/spring-tx-5.1.0.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/lib/spring-web-5.1.0.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/lib/spring-webmvc-5.1.0.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/lib/standard-1.1.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/web.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/error.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/index.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/refuse.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/erp/validatecode.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/erp/web4j/mapper/CustomMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/erp/web4j/mapper/CustomMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/erp/web4j/mapper/CustomOrderMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/erp/web4j/mapper/CustomOrderMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/erp/web4j/mapper/DepartmentMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/erp/web4j/mapper/DepartmentMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/erp/web4j/mapper/DeviceCheckMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/erp/web4j/mapper/DeviceCheckMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/erp/web4j/mapper/DeviceFaultMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/erp/web4j/mapper/DeviceFaultMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/erp/web4j/mapper/DeviceMaintainMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/erp/web4j/mapper/DeviceMaintainMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/erp/web4j/mapper/DeviceMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/erp/web4j/mapper/DeviceMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/erp/web4j/mapper/DeviceTypeMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/erp/web4j/mapper/DeviceTypeMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/erp/web4j/mapper/EmployeeMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/erp/web4j/mapper/EmployeeMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/erp/web4j/mapper/FinalCountCheckMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/erp/web4j/mapper/FinalCountCheckMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/erp/web4j/mapper/FinalMeasuretCheckMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/erp/web4j/mapper/FinalMeasuretCheckMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/erp/web4j/mapper/ManufactureMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/erp/web4j/mapper/ManufactureMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/erp/web4j/mapper/MaterialConsumeMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/erp/web4j/mapper/MaterialConsumeMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/erp/web4j/mapper/MaterialMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/erp/web4j/mapper/MaterialMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/erp/web4j/mapper/MaterialReceiveMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/erp/web4j/mapper/MaterialReceiveMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/erp/web4j/mapper/ProcessCountCheckMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/erp/web4j/mapper/ProcessCountCheckMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/erp/web4j/mapper/ProcessMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/erp/web4j/mapper/ProcessMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/erp/web4j/mapper/ProcessMeasureCheckMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/erp/web4j/mapper/ProcessMeasureCheckMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/erp/web4j/mapper/ProductMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/erp/web4j/mapper/ProductMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/erp/web4j/mapper/SysUserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/erp/web4j/mapper/SysUserMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/erp/web4j/mapper/TaskMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/erp/web4j/mapper/TaskMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/erp/web4j/mapper/TechnologyMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/erp/web4j/mapper/TechnologyMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/erp/web4j/mapper/TechnologyPlanMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/erp/web4j/mapper/TechnologyPlanMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/erp/web4j/mapper/TechnologyRequirementMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/erp/web4j/mapper/TechnologyRequirementMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/erp/web4j/mapper/UnqualifyApplyMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/erp/web4j/mapper/UnqualifyApplyMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/erp/web4j/mapper/WorkMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/erp/web4j/mapper/WorkMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application-web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application-web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/erp/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/target/erp/META-INF/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/classes/application-web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/erp/WEB-INF/classes/application-web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/classes/application.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/erp/WEB-INF/classes/application.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/erp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/erp/WEB-INF/web.xml" afterDir="false" />
     </list>
-    <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -1015,30 +124,17 @@
   </component>
   <component name="FUSProjectUsageTrigger">
     <session id="1736417041">
-      <usages-collector id="statistics.lifecycle.project">
-        <counts>
-          <entry key="project.closed" value="1" />
-          <entry key="project.open.time.1" value="1" />
-          <entry key="project.open.time.14" value="1" />
-          <entry key="project.opened" value="2" />
-        </counts>
-      </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="IDEA_MODULE" value="1" />
-          <entry key="JAVA" value="1" />
-          <entry key="JSP" value="2" />
-          <entry key="XML" value="15" />
+          <entry key="JAVA" value="2" />
+          <entry key="JSP" value="9" />
+          <entry key="XML" value="9" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="XML" value="23" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.spring.core.usages.trigger">
-        <counts>
-          <entry key="fixes.SpringFacetInspection.AddFacetFix" value="1" />
+          <entry key="JAVA" value="194" />
+          <entry key="XML" value="9" />
         </counts>
       </usages-collector>
     </session>
@@ -1047,44 +143,99 @@
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="132">
+              <caret line="121" column="17" selection-start-line="121" selection-start-column="17" selection-end-line="121" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/erp/web4j/controller/technologyController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="205">
+              <caret line="9" column="4" lean-forward="true" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/home.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="140">
+              <caret line="107" column="77" selection-start-line="107" selection-start-column="67" selection-end-line="107" selection-end-column="77" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/process_edit.jsp">
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="196">
-              <caret line="25" column="30" selection-start-line="25" selection-start-column="30" selection-end-line="25" selection-end-column="30" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/application.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="78">
-              <caret line="27" selection-start-line="27" selection-end-line="27" />
-            </state>
-          </provider>
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/technologyRequirement_add.jsp">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/application-web.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
+            <state relative-caret-position="466">
               <caret line="21" column="8" selection-start-line="21" selection-start-column="8" selection-end-line="21" selection-end-column="8" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/technology_add.jsp">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/technologyRequirement_list.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2263" />
+            <state relative-caret-position="-1596" />
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/login.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-672" />
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/index.jsp">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/erp/web4j/controller/LoginController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="236">
+              <caret line="16" column="24" lean-forward="true" selection-start-line="16" selection-start-column="24" selection-end-line="16" selection-end-column="24" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#303#304#0" expanded="true" />
+                <element signature="e#327#328#0" expanded="true" />
+              </folding>
+            </state>
           </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>jstl</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -1092,7 +243,9 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/resources/application.xml" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/erp/web4j/controller/LoginController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/erp/web4j/controller/technologyController.java" />
       </list>
     </option>
   </component>
@@ -1116,6 +269,11 @@
         <option name="userSettingsFile" value="D:\maven\apache-maven-3.6.0\conf\settings.xml" />
       </MavenGeneralSettings>
     </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
   </component>
   <component name="MavenProjectNavigator">
     <treeState>
@@ -1123,11 +281,6 @@
         <path>
           <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
           <item name="erp Maven Webapp" type="9519ce18:MavenProjectsStructure$ProjectNode" />
-        </path>
-        <path>
-          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="erp Maven Webapp" type="9519ce18:MavenProjectsStructure$ProjectNode" />
-          <item name="Lifecycle" type="58874e2:MavenProjectsStructure$LifecycleNode" />
         </path>
         <path>
           <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
@@ -1150,7 +303,9 @@
     <option name="width" value="1390" />
     <option name="height" value="1040" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
@@ -1176,6 +331,61 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="erp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="erp" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="erp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="erp" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="web4j" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="erp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="erp" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="web4j" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="erp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="erp" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="erp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="erp" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="erp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="erp" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="erp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="erp" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+              <item name="jsp" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -1183,16 +393,10 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554282218989" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
-    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
-    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554286195631" />
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="MavenSettings" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -1290,17 +494,18 @@
       <option name="presentableId" value="Default" />
       <updated>1554277972933</updated>
       <workItem from="1554277974855" duration="2527000" />
-      <workItem from="1554280555465" duration="1795000" />
+      <workItem from="1554280555465" duration="5583000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4322000" />
+    <option name="totallyTimeSpent" value="3538000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2533512" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19906166" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -1311,15 +516,15 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.47178003" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.45296672" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49932975" visible="true" weight="0.15629523" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Application Servers" order="7" weight="0.0" />
       <window_info anchor="bottom" id="Spring" order="8" />
-      <window_info anchor="bottom" id="Terminal" order="9" visible="true" weight="0.3299566" />
-      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="11" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.3299566" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50067025" side_tool="true" weight="0.43849492" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.37916064" />
       <window_info anchor="bottom" id="Java Enterprise" order="12" />
       <window_info anchor="bottom" id="Database Changes" order="13" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="14" weight="0.3748191" />
@@ -1328,94 +533,122 @@
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info anchor="right" id="Maven Projects" order="5" visible="true" weight="0.11394102" />
+      <window_info anchor="right" id="Maven Projects" order="5" visible="true" weight="0.34919572" />
       <window_info anchor="right" id="Database" order="6" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info anchor="right" id="Theme Preview" order="8" />
     </layout>
   </component>
-  <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
-  </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Merge branch 'master' of github.com:zhattty/project2&#10;&#10;# Conflicts:&#10;#&#9;erp/.idea/workspace.xml&#10;#&#9;erp/src/main/resources/com/erp/web4j/mapper/CustomMapper.xml&#10;#&#9;erp/src/main/resources/com/erp/web4j/mapper/CustomOrderMapper.xml&#10;#&#9;erp/src/main/resources/com/erp/web4j/mapper/DepartmentMapper.xml&#10;#&#9;erp/src/main/resources/com/erp/web4j/mapper/DeviceCheckMapper.xml&#10;#&#9;erp/src/main/resources/com/erp/web4j/mapper/DeviceFaultMapper.xml&#10;#&#9;erp/src/main/resources/com/erp/web4j/mapper/DeviceMaintainMapper.xml&#10;#&#9;erp/src/main/resources/com/erp/web4j/mapper/DeviceMapper.xml&#10;#&#9;erp/src/main/resources/com/erp/web4j/mapper/DeviceTypeMapper.xml&#10;#&#9;erp/src/main/resources/com/erp/web4j/mapper/EmployeeMapper.xml&#10;#&#9;erp/src/main/resources/com/erp/web4j/mapper/FinalCountCheckMapper.xml&#10;#&#9;erp/src/main/resources/com/erp/web4j/mapper/FinalMeasuretCheckMapper.xml&#10;#&#9;erp/src/main/resources/com/erp/web4j/mapper/ManufactureMapper.xml&#10;#&#9;erp/src/main/resources/com/erp/web4j/mapper/MaterialConsumeMapper.xml&#10;#&#9;erp/src/main/resources/com/erp/web4j/mapper/MaterialMapper.xml&#10;#&#9;erp/src/main/resources/com/erp/web4j/mapper/MaterialReceiveMapper.xml&#10;#&#9;erp/src/main/resources/com/erp/web4j/mapper/ProcessCountCheckMapper.xml&#10;#&#9;erp/src/main/resources/com/erp/web4j/mapper/ProcessMapper.xml&#10;#&#9;erp/src/main/resources/com/erp/web4j/mapper/ProcessMeasureCheckMapper.xml&#10;#&#9;erp/src/main/resources/com/erp/web4j/mapper/ProductMapper.xml&#10;#&#9;erp/src/main/resources/com/erp/web4j/mapper/SysUserMapper.xml&#10;#&#9;erp/src/main/resources/com/erp/web4j/mapper/TaskMapper.xml&#10;#&#9;erp/src/main/resources/com/erp/web4j/mapper/TechnologyMapper.xml&#10;#&#9;erp/src/main/resources/com/erp/web4j/mapper/TechnologyPlanMapper.xml&#10;#&#9;erp/src/main/resources/com/erp/web4j/mapper/TechnologyRequirementMapper.xml&#10;#&#9;erp/src/main/resources/com/erp/web4j/mapper/UnqualifyApplyMapper.xml&#10;#&#9;erp/src/main/resources/com/erp/web4j/mapper/WorkMapper.xml" />
+    <option name="LAST_COMMIT_MESSAGE" value="Merge branch 'master' of github.com:zhattty/project2&#10;&#10;# Conflicts:&#10;#&#9;erp/.idea/workspace.xml&#10;#&#9;erp/src/main/resources/com/erp/web4j/mapper/CustomMapper.xml&#10;#&#9;erp/src/main/resources/com/erp/web4j/mapper/CustomOrderMapper.xml&#10;#&#9;erp/src/main/resources/com/erp/web4j/mapper/DepartmentMapper.xml&#10;#&#9;erp/src/main/resources/com/erp/web4j/mapper/DeviceCheckMapper.xml&#10;#&#9;erp/src/main/resources/com/erp/web4j/mapper/DeviceFaultMapper.xml&#10;#&#9;erp/src/main/resources/com/erp/web4j/mapper/DeviceMaintainMapper.xml&#10;#&#9;erp/src/main/resources/com/erp/web4j/mapper/DeviceMapper.xml&#10;#&#9;erp/src/main/resources/com/erp/web4j/mapper/DeviceTypeMapper.xml&#10;#&#9;erp/src/main/resources/com/erp/web4j/mapper/EmployeeMapper.xml&#10;#&#9;erp/src/main/resources/com/erp/web4j/mapper/FinalCountCheckMapper.xml&#10;#&#9;erp/src/main/resources/com/erp/web4j/mapper/FinalMeasuretCheckMapper.xml&#10;#&#9;erp/src/main/resources/com/erp/web4j/mapper/ManufactureMapper.xml&#10;#&#9;erp/src/main/resources/com/erp/web4j/mapper/MaterialConsumeMapper.xml&#10;#&#9;erp/src/main/resources/com/erp/web4j/mapper/MaterialMapper.xml&#10;#&#9;erp/src/main/resources/com/erp/web4j/mapper/MaterialReceiveMapper.xml&#10;#&#9;erp/src/main/resources/com/erp/web4j/mapper/ProcessCountCheckMapper.xml&#10;#&#9;erp/src/main/resources/com/erp/web4j/mapper/ProcessMapper.xml&#10;#&#9;erp/src/main/resources/com/erp/web4j/mapper/ProcessMeasureCheckMapper.xml&#10;#&#9;erp/src/main/resources/com/erp/web4j/mapper/ProductMapper.xml&#10;#&#9;erp/src/main/resources/com/erp/web4j/mapper/SysUserMapper.xml&#10;#&#9;erp/src/main/resources/com/erp/web4j/mapper/TaskMapper.xml&#10;#&#9;erp/src/main/resources/com/erp/web4j/mapper/TechnologyMapper.xml&#10;#&#9;erp/src/main/resources/com/erp/web4j/mapper/TechnologyPlanMapper.xml&#10;#&#9;erp/src/main/resources/com/erp/web4j/mapper/TechnologyRequirementMapper.xml&#10;#&#9;erp/src/main/resources/com/erp/web4j/mapper/UnqualifyApplyMapper.xml&#10;#&#9;erp/src/main/resources/com/erp/web4j/mapper/WorkMapper.xml" />
+  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/resources/com/erp/web4j/mapper/DeviceMaintainMapper.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/com/erp/web4j/mapper/DepartmentMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3528">
-          <caret line="36" column="29" selection-start-line="36" selection-start-column="14" selection-end-line="36" selection-end-column="29" />
-        </state>
+        <state relative-caret-position="-1942" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/main.iml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/com/erp/web4j/mapper/MaterialConsumeMapper.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/com/erp/web4j/mapper/TechnologyRequirementMapper.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/com/erp/web4j/mapper/DeviceMapper.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/com/erp/web4j/mapper/CustomOrderMapper.xml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/com/erp/web4j/mapper/CustomMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-7784">
-          <caret line="163" column="14" lean-forward="true" selection-start-line="163" selection-start-column="14" selection-end-line="163" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/com/erp/web4j/mapper/DepartmentMapper.xml">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/erp/web4j/mapper/ProcessMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="112">
-          <caret line="4" column="32" selection-start-line="4" selection-start-column="32" selection-end-line="4" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/com/erp/web4j/mapper/ProcessMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-756" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/process_add.jsp">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/technology_add.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2263" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/com/erp/web4j/mapper/TechnologyMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-336" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="25" column="30" selection-start-line="25" selection-start-column="30" selection-end-line="25" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/application-web.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="21" column="8" selection-start-line="21" selection-start-column="8" selection-end-line="21" selection-end-column="8" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/application.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="78">
           <caret line="27" selection-start-line="27" selection-end-line="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="538" column="10" lean-forward="true" selection-start-line="538" selection-start-column="10" selection-end-line="538" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/technology_add.jsp">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="15" column="18" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/home.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="107" column="77" selection-start-line="107" selection-start-column="67" selection-end-line="107" selection-end-column="77" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/process_edit.jsp">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/process_add.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-524" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/technologyRequirement_list.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1596" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/login.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-672" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/index.jsp">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/technologyRequirement_edit.jsp">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/technologyRequirement_add.jsp">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application-web.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="466">
+          <caret line="21" column="8" selection-start-line="21" selection-start-column="8" selection-end-line="21" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="121" column="17" selection-start-line="121" selection-start-column="17" selection-end-line="121" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/erp/web4j/controller/technologyController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="205">
+          <caret line="9" column="4" lean-forward="true" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/erp/web4j/controller/LoginController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="236">
+          <caret line="16" column="24" lean-forward="true" selection-start-line="16" selection-start-column="24" selection-end-line="16" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#303#304#0" expanded="true" />
+            <element signature="e#327#328#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1425,7 +658,7 @@
       <state key="ArtifactsStructureConfigurable.UI">
         <settings>
           <artifact-editor />
-          <last-edited>erp:war exploded</last-edited>
+          <last-edited>erp:war</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -1438,7 +671,7 @@
       </state>
       <state key="FacetStructureConfigurable.UI">
         <settings>
-          <last-edited>Web (erp)|Web</last-edited>
+          <last-edited>Spring</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -1473,20 +706,7 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>erp</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-                <option value="0.6" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ProjectJDKs.UI">
-        <settings>
-          <last-edited>1.8</last-edited>
+          <last-edited>Spring|erp</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
