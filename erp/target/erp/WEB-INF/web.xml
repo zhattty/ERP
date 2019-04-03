@@ -10,6 +10,18 @@
       <param-name>contextConfigLocation</param-name>
       <param-value>classpath:application.xml</param-value>
     </context-param>
+    <filter>
+      <filter-name>DruidWebStatFilter</filter-name>
+      <filter-class>com.alibaba.druid.support.http.WebStatFilter</filter-class>
+      <init-param>
+        <param-name>exclusions</param-name>
+        <param-value>*.js,*.gif,*.jpg,*.png,*.css,*.ico,/druid/*</param-value>
+      </init-param>
+    </filter>
+    <filter-mapping>
+      <filter-name>DruidWebStatFilter</filter-name>
+      <url-pattern>/*</url-pattern>
+    </filter-mapping>
 
   <filter>
     <filter-name>CharacterEncoding</filter-name>
@@ -19,6 +31,17 @@
     <filter-name>CharacterEncoding</filter-name>
     <url-pattern>/*</url-pattern>
   </filter-mapping>
+
+  <servlet>
+    <servlet-name>DruidStatView</servlet-name>
+    <servlet-class>com.alibaba.druid.support.http.StatViewServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>DruidStatView</servlet-name>
+    <url-pattern>/druid/*</url-pattern>
+  </servlet-mapping>
+
   <servlet>
     <servlet-name>dispatcherServlet</servlet-name>
     <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
@@ -27,6 +50,7 @@
       <param-value>classpath:application-web.xml</param-value>
     </init-param>
   </servlet>
+
   <servlet-mapping>
     <servlet-name>dispatcherServlet</servlet-name>
     <url-pattern>/</url-pattern>
