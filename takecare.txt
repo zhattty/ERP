@@ -1,0 +1,5 @@
+target和./idea文件不要提交到github上，否则容易引发冲突，通过gitignore去忽略
+将service层和controller层class的名称可以统一先确定好
+继续加油 尽快开始业务模块的代码的编写 加油
+
+190404 刘
