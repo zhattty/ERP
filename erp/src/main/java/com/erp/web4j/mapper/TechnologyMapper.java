@@ -23,4 +23,6 @@ public interface TechnologyMapper {
     List<Technology> searchByPrimaryKey(@Param("searchValue") String searchValue,@Param("offset") Integer offset, @Param("rows")Integer rows);
 
     List<Technology> searchByName(@Param("searchValue") String searchValue,@Param("offset") Integer offset, @Param("rows")Integer rows);
+
+    int deleteBatch( int [] ids);
 }
