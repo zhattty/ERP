@@ -12,7 +12,7 @@
 erp/.idea/
 erp/target/
 # BlueJ files
-
+.idea/
 *.ctxt
 
 
