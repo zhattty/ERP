@@ -7,6 +7,8 @@ import com.github.pagehelper.Page;
 import com.github.pagehelper.PageHelper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Propagation;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.HashMap;
 import java.util.List;
@@ -44,6 +46,24 @@ public class MaterialServiceImpl implements MaterialService {
         map.put("total",onePage.getTotal());
         map.put("rows",materials);
         return map;
+    }
+
+    @Override
+    @Transactional(readOnly = false, propagation = Propagation.REQUIRES_NEW,rollbackFor = Exception.class)
+    public boolean deleteMaterials(String[] ids) {
+        int i = materialMapper.deleteByPrimaryKeyBanch(ids);
+        if(i>0) {
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
+
+    @Override
+    public Material findMaterialById(String materialId) {
+        Material material = materialMapper.selectByPrimaryKey(materialId);
+        return material;
     }
 
 

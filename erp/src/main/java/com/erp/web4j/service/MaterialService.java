@@ -29,5 +29,11 @@ public interface MaterialService {
      */
     Map<String, Object> listMaterialByPage(Integer pageNum, Integer pageSize);
 
+    /**
+     * 根据id批量删除materials
+     * @return
+     */
+    boolean deleteMaterials(String[] ids);
 
+    Material findMaterialById(String materialId);
 }

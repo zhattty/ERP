@@ -1,11 +1,14 @@
 package com.erp.web4j.mapper;
 
 import com.erp.web4j.bean.Material;
+import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 
 public interface MaterialMapper {
     int deleteByPrimaryKey(String materialId);
+
+    int deleteByPrimaryKeyBanch(@Param("ids") String[] ids);
 
     int insert(Material record);
 

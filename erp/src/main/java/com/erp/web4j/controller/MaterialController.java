@@ -2,7 +2,7 @@ package com.erp.web4j.controller;
 
 
 import com.erp.web4j.bean.Material;
-import com.erp.web4j.bean.Msg;
+import com.erp.web4j.bean.ResponseMsg;
 import com.erp.web4j.service.MaterialService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -55,7 +55,7 @@ public class MaterialController {
      */
     @RequestMapping("/material/add_judge")
     @ResponseBody
-    public Msg addJudge(HttpServletRequest request) {
+    public ResponseMsg addJudge(HttpServletRequest request) {
         /***
          * 先略
          * 1. 得到session
@@ -64,7 +64,8 @@ public class MaterialController {
          * 4. 返回message。
          **/
 
-        return null;
+        ResponseMsg responseMsg = new ResponseMsg();
+        return responseMsg;
     }
 
     @RequestMapping("/material/add")
@@ -72,14 +73,65 @@ public class MaterialController {
         return "material_add";
     }
 
-    @RequestMapping(value = "material/insert", method = RequestMethod.POST)
-    public Msg insertMaterial(Material material) {
-        Msg msg = new Msg();
-        boolean ret = materialService.addMaterial(material);
-        if(ret) {
-            msg.setMsg("");
+    /***
+     * function：insert the material
+     * @param material
+     * @return class message parased to json
+     */
+    @RequestMapping(value = "material/insert",produces = "application/json; charset=utf-8")
+    @ResponseBody
+    public ResponseMsg insertMaterial(Material material) {
+        ResponseMsg msg = new ResponseMsg();
+        boolean b = materialService.addMaterial(material);
+        if (b) {
+            msg.setStatus(200);
+            msg.setMsg("成功");
         }
+        else{
+            msg.setMsg("我自己的失败");
+        }
+        return msg;
     }
 
 
+    @RequestMapping("/material/delete_judge")
+    @ResponseBody
+    public ResponseMsg initDeleteMaterial() {
+        ResponseMsg responseMsg = new ResponseMsg();
+        return responseMsg;
+    }
+
+    /***
+     * function: delelte batch by id， 批量删除
+     * @param ids
+     * @return
+     */
+    @RequestMapping("material/delete_batch")
+    @ResponseBody
+    public ResponseMsg deleteMaterial(String[] ids) {
+        boolean ret = materialService.deleteMaterials(ids);
+        ResponseMsg responseMsg = new ResponseMsg();
+
+        if(ret) {
+            responseMsg.setStatus(200);
+            responseMsg.setMsg("");
+        }
+
+        return responseMsg;
+
+    }
+
+    @RequestMapping("material/edit_judge")
+    @ResponseBody
+    public ResponseMsg initEditMaterial() {
+        return null;
+    }
+
+    @RequestMapping("material/edit")
+    @ResponseBody
+    public Material findMaterial(String materialId) {
+        Material material =   materialService.findMaterialById(materialId);
+        System.out.println(material);
+        return material;
+    }
 }
