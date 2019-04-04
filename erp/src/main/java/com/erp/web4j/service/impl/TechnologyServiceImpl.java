@@ -15,7 +15,7 @@ import java.util.List;
  * Created by wawawa
  * Date 2019/4/3 Time 19:38
  */
-@Service("TechnologyService")
+@Service("technologyService")
 @Transactional(propagation = Propagation.REQUIRED,isolation = Isolation.DEFAULT)
 public class TechnologyServiceImpl implements TechnologyService {
 
