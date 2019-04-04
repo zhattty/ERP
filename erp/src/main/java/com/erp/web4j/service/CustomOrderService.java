@@ -13,4 +13,22 @@ public interface CustomOrderService {
     List<CustomOrder> listOrders(Integer page,Integer rows);
 
     int countOrderRecords();
+
+    int insert(CustomOrder customOrder);
+
+    int updateCustomOrderByPrimaryKey(CustomOrder customOrder);
+
+    int deleteCustomOrderByIds(int[] ids);
+
+    List<CustomOrder> listOrdersById(String id, Integer page, Integer rows);
+
+    Integer countOrderRecordsById(String searchValue);
+
+    List<CustomOrder> listOrdersByCustomName(String searchValue, Integer page, Integer rows);
+
+    Integer countOrderRecordsByCustomName(String searchValue);
+
+    Integer countOrderRecordsByProductName(String searchValue);
+
+    List<CustomOrder> listOrdersByProductName(String searchValue, Integer page, Integer rows);
 }
