@@ -23,4 +23,10 @@ public interface TechnologyService {
     List<Technology> searchByName(String searchValue, Integer page, Integer rows);
 
     boolean insert(Technology technology);
+
+    boolean update(Technology technology);
+
+    boolean deleteBatch(int []ids);
+
+    Technology selectTechnologyById(String technologyName);
 }

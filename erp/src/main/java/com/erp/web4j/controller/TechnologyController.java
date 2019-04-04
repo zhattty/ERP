@@ -7,7 +7,10 @@ import org.apache.ibatis.annotations.Param;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import java.util.List;
@@ -42,7 +45,7 @@ class TechnologyController {
      */
     @RequestMapping("list")
     @ResponseBody
-    public List<Technology> list(@Param("page") Integer page,@Param("rows")Integer rows){
+    public List<Technology> list(@RequestParam("page") Integer page,@RequestParam("rows") Integer rows){
 
         List<Technology> technologyList = technologyService.findTechnology(page, rows);
         return technologyList;
@@ -57,16 +60,14 @@ class TechnologyController {
      */
     @RequestMapping("search_technology_by_technologyId")
     @ResponseBody
-    public List<Technology> search_technology_by_technologyId(@Param("searchValue")String  searchValue,@Param("page") Integer page,@Param("rows")Integer rows){
+    public List<Technology> search_technology_by_technologyId(String  searchValue, Integer page,@Param("rows")Integer rows){
         if (page == null || page <= 0){
             page = 1;
         }
         if (rows<=0){
             rows = 10;
         }
-        System.out.println("pre");
         List<Technology> technologies = technologyService.searchByPrimaryKey(searchValue, page, rows);
-        System.out.println("past");
         return technologies;
     }
 
@@ -79,7 +80,7 @@ class TechnologyController {
      */
     @RequestMapping("search_technology_by_technologyName")
     @ResponseBody
-    public List<Technology> search_technology_by_technologyName(@Param("searchValue")String  searchValue,@Param("page") Integer page,@Param("rows")Integer rows){
+    public List<Technology> search_technology_by_technologyName(@RequestParam("searchValue")String  searchValue,@Param("page") Integer page,@Param("rows")Integer rows){
         if (page == null || page <= 0){
             page = 1;
         }
@@ -97,18 +98,18 @@ class TechnologyController {
     }
 
     @RequestMapping("add")
-    public String add(@Param("technology")Technology technology){
+    public String add(Technology technology){
         return "technology_add";
     }
 
     /**
      * 接收前端传输的technology对象，返回查询结果的StatusJson
      * @param technology
-     * @return json
+     * @return 插入的结果json
      */
     @RequestMapping("insert")
     @ResponseBody
-    public StatusJson insert(@Param("technology")Technology technology){
+    public StatusJson insert(Technology technology){
         //StatusJson statusJson = new StatusJson();
         if(technology!=null) {
             boolean flag = technologyService.insert(technology);
@@ -122,4 +123,69 @@ class TechnologyController {
         }
     }
 
+    @RequestMapping("edit_judge")
+    @ResponseBody
+    public String edit_judge(){
+        return "";
+    }
+
+    @RequestMapping("edit")
+    public String edit(){
+        return "technology_edit";
+    }
+
+    /**
+     * 更新数据库
+     * @param technology
+     * @return
+     */
+    @RequestMapping("update_all")
+    @ResponseBody
+    public StatusJson update_all(Technology technology){
+        if(technology!=null) {
+            boolean flag = technologyService.update(technology);
+            if(flag ){
+                return new StatusJson("200","OK",null);
+            }else {
+                return new StatusJson("0","该工艺编号已经存在，请更换工艺编号！",null);
+            }
+        }else {
+            return new StatusJson("0","输入有误，请重新输入",null);
+        }
+    }
+
+    @RequestMapping("delete_judge")
+    @ResponseBody
+    public String delete_judge(){
+        return "";
+    }
+
+    /**
+     * 批量删除
+     * @param ids 前端传输过来的数据
+     * @return  StatusJson
+     */
+    @RequestMapping("delete_batch")
+    @ResponseBody
+    public StatusJson delete_batch(@RequestParam("ids")int[] ids){
+        if(ids!=null) {
+            boolean flag = technologyService.deleteBatch(ids);
+            if(flag ){
+                return new StatusJson("200","OK",null);
+            }else {
+                return new StatusJson("0","删除失败",null);
+            }
+        }else {
+            return new StatusJson("0","输入有误，请重新输入",null);
+        }
+    }
+
+    @RequestMapping("get/{technologyName}")
+    @ResponseBody
+    public Technology selectTechnologyById(@PathVariable String technologyName){
+        Technology technology = technologyService.selectTechnologyById(technologyName);
+        System.out.println(technology);
+        return technology;
+
+    }
 }

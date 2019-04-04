@@ -2,8 +2,11 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xmlns:context="http://www.springframework.org/schema/context"
-       xmlns:aop="http://www.springframework.org/schema/aop"
        xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context  https://www.springframework.org/schema/context/spring-context.xsd
+        http://www.springframework.org/schema/mvc  https://www.springframework.org/schema/mvc/spring-mvc.xsd">
        xmlns:tx="http://www.springframework.org/schema/tx" xmlns:beans="http://www.springframework.org/schema/util"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
         http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
@@ -20,6 +23,7 @@
         <property name="maxUploadSize" value="5242880"/>
     </bean>
     <!--springmvc的视图解析器-->
+
     <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
         <property name="prefix" value="/WEB-INF/jsp/"/>
         <property name="suffix" value=".jsp"/>
@@ -28,12 +32,13 @@
     <mvc:resources mapping="/js/**" location="/WEB-INF/js/"/>
     <mvc:resources mapping="/image/**" location="/WEB-INF/image/"/>
     <mvc:resources mapping="/file/**" location="/WEB-INF/file/"/>
-    <bean id="conversionService"
-          class="org.springframework.format.support.FormattingConversionServiceFactoryBean">
+    <bean id="conversionService" class="org.springframework.format.support.FormattingConversionServiceFactoryBean">
         <property name="converters">
-            <set>
-                <bean class="com.erp.web4j.converter.DateConverterByZhangYao"/>
-            </set>
+            <list>
+                <bean class="com.erp.web4j.util.DateConverter"/>
+            </list>
         </property>
     </bean>
+
+
 </beans>

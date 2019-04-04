@@ -58,5 +58,31 @@ public class TechnologyServiceImpl implements TechnologyService {
         }
     }
 
+    @Override
+    public boolean update(Technology technology) {
+
+        int i = technologyMapper.updateByPrimaryKey(technology);
+        return i==1;
+    }
+
+    @Override
+    public boolean deleteBatch(int [] ids) {
+       /* for (int i = 0; i < ids.length; i++) {
+            int i1 = technologyMapper.deleteByPrimaryKey(ids[i]);
+        }*/
+        int i = technologyMapper.deleteBatch(ids);
+        if(i == ids.length) {
+            return true;
+        }else {
+            return false;
+        }
+    }
+
+    @Override
+    public Technology selectTechnologyById(String technologyName) {
+        Technology technology =  technologyMapper.searchByName3(technologyName);
+        return technology;
+    }
+
 
 }
