@@ -38,6 +38,16 @@
     <include refid="Base_Column_List"/>
     from material
   </select>
+  <select id="selectLikeID" resultMap="BaseResultMap">
+    select *
+    from material
+    where material_id like CONCAT('%',#{materialId},'%')
+  </select>
+  <select id="selectByType" resultMap="BaseResultMap">
+    select *
+    from material
+    where material_type like CONCAT('%',#{materialType},'%')
+  </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
     <!--
       WARNING - @mbg.generated

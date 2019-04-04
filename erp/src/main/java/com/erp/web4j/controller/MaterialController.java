@@ -6,10 +6,7 @@ import com.erp.web4j.bean.ResponseMsg;
 import com.erp.web4j.service.MaterialService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 import sun.plugin2.message.Message;
 
 import javax.servlet.http.HttpServletRequest;
@@ -31,7 +28,10 @@ public class MaterialController {
     @Autowired
     private MaterialService materialService;
 
-
+    /***
+     *
+     * ---------------------- Material Controller  ----------------------
+     */
     @RequestMapping("/material/find")
     public String findMaterial() {
         return "material_list";
@@ -39,7 +39,7 @@ public class MaterialController {
 
 
     /***
-     * list all materials by page
+     * function: list all materials by page 查询所有
      * */
     @RequestMapping("/material/list")
     @ResponseBody
@@ -48,8 +48,29 @@ public class MaterialController {
         return map;
     }
 
+    /**
+     * function: search materials by id or type 按条件查询
+     * @param searchValue
+     * @param name
+     * @param pageNum
+     * @param pageSize
+     * @return json
+     */
+    @RequestMapping("material/search_material_by_{name}")
+    @ResponseBody
+    public Map<String, Object> search(String searchValue, @PathVariable("name") String name, @RequestParam("page") Integer pageNum, @RequestParam("rows") Integer pageSize){
+        Map<String, Object> map = null;
+        if("materialId".equals(name)) {
+
+            map=  materialService.searchMaterialById(searchValue,pageNum, pageSize);
+        }
+        if("materialType".equals(name)) {
+            map = materialService.searchMaterialByType(searchValue,pageNum,pageSize);
+        }
+        return map;
+    }
     /***
-     *  add judge
+     *  function: judge before add material
      *  need session and authority
      *  v1.0 doesnot have the authority
      */
@@ -74,7 +95,7 @@ public class MaterialController {
     }
 
     /***
-     * function：insert the material
+     * function：insert the material   添加
      * @param material
      * @return class message parased to json
      */
@@ -88,7 +109,7 @@ public class MaterialController {
             msg.setMsg("成功");
         }
         else{
-            msg.setMsg("我自己的失败");
+            msg.setMsg("添加失败");
         }
         return msg;
     }
@@ -127,11 +148,33 @@ public class MaterialController {
         return null;
     }
 
+    /**
+     * jump to the update interface
+     * @param materialId
+     * @return
+     */
     @RequestMapping("material/edit")
-    @ResponseBody
-    public Material findMaterial(String materialId) {
-        Material material =   materialService.findMaterialById(materialId);
-        System.out.println(material);
-        return material;
+    public String findMaterial(String materialId) {
+        return "material_edit";
     }
+
+    /***
+     * function: update Material 更新
+     * @param material
+     * @return
+     */
+    @RequestMapping("material/update_all")
+    @ResponseBody
+    public ResponseMsg updateMaterial(Material material) {
+        boolean ret = materialService.updateMaterial(material);
+        ResponseMsg msg = new ResponseMsg();
+        if(ret) {
+            msg.setStatus(200);
+        }
+        else {
+            msg.setMsg("更新失败，请重试");
+        }
+        return msg;
+    }
+
 }

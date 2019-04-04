@@ -22,7 +22,7 @@ public interface MaterialService {
     boolean addMaterial(Material material);
 
     /**
-     * 分页显示所有的material
+     * 分页查询所有的material
      * @param pageNum
      * @param pageSize
      * @return
@@ -35,5 +35,29 @@ public interface MaterialService {
      */
     boolean deleteMaterials(String[] ids);
 
-    Material findMaterialById(String materialId);
+
+    /**
+     * 修改material
+     * @param material
+     * @return
+     */
+    boolean updateMaterial(Material material);
+
+    /**
+     * 根据id查询并分页
+     * @param searchValue
+     * @param pageNum
+     * @param pageSize
+     * @return
+     */
+    Map<String, Object> searchMaterialById(String searchValue, Integer pageNum, Integer pageSize);
+
+    /***
+     * 根据type查询并分页
+     * @param searchValue
+     * @param pageNum
+     * @param pageSize
+     * @return
+     */
+    Map<String, Object> searchMaterialByType(String searchValue, Integer pageNum, Integer pageSize);
 }

@@ -21,4 +21,8 @@ public interface MaterialMapper {
     int updateByPrimaryKey(Material record);
 
     List<Material> selectAll();
+
+    List<Material> selectLikeID(@Param("materialId") String searchValue);
+
+    List<Material> selectByType(@Param("materialType") String searchValue);
 }
