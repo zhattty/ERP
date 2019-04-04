@@ -241,4 +241,97 @@
   <select id="countOrderRecords" resultType="_int">
     select  count(*) from c_order
   </select>
+
+  <delete id="deleteByIds" >
+    delete
+    from c_order
+    where order_id in
+    <foreach collection="ids" item="id" open="(" close=")" separator=",">
+       #{id}
+    </foreach>
+  </delete>
+
+  <select id="listOrdersById" resultMap="LazyLoadResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from c_order
+    where order_id like #{order_id}
+    limit #{rows} offset #{offset}
+  </select>
+
+  <select id="countOrderRecordsById" resultType="_int">
+    select count(*)
+    from c_order
+    where order_id like #{order_id}
+  </select>
+
+  <select id="listOrdersByCustomName" resultMap="LastResultMap">
+    select
+    co.order_id, co.custom_id, co.product_id, co.order_date, co.request_date, co.note, co.quantity, co.unit_price, co.unit, co.image, co.file, co.status,
+    cu.custom_id as cid, cu.custom_name, cu.full_name, cu.address, cu.fax, cu.email, cu.owner_name, cu.owner_tel, cu.status as custatus,cu.note as cunote,
+    p.product_id as pid, p.product_name, p.product_type,p.image as pimage, p.note as pnote, p.status as pstatus
+    from c_order as co
+    left join custom as cu on co.custom_id = cu.custom_id
+    left join product as p on co.product_id = p.product_id
+    where cu.custom_name like #{customName}
+    limit #{rows} offset #{offset}
+  </select>
+  <resultMap id="LastResultMap" type="customOrder">
+    <id column="order_id" jdbcType="VARCHAR" property="orderId" />
+    <result column="custom_id" jdbcType="VARCHAR" property="customId" />
+    <result column="product_id" jdbcType="VARCHAR" property="productId" />
+    <result column="order_date" jdbcType="TIMESTAMP" property="orderDate" />
+    <result column="request_date" jdbcType="TIMESTAMP" property="requestDate" />
+    <result column="note" jdbcType="VARCHAR" property="note" />
+    <result column="quantity" jdbcType="INTEGER" property="quantity" />
+    <result column="unit_price" jdbcType="DECIMAL" property="unitPrice" />
+    <result column="unit" jdbcType="VARCHAR" property="unit" />
+    <result column="image" jdbcType="VARCHAR" property="image" />
+    <result column="file" jdbcType="VARCHAR" property="file" />
+    <result column="status" jdbcType="INTEGER" property="status" />
+    <association property="custom" javaType="custom">
+      <id column="cid" jdbcType="VARCHAR" property="customId" />
+      <result column="custom_name" jdbcType="VARCHAR" property="customName" />
+      <result column="full_name" jdbcType="VARCHAR" property="fullName" />
+      <result column="address" jdbcType="VARCHAR" property="address" />
+      <result column="fax" jdbcType="VARCHAR" property="fax" />
+      <result column="email" jdbcType="VARCHAR" property="email" />
+      <result column="owner_name" jdbcType="VARCHAR" property="ownerName" />
+      <result column="owner_tel" jdbcType="VARCHAR" property="ownerTel" />
+      <result column="custatus" jdbcType="INTEGER" property="status" />
+      <result column="cunote" jdbcType="VARCHAR" property="note" />
+    </association>
+    <association property="product" javaType="product">
+      <result column="pid" jdbcType="VARCHAR" property="productId" />
+      <result column="product_name" jdbcType="VARCHAR" property="productName" />
+      <result column="product_type" jdbcType="VARCHAR" property="productType" />
+      <result column="pimage" jdbcType="VARCHAR" property="image" />
+      <result column="pnote" jdbcType="VARCHAR" property="note" />
+      <result column="pstatus" jdbcType="INTEGER" property="status" />
+    </association>
+  </resultMap>
+
+  <select id="countOrderRecordsByCustomName" resultType="_int">
+    select count(*)
+    from c_order as c left join custom as cu on c.custom_id = cu.custom_id
+    where cu.custom_name like #{customName}
+  </select>
+
+  <select id="countOrderRecordsByProductName" resultType="_int">
+    select count(*)
+    from c_order as c left join product as p on c.product_id = p.product_id
+    where p.product_name like #{productName}
+  </select>
+
+  <select id="listOrdersByProductName" resultMap="LastResultMap">
+    select
+    co.order_id, co.custom_id, co.product_id, co.order_date, co.request_date, co.note, co.quantity, co.unit_price, co.unit, co.image, co.file, co.status,
+    cu.custom_id as cid, cu.custom_name, cu.full_name, cu.address, cu.fax, cu.email, cu.owner_name, cu.owner_tel, cu.status as custatus,cu.note as cunote,
+    p.product_id as pid, p.product_name, p.product_type,p.image as pimage, p.note as pnote, p.status as pstatus
+    from c_order as co
+    left join custom as cu on co.custom_id = cu.custom_id
+    left join product as p on co.product_id = p.product_id
+    where p.product_name like #{productName}
+    limit #{rows} offset #{offset}
+  </select>
 </mapper>

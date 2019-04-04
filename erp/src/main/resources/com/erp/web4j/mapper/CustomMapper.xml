@@ -190,4 +190,57 @@
       note = #{note,jdbcType=VARCHAR}
     where custom_id = #{customId,jdbcType=VARCHAR}
   </update>
+
+  <select id="listAllCustoms" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from custom
+  </select>
+
+  <select id="countAllCustomRecords" resultType="_int">
+    select count(*) from custom
+  </select>
+
+  <select id="listAllCustomsWithOffsetAndLimit" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from custom
+    limit #{limit} offset #{offset}
+  </select>
+
+  <select id="countCustomById" resultType="_int">
+    select count(*) from custom where custom_id = #{cutomId}
+  </select>
+
+  <delete id="deleteByIds" >
+    delete from custom
+    where custom_id in
+    <foreach collection="ids" item="id" open="(" separator="," close=")">
+      #{id}
+    </foreach>
+  </delete>
+
+  <select id="listCustomsByCustomId" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from custom
+    where custom_id like #{customId}
+    limit #{limit} offset #{offset}
+  </select>
+
+  <select id="countCustomRecordsByCustomId" resultType="_int">
+    select  count(*) from custom where custom_id like #{customId};
+  </select>
+
+  <select id="listCustomsByCustomName" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from custom
+    where custom_name like #{customName}
+    limit #{limit} offset #{offset}
+  </select>
+
+  <select id="countCustomRecordsByCustomName" resultType="_int">
+    select  count(*) from custom where custom_name like #{customName};
+  </select>
 </mapper>
