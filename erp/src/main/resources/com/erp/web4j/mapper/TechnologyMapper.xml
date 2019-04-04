@@ -52,7 +52,9 @@
     <include refid="Base_Column_List" />
     from technology
 
-    where technology_name like #{searchValue} limit #{rows} offset #{offset}
+    where technology_name like CONCAT(CONCAT('%', #{searchValue}), '%')
+
+    limit #{rows} offset #{offset}
   </select>
 
   <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
