@@ -60,11 +60,7 @@ public class MaterialServiceImpl implements MaterialService {
         }
     }
 
-    @Override
-    public Material findMaterialById(String materialId) {
-        Material material = materialMapper.selectByPrimaryKey(materialId);
-        return material;
-    }
+
 
     @Override
     public boolean updateMaterial(Material material) {
