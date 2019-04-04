@@ -132,4 +132,8 @@
       revise_time = #{reviseTime,jdbcType=TIMESTAMP}
     where technology_requirement_id = #{technologyRequirementId,jdbcType=VARCHAR}
   </update>
+
+  <select id="listOrders" resultMap="BaseResultMap">
+    select <include refid="Base_Column_List"/>
+  </select>
 </mapper>

@@ -52,9 +52,19 @@
     <include refid="Base_Column_List" />
     from technology
 
-    where technology_name like #{searchValue} limit #{rows} offset #{offset}
+    where technology_name like CONCAT(CONCAT('%', #{searchValue}), '%')
+
+    limit #{rows} offset #{offset}
   </select>
 
+  <delete id="deleteBatch" parameterType="int" >
+    delete  from technology
+    where technology_id in (
+    <foreach collection="array" item="id" separator=",">
+      #{id}
+    </foreach>
+    )
+  </delete>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
     <!--
       WARNING - @mbg.generated
