@@ -19,7 +19,7 @@ import java.util.List;
  */
 @Controller
 @RequestMapping("technology")
-public class TechnologyController {
+class TechnologyController {
     @Autowired
     @Qualifier("TechnologyService")
     TechnologyService technologyService;
