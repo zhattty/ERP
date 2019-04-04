@@ -25,4 +25,6 @@ public interface MaterialMapper {
     List<Material> selectLikeID(@Param("materialId") String searchValue);
 
     List<Material> selectByType(@Param("materialType") String searchValue);
+
+    List<String> selectIds();
 }

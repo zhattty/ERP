@@ -51,6 +51,11 @@
     where material_type like CONCAT('%',#{materialType},'%')
   </select>
 
+  <select id="selectIds" resultType="String">
+    select material_id
+    from material
+  </select>
+
   <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
     <!--
       WARNING - @mbg.generated

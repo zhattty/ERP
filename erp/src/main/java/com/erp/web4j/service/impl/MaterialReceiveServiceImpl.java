@@ -1,10 +1,13 @@
 package com.erp.web4j.service.impl;
 
 import com.erp.web4j.bean.Material;
-import com.erp.web4j.mapper.MaterialMapper;
-import com.erp.web4j.service.MaterialService;
+import com.erp.web4j.bean.MaterialReceive;
+
+import com.erp.web4j.mapper.MaterialReceiveMapper;
+import com.erp.web4j.service.MaterialReceiveService;
 import com.github.pagehelper.Page;
 import com.github.pagehelper.PageHelper;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
@@ -15,34 +18,32 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * ClassName: MaterialServiceImpl
+ * ClassName: MaterialReceiveServiceImpl
  * Description:
  *
  * @author mighty
  * @version 1.0
- * @date 2019/4/3  22:35
+ * @date 2019/4/4  19:55
  */
 @Service
-public class MaterialServiceImpl implements MaterialService {
+public class MaterialReceiveServiceImpl implements MaterialReceiveService {
     @Autowired
-    private MaterialMapper materialMapper;
-
+    MaterialReceiveMapper materialReceiveMapper;
 
     @Override
-    public boolean addMaterial(Material material) {
-        int insert = materialMapper.insert(material);
-        return insert==1;
+    public boolean addMaterialReceive(MaterialReceive materialReceive) {
+        int i = materialReceiveMapper.insertSelective(materialReceive);
+        return i==1;
     }
 
     @Override
-    public Map<String, Object> listMaterialByPage(Integer pageNum, Integer pageSize) {
-        /*分页设置*/
+    public Map<String, Object> listMaterialReceiveByPage(Integer pageNum, Integer pageSize) {
         Integer num = pageNum!=null ? pageNum:1;
         Integer size = pageSize!=null ? pageSize:10;
         Page onePage = PageHelper.startPage(num,size,true);
 
         Map<String, Object> map = new HashMap<>();
-        List<Material> materials= materialMapper.selectAll();
+        List<MaterialReceive> materials= materialReceiveMapper.selectAll();
         map.put("total",onePage.getTotal());
         map.put("rows",materials);
         return map;
@@ -50,8 +51,8 @@ public class MaterialServiceImpl implements MaterialService {
 
     @Override
     @Transactional(readOnly = false, propagation = Propagation.REQUIRES_NEW,rollbackFor = Exception.class)
-    public boolean deleteMaterials(String[] ids) {
-        int results = materialMapper.deleteByPrimaryKeyBanch(ids);
+    public boolean deleteMaterialReceives(String[] ids) {
+        int results = materialReceiveMapper.deleteByPrimaryKeyBanch(ids);
         if(results>0) {
             return true;
         }
@@ -60,53 +61,36 @@ public class MaterialServiceImpl implements MaterialService {
         }
     }
 
-
-
     @Override
-    public boolean updateMaterial(Material material) {
-        int i = materialMapper.updateByPrimaryKeySelective(material);
-        return i==1;
+    public boolean updateMaterialReceive(MaterialReceive materialReceive) {
+        int row = materialReceiveMapper.updateByPrimaryKeySelective(materialReceive);
+        return row==1;
     }
 
     @Override
-    public Map<String, Object> searchMaterialById(String searchValue, Integer pageNum, Integer pageSize) {
+    public Map<String, Object> searchMaterialReceiveBymaterialId(String materialId, Integer pageNum, Integer pageSize) {
         Integer num = pageNum!=null ? pageNum:1;
         Integer size = pageSize!=null ? pageSize:10;
         Page onePage = PageHelper.startPage(num,size,true);
 
         Map<String, Object> map = new HashMap<>();
-        List<Material> materials= materialMapper.selectLikeID(searchValue);
+        List<MaterialReceive> materialReceives = materialReceiveMapper.selectLikeMaterialId(materialId);
         map.put("total",onePage.getTotal());
-        map.put("rows",materials);
+        map.put("rows",materialReceives);
         return map;
     }
 
     @Override
-    public Map<String, Object> searchMaterialByType(String searchValue, Integer pageNum, Integer pageSize) {
+    public Map<String, Object> searchMaterialReceiveByReceiveId(String receiveId, Integer pageNum, Integer pageSize) {
         Integer num = pageNum!=null ? pageNum:1;
         Integer size = pageSize!=null ? pageSize:10;
         Page onePage = PageHelper.startPage(num,size,true);
 
         Map<String, Object> map = new HashMap<>();
-        List<Material> materials= materialMapper.selectByType(searchValue);
+        List<MaterialReceive> materialReceives = materialReceiveMapper.selectLikePrimaryKey(receiveId);
         map.put("total",onePage.getTotal());
-        map.put("rows",materials);
+        map.put("rows",materialReceives);
         return map;
+
     }
-
-    @Override
-    public Material getMaterial(String materialId) {
-        Material material = materialMapper.selectByPrimaryKey(materialId);
-        return material;
-    }
-
-    @Override
-    public List<Material> selectAllMaterials() {
-        List<Material> materials = materialMapper.selectAll();
-        return materials;
-    }
-
-
-
-
 }
