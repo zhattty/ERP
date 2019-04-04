@@ -33,7 +33,8 @@
       This element was generated on Wed Apr 03 16:47:06 GMT+08:00 2019.
     -->
     select 
-    <include refid="Base_Column_List" />
+    <!--<include refid="Base_Column_List" />-->
+    technology_name
     from technology
     where technology_id = #{technologyId,jdbcType=VARCHAR}
   </select>
@@ -222,5 +223,15 @@
               </if>
       </where>-->
 
+  </select>
+
+  <select id="searchByName2" resultType="string">
+    select technology_id from technology where technology_name = #{searchValue}
+  </select>
+
+  <select id="searchByName3" resultMap="BaseResultMap">
+    select <include refid="Base_Column_List"/>
+    from technology
+    where technology_id=#{technologyId}
   </select>
 </mapper>

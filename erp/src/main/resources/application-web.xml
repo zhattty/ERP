@@ -13,7 +13,7 @@
 
     <context:component-scan base-package="com.erp.web4j.controller"/>
     <!--mvc的配置-->
-    <mvc:annotation-driven/>
+    <mvc:annotation-driven conversion-service="conversionService"/>
     <!--springmvc的视图解析器-->
 
     <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
@@ -23,5 +23,11 @@
     <mvc:resources mapping="/css/**" location="/WEB-INF/css/"/>
     <mvc:resources mapping="/js/**" location="/WEB-INF/js/"/>
     <mvc:resources mapping="/image/**" location="/WEB-INF/image/"/>
-
+    <bean id="conversionService" class="org.springframework.format.support.FormattingConversionServiceFactoryBean">
+        <property name="converters">
+            <list>
+                <bean class="com.erp.web4j.util.DateConverter"/>
+            </list>
+        </property>
+    </bean>
 </beans>
