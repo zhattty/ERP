@@ -75,4 +75,10 @@
       </if>
     </trim>
   </insert>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap">
+    select
+    product_id, product_name, product_type,image, note, status
+    from product
+    where product_id = #{primaykey}
+  </select>
 </mapper>

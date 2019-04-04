@@ -1,6 +1,7 @@
 # Compiled class file
 
 *.class
+*.iml
 
 
 
@@ -8,8 +9,8 @@
 
 *.log
 
-
-
+erp/.idea/
+erp/target/
 # BlueJ files
 
 *.ctxt

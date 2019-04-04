@@ -6,4 +6,6 @@ public interface ProductMapper {
     int insert(Product record);
 
     int insertSelective(Product record);
+
+    Product selectByPrimaryKey(int PrimaryKey);
 }
