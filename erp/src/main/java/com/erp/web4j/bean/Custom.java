@@ -100,4 +100,6 @@ public class Custom {
     public void setNote(String note) {
         this.note = note == null ? null : note.trim();
     }
+
+
 }

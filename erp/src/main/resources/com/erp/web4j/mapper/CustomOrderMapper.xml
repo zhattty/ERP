@@ -214,4 +214,31 @@
       status = #{status,jdbcType=INTEGER}
     where order_id = #{orderId,jdbcType=VARCHAR}
   </update>
+  <resultMap id="LazyLoadResultMap" type="customOrder">
+    <!--<result column="custom_id" jdbcType="VARCHAR" property="customId" />-->
+    <!--<result column="product_id" jdbcType="VARCHAR" property="productId" />-->
+    <id column="order_id" jdbcType="VARCHAR" property="orderId" />
+    <result column="order_date" jdbcType="TIMESTAMP" property="orderDate" />
+    <result column="request_date" jdbcType="TIMESTAMP" property="requestDate" />
+    <result column="note" jdbcType="VARCHAR" property="note" />
+    <result column="quantity" jdbcType="INTEGER" property="quantity" />
+    <result column="unit_price" jdbcType="DECIMAL" property="unitPrice" />
+    <result column="unit" jdbcType="VARCHAR" property="unit" />
+    <result column="image" jdbcType="VARCHAR" property="image" />
+    <result column="file" jdbcType="VARCHAR" property="file" />
+    <result column="status" jdbcType="INTEGER" property="status" />
+    <!--加载custom和product-->
+    <association column="custom_id" property="custom" select="com.erp.web4j.mapper.CustomMapper.selectByPrimaryKey" />
+    <association column="product_id" property="product" select="com.erp.web4j.mapper.ProductMapper.selectByPrimaryKey"/>
+  </resultMap>
+  <select id="listOrders" resultMap="LazyLoadResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from c_order
+    limit #{rows} offset #{offset}
+  </select>
+
+  <select id="countOrderRecords" resultType="_int">
+    select  count(*) from c_order
+  </select>
 </mapper>
