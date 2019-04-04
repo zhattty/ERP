@@ -27,8 +27,18 @@ public class MaterialServiceImpl implements MaterialService {
 
 
     @Override
+    public boolean addMaterial(Material material) {
+        int insert = materialMapper.insert(material);
+        return insert==1;
+    }
+
+    @Override
     public Map<String, Object> listMaterialByPage(Integer pageNum, Integer pageSize) {
-        Page onePage = PageHelper.startPage(pageNum,pageSize,true);
+        /*分页设置*/
+        Integer num = pageNum!=null ? pageNum:1;
+        Integer size = pageSize!=null ? pageSize:10;
+        Page onePage = PageHelper.startPage(num,size,true);
+
         Map<String, Object> map = new HashMap<>();
         List<Material> materials= materialMapper.selectAll();
         map.put("total",onePage.getTotal());
