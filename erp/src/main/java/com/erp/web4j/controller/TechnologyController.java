@@ -1,5 +1,6 @@
 package com.erp.web4j.controller;
 
+import com.erp.web4j.bean.StatusJson;
 import com.erp.web4j.bean.Technology;
 import com.erp.web4j.service.TechnologyService;
 import org.apache.ibatis.annotations.Param;
@@ -97,8 +98,28 @@ class TechnologyController {
 
     @RequestMapping("add")
     public String add(@Param("technology")Technology technology){
-        //technologyService.insert(technology);
         return "technology_add";
+    }
+
+    /**
+     * 接收前端传输的technology对象，返回查询结果的StatusJson
+     * @param technology
+     * @return json
+     */
+    @RequestMapping("insert")
+    @ResponseBody
+    public StatusJson insert(@Param("technology")Technology technology){
+        //StatusJson statusJson = new StatusJson();
+        if(technology!=null) {
+            boolean flag = technologyService.insert(technology);
+            if(flag ){
+                return new StatusJson("200","OK",null);
+            }else {
+                return new StatusJson("0","该工艺编号已经存在，请更换工艺编号！",null);
+            }
+        }else {
+            return new StatusJson("0","输入有误，请重新输入",null);
+        }
     }
 
 }

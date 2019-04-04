@@ -42,5 +42,21 @@ public class TechnologyServiceImpl implements TechnologyService {
         return technologyMapper.searchByName(searchValue,(page-1)*rows,rows);
     }
 
+    /**
+     * 插入操作
+     * @param technology
+     * @return 返回true，插入成功  返回false ， 插入失败
+     */
+    @Override
+    public boolean insert(Technology technology) {
+        Technology selectByPrimaryKey = technologyMapper.selectByPrimaryKey(technology.getTechnologyId());
+        if(selectByPrimaryKey==null) {
+            int i = technologyMapper.insert(technology);
+            return i == 1;
+        }else {
+            return false;
+        }
+    }
+
 
 }
