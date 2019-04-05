@@ -19,6 +19,10 @@ public class MaterialConsume {
 
     private String note;
 
+    private Material material;
+
+    private Work work;
+
     public String getConsumeId() {
         return consumeId;
     }
@@ -81,5 +85,21 @@ public class MaterialConsume {
 
     public void setNote(String note) {
         this.note = note == null ? null : note.trim();
+    }
+
+    public Material getMaterial() {
+        return material;
+    }
+
+    public void setMaterial(Material material) {
+        this.material = material;
+    }
+
+    public Work getWork() {
+        return work;
+    }
+
+    public void setWork(Work work) {
+        this.work = work;
     }
 }

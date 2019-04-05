@@ -17,6 +17,8 @@ public class MaterialReceive {
 
     private String note;
 
+    private Material material;
+
     public String getReceiveId() {
         return receiveId;
     }
@@ -71,5 +73,13 @@ public class MaterialReceive {
 
     public void setNote(String note) {
         this.note = note == null ? null : note.trim();
+    }
+
+    public Material getMaterial() {
+        return material;
+    }
+
+    public void setMaterial(Material material) {
+        this.material = material;
     }
 }

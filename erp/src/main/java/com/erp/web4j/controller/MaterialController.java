@@ -29,7 +29,7 @@ public class MaterialController {
     private MaterialService materialService;
     @Autowired
     private MaterialReceiveService materialReceiveService;
-    
+
     @Autowired
     private MaterialConsumeService materialConsumeService;
 
@@ -123,16 +123,21 @@ public class MaterialController {
     @RequestMapping(value = "material/insert",produces = "application/json; charset=utf-8")
     @ResponseBody
     public ResponseMsg insertMaterial(Material material) {
-        ResponseMsg msg = new ResponseMsg();
-        boolean b = materialService.addMaterial(material);
-        if (b) {
-            msg.setStatus(200);
-            msg.setMsg("成功");
+        Material select = materialService.getMaterial(material.getMaterialId());
+        if(select!=null) {
+            return new ResponseMsg(null,"物料编号已存在，请重新输入","");
         }
-        else{
-            msg.setMsg("添加失败");
+        else {
+            boolean b = materialService.addMaterial(material);
+            if (b) {
+                return new ResponseMsg(200,"添加成功！","");
+
+            }
+            else{
+                return new ResponseMsg(null,"添加失败！","");
+            }
         }
-        return msg;
+
     }
 
 
@@ -286,17 +291,21 @@ public class MaterialController {
     @RequestMapping(value = "materialReceive/insert",produces = "application/json; charset=utf-8")
     @ResponseBody
     public ResponseMsg insertMaterialReceive(MaterialReceive materialReceive) {
-        ResponseMsg msg = new ResponseMsg();
+        MaterialReceive select = materialReceiveService.findMaterialReceive(materialReceive.getReceiveId());
 
-        boolean b = materialReceiveService.addMaterialReceive(materialReceive);
-        if (b) {
-            msg.setStatus(200);
-            msg.setMsg("成功");
+        if(select!=null) {
+            return new ResponseMsg(null,"物料收入编号已存在，请重新输入","");
         }
-        else{
-            msg.setMsg("添加失败");
+        else {
+            boolean b = materialReceiveService.addMaterialReceive(materialReceive);
+            if (b) {
+                return new ResponseMsg(200,"添加成功！","");
+
+            }
+            else{
+                return new ResponseMsg(null,"添加失败！","");
+            }
         }
-        return msg;
     }
 
     @RequestMapping("/materialReceive/delete_judge")
@@ -346,7 +355,7 @@ public class MaterialController {
      * @param materialReceive
      * @return
      */
-    @RequestMapping(value = {"materialReceive/update_add","materialReceive/update_note"})
+    @RequestMapping(value = {"/materialReceive/update_all","/materialReceive/update_note"})
     @ResponseBody
     public ResponseMsg updateMaterialReceive(MaterialReceive materialReceive) {
 
@@ -437,17 +446,21 @@ public class MaterialController {
     @RequestMapping(value = "materialConsume/insert",produces = "application/json; charset=utf-8")
     @ResponseBody
     public ResponseMsg insertMaterialConsume(MaterialConsume materialConsume) {
-        ResponseMsg msg = new ResponseMsg();
+        MaterialConsume select = materialConsumeService.findMaterialConsume(materialConsume.getConsumeId());
 
-        boolean b = materialConsumeService.addMaterialConsume(materialConsume);
-        if (b) {
-            msg.setStatus(200);
-            msg.setMsg("成功");
+        if(select!=null) {
+            return new ResponseMsg(null,"物料收入编号已存在，请重新输入","");
         }
-        else{
-            msg.setMsg("添加失败");
+        else {
+            boolean b = materialConsumeService.addMaterialConsume(materialConsume);
+            if (b) {
+                return new ResponseMsg(200,"添加成功！","");
+
+            }
+            else{
+                return new ResponseMsg(null,"添加失败！","");
+            }
         }
-        return msg;
     }
 
     @RequestMapping("/materialConsume/delete_judge")

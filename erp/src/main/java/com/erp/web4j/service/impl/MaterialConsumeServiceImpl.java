@@ -1,6 +1,5 @@
 package com.erp.web4j.service.impl;
 
-import com.erp.web4j.bean.Material;
 import com.erp.web4j.bean.MaterialConsume;
 import com.erp.web4j.mapper.MaterialConsumeMapper;
 import com.erp.web4j.service.MaterialConsumeService;
@@ -92,5 +91,11 @@ public class MaterialConsumeServiceImpl implements MaterialConsumeService {
         map.put("total",onePage.getTotal());
         map.put("rows",materialConsumes);
         return map;
+    }
+
+    @Override
+    public MaterialConsume findMaterialConsume(String consumeId) {
+        MaterialConsume materialConsume = materialConsumeMapper.selectByPrimaryKey(consumeId);
+        return materialConsume;
     }
 }

@@ -16,6 +16,15 @@ public class ResponseMsg implements Serializable {
     private Integer status;
     private String data;
 
+    public ResponseMsg() {
+    }
+
+    public ResponseMsg(Integer status, String msg, String data) {
+        this.status = status;
+        this.msg = msg;
+        this.data = data;
+    }
+
     public String getMsg() {
         return msg;
     }
