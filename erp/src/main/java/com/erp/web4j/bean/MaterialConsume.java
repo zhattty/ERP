@@ -1,16 +1,31 @@
 package com.erp.web4j.bean;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+import org.hibernate.validator.constraints.NotBlank;
+import org.springframework.format.annotation.DateTimeFormat;
+import org.springframework.test.context.TestExecutionListeners;
+
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Past;
 import java.util.Date;
 
 public class MaterialConsume {
+    @NotBlank(message = "物料消耗的编号不能为空")
     private String consumeId;
 
     private String workId;
 
+    @NotBlank(message = "物料编号不能为空")
     private String materialId;
 
+    @NotNull(message = "数量不能为空")
+    @Min(value = 1,message = "数量请填写正整数")
     private Integer consumeAmount;
 
+    @JsonFormat(pattern="yyyy-MM-dd HH:mm:ss",timezone="GMT+8")
+    @DateTimeFormat(pattern="yyyy-MM-dd HH:mm:ss")
+    @Past(message = "日期不符合实际情况，请修改")
     private Date consumeDate;
 
     private String sender;
@@ -102,4 +117,6 @@ public class MaterialConsume {
     public void setWork(Work work) {
         this.work = work;
     }
+
+
 }

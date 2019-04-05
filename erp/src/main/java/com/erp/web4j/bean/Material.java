@@ -1,12 +1,18 @@
 package com.erp.web4j.bean;
 
+import org.hibernate.validator.constraints.NotBlank;
+
+import javax.validation.constraints.Digits;
+import javax.validation.constraints.NotNull;
+
 public class Material {
+    @NotBlank(message = "物料编号不能为空")
     private String materialId;
 
     private String materialType;
 
     private String status;
-
+    @NotNull(message = "库存数量不能为空")
     private Integer remaining;
 
     private String note;

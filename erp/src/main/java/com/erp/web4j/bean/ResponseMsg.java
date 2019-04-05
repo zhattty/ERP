@@ -4,7 +4,7 @@ import java.io.Serializable;
 
 /**
  * ClassName: ResponseMsg
- * Description:
+ * Description: 返回信息类
  *
  * @author mighty
  * @version 1.0
@@ -12,9 +12,26 @@ import java.io.Serializable;
  */
 public class ResponseMsg implements Serializable {
     private static final long serialVersionUID = -5872917581716806078L;
+    /**
+     * 返回的信息
+     */
     private String msg;
+
+    /**
+     * 返回的状态码
+     */
     private Integer status;
+
+    /**
+     * 返回的数据
+     */
     private String data;
+    /**
+     * 状态标识
+     */
+    public static ResponseMsg OK = new ResponseMsg(200,"成功", null);
+    public static ResponseMsg FAIL = new ResponseMsg(null,"操作失败，请重试",null);
+
 
     public ResponseMsg() {
     }
