@@ -51,8 +51,8 @@ public class MaterialServiceImpl implements MaterialService {
     @Override
     @Transactional(readOnly = false, propagation = Propagation.REQUIRES_NEW,rollbackFor = Exception.class)
     public boolean deleteMaterials(String[] ids) {
-        int results = materialMapper.deleteByPrimaryKeyBanch(ids);
-        if(results>0) {
+        int i = materialMapper.deleteByPrimaryKeyBanch(ids);
+        if(i>0) {
             return true;
         }
         else {
@@ -93,20 +93,6 @@ public class MaterialServiceImpl implements MaterialService {
         map.put("rows",materials);
         return map;
     }
-
-    @Override
-    public Material getMaterial(String materialId) {
-        Material material = materialMapper.selectByPrimaryKey(materialId);
-        return material;
-    }
-
-    @Override
-    public List<Material> selectAllMaterials() {
-        List<Material> materials = materialMapper.selectAll();
-        return materials;
-    }
-
-
 
 
 }

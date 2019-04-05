@@ -1,6 +1,7 @@
 package com.erp.web4j.bean;
 
 import java.util.Date;
+import java.util.List;
 
 public class TechnologyRequirement {
     private String technologyRequirementId;
@@ -13,6 +14,34 @@ public class TechnologyRequirement {
 
     private Date reviseTime;
 
+   //private Technology technology;
+   private String technologyName;
+
+    public String getTechnologyName() {
+        return technologyName;
+    }
+
+    public void setTechnologyName(String technologyName) {
+        this.technologyName = technologyName;
+    }
+
+   /* public Technology getTechnology() {
+        return technology;
+    }
+
+    public void setTechnology(Technology technology) {
+        this.technology = technology;
+    }*/
+  /* private String technologyName;
+
+    public String getTechnologyName() {
+        return technologyName;
+    }
+
+    public void setTechnologyName(String technologyName) {
+        this.technologyName = technologyName;
+    }
+*/
     public String getTechnologyRequirementId() {
         return technologyRequirementId;
     }
