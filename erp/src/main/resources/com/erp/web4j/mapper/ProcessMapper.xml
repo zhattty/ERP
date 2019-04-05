@@ -119,4 +119,33 @@
       quota = #{quota,jdbcType=INTEGER}
     where process_id = #{processId,jdbcType=VARCHAR}
   </update>
+
+
+  <select id="countOrderRecords" resultType="int">
+    select count(*) from process;
+  </select>
+
+  <select id="searchByPrimaryKey" resultMap="BaseResultMap">
+    select <include refid="Base_Column_List"/>
+    from process
+  </select>
+
+  <delete id="deleteBatch" parameterType="int" >
+    delete  from process
+    where process_id in (
+    <foreach collection="array" item="id" separator=",">
+      #{id}
+    </foreach>
+    )
+  </delete>
+
+  <select id="searchByPrimaryKey2" resultMap="BaseResultMap">
+    select <include refid="Base_Column_List"/>
+    from process where process_id = #{searchValue}
+  </select>
+
+  <select id="searchByTechnologyId" resultMap="BaseResultMap">
+    select <include refid="Base_Column_List"/>
+    from process where technology_plan_id = #{searchValue}
+  </select>
 </mapper>

@@ -19,6 +19,31 @@ public class TechnologyPlan {
 
     private Date technologyPlanEnd;
 
+    private String technologyName;
+
+    @Override
+    public String toString() {
+        return "TechnologyPlan{" +
+                "technologyPlanId='" + technologyPlanId + '\'' +
+                ", technologyId='" + technologyId + '\'' +
+                ", batchAmount=" + batchAmount +
+                ", startPlan=" + startPlan +
+                ", endPlan=" + endPlan +
+                ", commitPlan=" + commitPlan +
+                ", technologyPlanStart=" + technologyPlanStart +
+                ", technologyPlanEnd=" + technologyPlanEnd +
+                ", technologyName='" + technologyName + '\'' +
+                '}';
+    }
+
+    public String getTechnologyName() {
+        return technologyName;
+    }
+
+    public void setTechnologyName(String technologyName) {
+        this.technologyName = technologyName;
+    }
+
     public String getTechnologyPlanId() {
         return technologyPlanId;
     }

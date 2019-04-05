@@ -37,7 +37,7 @@
       from technology_requirement
       limit #{rows} offset #{offset}
     </select>-->
-  <resultMap id="associationQuery" type="TechnologyRequirement">
+  <resultMap id="associationQuery" type="technologyrequirement">
     <id column="technology_requirement_id" jdbcType="VARCHAR" property="technologyRequirementId" />
 
     <result column="technology_id" jdbcType="VARCHAR" property="technologyId" />

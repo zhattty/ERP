@@ -1,5 +1,5 @@
 package com.erp.web4j.service.impl;
-
+/*
 import com.erp.web4j.bean.Material;
 import com.erp.web4j.bean.MaterialReceive;
 
@@ -17,6 +17,22 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+*/
+
+import com.erp.web4j.bean.MaterialReceive;
+import com.erp.web4j.mapper.MaterialReceiveMapper;
+import com.erp.web4j.service.MaterialReceiveService;
+import com.github.pagehelper.Page;
+import com.github.pagehelper.PageHelper;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Propagation;
+import org.springframework.transaction.annotation.Transactional;
+
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
 /**
  * ClassName: MaterialReceiveServiceImpl
  * Description:
@@ -25,6 +41,7 @@ import java.util.Map;
  * @version 1.0
  * @date 2019/4/4  19:55
  */
+
 @Service
 public class MaterialReceiveServiceImpl implements MaterialReceiveService {
     @Autowired
@@ -100,3 +117,4 @@ public class MaterialReceiveServiceImpl implements MaterialReceiveService {
         return materialReceive;
     }
 }
+

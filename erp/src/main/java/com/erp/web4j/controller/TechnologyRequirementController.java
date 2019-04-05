@@ -153,16 +153,16 @@ public class TechnologyRequirementController {
      * @param rows
      * @return 查询到的数据
      */
-    @RequestMapping("search_technology_by_technologyId")
+    @RequestMapping("search_technologyRequirement_by_technologyRequirementId")
     @ResponseBody
-    public List<Technology> search_technology_by_technologyId(String  searchValue, Integer page,@Param("rows")Integer rows){
+    public List<TechnologyRequirement> search_technology_by_technologyId(String  searchValue, Integer page,@Param("rows")Integer rows){
         if (page == null || page <= 0){
             page = 1;
         }
         if (rows<=0){
             rows = 10;
         }
-        List<Technology> technologies = requirementService.searchByPrimaryKey(searchValue, page, rows);
+        List<TechnologyRequirement> technologies = requirementService.searchByPrimaryKey(searchValue, page, rows);
         return technologies;
     }
 
@@ -173,16 +173,16 @@ public class TechnologyRequirementController {
      * @param rows
      * @return 返回查询到的数据
      */
-    @RequestMapping("search_technology_by_technologyName")
+    @RequestMapping("search_technologyRequirement_by_technologyName")
     @ResponseBody
-    public List<Technology> searchTechnologyByTechnologyName(@RequestParam("searchValue")String  searchValue,@Param("page") Integer page,@Param("rows")Integer rows){
+    public List<TechnologyRequirement> searchTechnologyByTechnologyName(@RequestParam("searchValue")String  searchValue,@Param("page") Integer page,@Param("rows")Integer rows){
         if (page == null || page <= 0){
             page = 1;
         }
         if (rows<=0){
             rows = 10;
         }
-        List<Technology> technologies = requirementService.searchByName(searchValue, page, rows);
+        List<TechnologyRequirement> technologies = requirementService.searchByName(searchValue, page, rows);
         return technologies;
     }
 }
