@@ -19,6 +19,42 @@ public class UnqualifyApply {
 
     private String note;
 
+
+
+    private String productName;
+
+
+
+    private String employeeName;
+
+    private String empName;
+
+    public String getEmpName() {
+        return empName;
+    }
+
+    public void setEmpName(String empName) {
+        this.empName = empName;
+    }
+
+    public String getProductName() {
+        return productName;
+    }
+
+    public void setProductName(String productName) {
+        this.productName = productName;
+    }
+
+    public String getEmployeeName() {
+        return employeeName;
+    }
+
+    public void setEmployeeName(String employeeName) {
+        this.employeeName = employeeName;
+    }
+
+
+
     public String getUnqualifyApplyId() {
         return unqualifyApplyId;
     }

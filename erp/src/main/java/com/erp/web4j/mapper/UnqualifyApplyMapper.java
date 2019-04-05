@@ -21,5 +21,16 @@ public interface UnqualifyApplyMapper {
 
     Integer countUnqualifyRecords();
 
-    ArrayList<UnqualifyApply> queryUnqualifyApply(@Param("offset") Integer offset,@Param("rows") Integer rows);
+    ArrayList<UnqualifyApply> queryUnqualifyApply(@Param("offset") Integer offset,@Param("rows")Integer rows);
+
+    int deleteByIds(@Param("ids")int[] ids);
+
+    int countUnqualifyRecordsById(@Param("id") String id);
+
+    ArrayList<UnqualifyApply> listUnqualifyApply(@Param("id") String searchValue, @Param("offset") Integer offset, @Param("rows")Integer rows);
+
+    ArrayList<UnqualifyApply> listUnqualifyApplyByProductName(@Param("productName")String searchValue, @Param("offset")Integer offset, @Param("rows")Integer rows);
+
+    int countUnqualifyRecordsByProductName(String searchValue);
+
 }
