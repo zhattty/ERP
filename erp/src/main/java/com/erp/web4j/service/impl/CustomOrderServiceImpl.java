@@ -33,4 +33,50 @@ public class CustomOrderServiceImpl implements CustomOrderService {
     public int countOrderRecords() {
         return customOrderMapper.countOrderRecords();
     }
+
+    @Override
+    public int insert(CustomOrder customOrder) {
+        return customOrderMapper.insertSelective(customOrder);
+    }
+
+    @Override
+    public int deleteCustomOrderByIds(int[] ids) {
+        return customOrderMapper.deleteByIds(ids);
+    }
+
+    @Override
+    public int updateCustomOrderByPrimaryKey(CustomOrder customOrder) {
+        return customOrderMapper.updateByPrimaryKey(customOrder);
+    }
+
+    @Override
+    public List<CustomOrder> listOrdersById(String id, Integer page, Integer rows) {
+
+        return customOrderMapper.listOrdersById("%"+id+"%",(page-1)*rows,rows);
+    }
+
+    @Override
+    public Integer countOrderRecordsById(String searchValue) {
+        return customOrderMapper.countOrderRecordsById("%"+searchValue+"%");
+    }
+
+    @Override
+    public List<CustomOrder> listOrdersByCustomName(String searchValue, Integer page, Integer rows) {
+        return customOrderMapper.listOrdersByCustomName("%"+searchValue+"%",(page-1)*rows,rows);
+    }
+
+    @Override
+    public Integer countOrderRecordsByCustomName(String searchValue) {
+        return customOrderMapper.countOrderRecordsByCustomName("%"+searchValue+"%");
+    }
+
+    @Override
+    public Integer countOrderRecordsByProductName(String searchValue) {
+        return customOrderMapper.countOrderRecordsByProductName("%"+searchValue+"%");
+    }
+
+    @Override
+    public List<CustomOrder> listOrdersByProductName(String searchValue, Integer page, Integer rows) {
+        return customOrderMapper.listOrdersByProductName("%"+searchValue+"%",(page-1)*rows,rows);
+    }
 }
