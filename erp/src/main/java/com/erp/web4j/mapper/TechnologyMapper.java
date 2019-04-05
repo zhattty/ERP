@@ -1,6 +1,7 @@
 package com.erp.web4j.mapper;
 
 import com.erp.web4j.bean.Technology;
+import com.erp.web4j.bean.TechnologyPlan;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
@@ -29,4 +30,5 @@ public interface TechnologyMapper {
     String searchByName2(@Param("searchValue") String searchValue);
 
     Technology searchByName3(@Param("technologyId") String technologyId);
+
 }

@@ -8,6 +8,9 @@ import com.erp.web4j.service.TechnologyRequirementService;
 import com.erp.web4j.service.TechnologyService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Isolation;
+import org.springframework.transaction.annotation.Propagation;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
@@ -18,6 +21,7 @@ import java.util.List;
  * Date 2019/4/4 Time 10:11
  */
 @Service
+@Transactional(propagation = Propagation.REQUIRED,isolation = Isolation.DEFAULT)
 public class TechnologyRequirementServiceImpl implements TechnologyRequirementService {
 
     @Autowired
@@ -69,13 +73,13 @@ public class TechnologyRequirementServiceImpl implements TechnologyRequirementSe
     }
 
     @Override
-    public List<Technology> searchByName(String searchValue, Integer page, Integer rows) {
+    public List<TechnologyRequirement> searchByName(String searchValue, Integer page, Integer rows) {
         return technologyRequirementMapper.searchByName(searchValue,(page-1)*rows,rows);
 
     }
 
     @Override
-    public List<Technology> searchByPrimaryKey(String searchValue, Integer page, Integer rows) {
+    public List<TechnologyRequirement> searchByPrimaryKey(String searchValue, Integer page, Integer rows) {
         return technologyRequirementMapper.searchByPrimaryKey(searchValue,(page-1)*rows,rows);
 
     }

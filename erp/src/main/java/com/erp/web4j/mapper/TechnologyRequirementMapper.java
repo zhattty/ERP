@@ -25,7 +25,7 @@ public interface TechnologyRequirementMapper {
 
     int deleteBatch(int[] ids);
 
-    List<Technology> searchByName(@Param("searchValue") String searchValue,@Param("offset") Integer offset, @Param("rows")Integer rows);
+    List<TechnologyRequirement> searchByName(@Param("searchValue") String searchValue,@Param("offset") Integer offset, @Param("rows")Integer rows);
 
-    List<Technology> searchByPrimaryKey(@Param("searchValue") String searchValue,@Param("offset") Integer offset, @Param("rows")Integer rows);
+    List<TechnologyRequirement> searchByPrimaryKey(@Param("searchValue") String searchValue,@Param("offset") Integer offset, @Param("rows")Integer rows);
 }

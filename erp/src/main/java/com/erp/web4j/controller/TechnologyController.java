@@ -183,9 +183,15 @@ class TechnologyController {
     @RequestMapping("get/{technologyName}")
     @ResponseBody
     public Technology selectTechnologyById(@PathVariable String technologyName){
-        Technology technology = technologyService.selectTechnologyById(technologyName);
-        System.out.println(technology);
-        return technology;
+        return technologyService.selectTechnologyById(technologyName);
+
+
+    }
+
+    @RequestMapping("get_data")
+    @ResponseBody
+    public List<Technology> getData() {
+        return technologyService.findTechnology(1, 30);
 
     }
 }
