@@ -1,3 +1,4 @@
+/*
 package com.erp.web4j.controller;
 
 import com.erp.web4j.bean.QueryVo;
@@ -9,10 +10,12 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+*/
 /**
  * Created by wawawa
  * Date 2019/4/4 Time 10:10
- */
+ *//*
+
 @Controller
 @RequestMapping("technologyRequirement")
 public class technologyRequirementController {
@@ -38,3 +41,4 @@ public class technologyRequirementController {
 
     }
 }
+*/

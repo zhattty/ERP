@@ -33,6 +33,7 @@ public class MaterialController {
     @Autowired
     private MaterialConsumeService materialConsumeService;
 
+
     /***
      *
      * ---------------------- Material Controller  ----------------------
@@ -379,9 +380,9 @@ public class MaterialController {
     }
 
     /**
-     * function: search materials by id or type 按条件查询
+     * function: search materialConsumes by id 按条件查询
      * @param searchValue
-     * @param name
+     * @param name  path中的后缀
      * @param pageNum
      * @param pageSize
      * @return json
@@ -394,8 +395,11 @@ public class MaterialController {
 
             map=  materialConsumeService.searchMaterialConsumeBymaterialId(searchValue,pageNum, pageSize);
         }
-        if("ConsumeId".equals(name)) {
+        if("consumeId".equals(name)) {
             map = materialConsumeService.searchMaterialConsumeByConsumeId(searchValue,pageNum,pageSize);
+        }
+        if("workId".equals(name)) {
+            map = materialConsumeService.searchMaterialConsumeByWorkId(searchValue,pageNum, pageSize);
         }
         return map;
     }
@@ -493,7 +497,7 @@ public class MaterialController {
      * @param materialConsume
      * @return
      */
-    @RequestMapping(value = {"materialConsume/update_add","materialConsume/update_note"})
+    @RequestMapping(value = {"/materialConsume/update_all","/materialConsume/update_note"})
     @ResponseBody
     public ResponseMsg updateMaterialConsume(MaterialConsume materialConsume) {
 
