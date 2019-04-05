@@ -125,7 +125,7 @@ class TechnologyController {
 
     @RequestMapping("edit_judge")
     @ResponseBody
-    public String edit_judge(){
+    public String editJudge(){
         return "";
     }
 
@@ -141,7 +141,7 @@ class TechnologyController {
      */
     @RequestMapping("update_all")
     @ResponseBody
-    public StatusJson update_all(Technology technology){
+    public StatusJson updateAll(Technology technology){
         if(technology!=null) {
             boolean flag = technologyService.update(technology);
             if(flag ){
@@ -156,7 +156,7 @@ class TechnologyController {
 
     @RequestMapping("delete_judge")
     @ResponseBody
-    public String delete_judge(){
+    public String deleteJudge(){
         return "";
     }
 
@@ -167,7 +167,7 @@ class TechnologyController {
      */
     @RequestMapping("delete_batch")
     @ResponseBody
-    public StatusJson delete_batch(@RequestParam("ids")int[] ids){
+    public StatusJson deleteBatch(@RequestParam("ids")int[] ids){
         if(ids!=null) {
             boolean flag = technologyService.deleteBatch(ids);
             if(flag ){
@@ -184,8 +184,6 @@ class TechnologyController {
     @ResponseBody
     public Technology selectTechnologyById(@PathVariable String technologyName){
         return technologyService.selectTechnologyById(technologyName);
-
-
     }
 
     @RequestMapping("get_data")

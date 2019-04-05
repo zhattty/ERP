@@ -12,7 +12,7 @@ import java.util.List;
 public interface TechnologyPlanService {
 
     /**
-     * 查找所有的记录数
+     * 输出所有的记录数
      * @return
      */
     Integer countOrderRecords();

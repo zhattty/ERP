@@ -158,4 +158,11 @@ public class TechnologyPlanController {
         }
         return  technologyPlanService.searchByName(searchValue, page, rows);
     }
+
+    @RequestMapping("get_data")
+    @ResponseBody
+    public List<TechnologyPlan> getData() {
+        return technologyPlanService.listOrders(1,30);
+
+    }
 }

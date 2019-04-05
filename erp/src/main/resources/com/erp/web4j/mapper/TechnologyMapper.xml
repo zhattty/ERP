@@ -66,6 +66,8 @@
     </foreach>
     )
   </delete>
+
+
   <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
     <!--
       WARNING - @mbg.generated
