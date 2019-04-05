@@ -2,8 +2,6 @@ package com.erp.web4j.mapper;
 
 import com.erp.web4j.bean.MaterialConsume;
 
-import java.util.List;
-
 public interface MaterialConsumeMapper {
     int deleteByPrimaryKey(String consumeId);
 
@@ -16,6 +14,4 @@ public interface MaterialConsumeMapper {
     int updateByPrimaryKeySelective(MaterialConsume record);
 
     int updateByPrimaryKey(MaterialConsume record);
-
-    List<MaterialConsume> selectAll();
 }

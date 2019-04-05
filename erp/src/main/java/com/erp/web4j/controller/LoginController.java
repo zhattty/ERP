@@ -3,7 +3,6 @@ package com.erp.web4j.controller;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
 
 /**
  * Created by wawawa
@@ -18,9 +17,4 @@ public class LoginController {
         return pathName;
     }
 
-    @RequestMapping("*/*_judge")
-    @ResponseBody
-    public String jump_Judge(){
-        return "{}";
-    }
 }
