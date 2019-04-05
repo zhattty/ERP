@@ -93,4 +93,10 @@ public class MaterialReceiveServiceImpl implements MaterialReceiveService {
         return map;
 
     }
+
+    @Override
+    public MaterialReceive findMaterialReceive(String receiveId) {
+        MaterialReceive materialReceive = materialReceiveMapper.selectByPrimaryKey(receiveId);
+        return materialReceive;
+    }
 }

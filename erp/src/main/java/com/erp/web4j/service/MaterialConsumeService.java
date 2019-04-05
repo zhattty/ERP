@@ -26,4 +26,6 @@ public interface MaterialConsumeService {
     boolean updateMaterialConsume(MaterialConsume materialConsume);
 
     Map<String, Object> searchMaterialConsumeByWorkId(String searchValue, Integer pageNum, Integer pageSize);
+
+    MaterialConsume findMaterialConsume(String consumeId);
 }

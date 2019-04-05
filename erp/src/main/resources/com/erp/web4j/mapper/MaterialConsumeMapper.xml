@@ -80,8 +80,8 @@
   </select>
   <select id="selectByConsumeId" resultMap="MaterialConsumeMap">
     SELECT consume_id, material_consume.work_id, material_consume.material_id,consume_amount,consume_date,sender, receiver,
-    material.*,work.*,material_consume.`note`
-    FROM `material_consume`, material,`work` as notem
+    material.*,work.*,material_consume.`note` as notem
+    FROM `material_consume`, material,`work`
     WHERE `material_consume`.`material_id` = `material`.`material_id` AND `material_consume`.`work_id` = `work`.work_id
     AND `material_consume`.`consume_id` LIKE CONCAT('%',#{consumeId},'%')
   </select>
@@ -89,7 +89,7 @@
     SELECT consume_id, material_consume.work_id, material_consume.material_id,consume_amount,consume_date,sender, receiver,
     material.*,work.*,material_consume.`note` as notem
     FROM `material_consume`, material,`work`
-    WHERE `material_consume`.`material_id` = `material`.`material_id` AND `material_consume`.`work_id` = work.work_id
+    WHERE `material_consume`.`material_id` = `material`.`material_id` AND `material_consume`.`work_id` = `work`.work_id
     AND `work`.`work_id` LIKE CONCAT('%',#{wordId},'%')
   </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
@@ -103,7 +103,7 @@
   </delete>
   <delete id="deleteByPrimaryKeyBantch">
     delete from material_consume
-    where consume_id =
+    where consume_id in
     <foreach collection="ids" item="item" index="index" open="(" close=")" separator=",">
       #{item}
     </foreach>
