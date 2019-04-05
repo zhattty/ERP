@@ -16,5 +16,9 @@ public class LoginController {
     public String index(@PathVariable String pathName){
         return pathName;
     }
-
+ @RequestMapping("*/*_judge")
+    @ResponseBody
+    public String jump_Judge(){
+        return "{}";
+    }
 }
