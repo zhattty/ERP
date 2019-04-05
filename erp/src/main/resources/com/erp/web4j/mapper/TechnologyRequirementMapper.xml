@@ -13,45 +13,6 @@
     <result column="add_time" jdbcType="TIMESTAMP" property="addTime" />
     <result column="revise_time" jdbcType="TIMESTAMP" property="reviseTime" />
   </resultMap>
-
-  <select id="listOrders" resultMap="associationQuery">
-    select
-    req.technology_requirement_id,
-    req.technology_id,
-    t.technology_name as t_technologyName,
-    req.requirement,
-    req.add_time,
-    req.revise_time
-    from technology_requirement req left join technology t
-    on req.technology_id = t.technology_id
-    limit #{rows} offset #{offset}
-  </select>
-<!--  <select id="listOrders" resultMap="associationQuery">
-    select
-    technology_requirement_id,
-    technology_id,
-    /*t.technology_name as t_technologyName,*/
-    requirement,
-    add_time,
-    revise_time
-    from technology_requirement
-    limit #{rows} offset #{offset}
-  </select>-->
-  <resultMap id="associationQuery" type="TechnologyRequirement">
-    <id column="technology_requirement_id" jdbcType="VARCHAR" property="technologyRequirementId" />
-
-    <result column="technology_id" jdbcType="VARCHAR" property="technologyId" />
-    <result column="requirement" jdbcType="VARCHAR" property="requirement" />
-    <result column="add_time" jdbcType="TIMESTAMP" property="addTime" />
-    <result column="revise_time" jdbcType="TIMESTAMP" property="reviseTime" />
-    <result column="t_technologyName" property="technologyName"/>
-    <!--<association column="technology_id" property="technology" javaType="technology" >
-        <result column="t_technologyName" property="technologyName"/>
-    </association>-->
-
-  </resultMap>
-  
-  
   <sql id="Base_Column_List">
     <!--
       WARNING - @mbg.generated
@@ -87,7 +48,7 @@
       This element was generated on Wed Apr 03 16:47:06 GMT+08:00 2019.
     -->
     insert into technology_requirement (technology_requirement_id, technology_id, 
-      requirement,add_time,revise_time
+      requirement, add_time, revise_time
       )
     values (#{technologyRequirementId,jdbcType=VARCHAR}, #{technologyId,jdbcType=VARCHAR}, 
       #{requirement,jdbcType=VARCHAR}, #{addTime,jdbcType=TIMESTAMP}, #{reviseTime,jdbcType=TIMESTAMP}
@@ -172,37 +133,7 @@
     where technology_requirement_id = #{technologyRequirementId,jdbcType=VARCHAR}
   </update>
 
-
-
-  <select id="countOrderRecords" resultType="_int">
-    select count(*) from technology_requirement
-  </select>
-
-  <delete id="deleteBatch" parameterType="int" >
-    delete  from technology_requirement
-    where technology_requirement_id in (
-    <foreach collection="array" item="id" separator=",">
-      #{id}
-    </foreach>
-    )
-  </delete>
-
-  <select id="searchByPrimaryKey" resultMap="BaseResultMap">
-    select
-
-    <include refid="Base_Column_List" />
-    from technology_requirement
-
-    where technology_requirement_id=#{searchValue} limit #{rows} offset #{offset}
-  </select>
-
-  <select id="searchByName" resultMap="BaseResultMap">
-    select
-    <include refid="Base_Column_List" />
-    from technology_requirement
-
-    where technology_requirement_name like CONCAT(CONCAT('%', #{searchValue}), '%')
-
-    limit #{rows} offset #{offset}
+  <select id="listOrders" resultMap="BaseResultMap">
+    select <include refid="Base_Column_List"/>
   </select>
 </mapper>
