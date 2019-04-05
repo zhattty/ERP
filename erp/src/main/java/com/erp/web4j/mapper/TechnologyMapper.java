@@ -18,13 +18,13 @@ public interface TechnologyMapper {
 
     int updateByPrimaryKey(Technology record);
 
-    List<Technology> findTechnology(@Param("offset") Integer offset,@Param("rows") Integer rows);
+    List<Technology> findTechnology(@Param("offset") Integer offset, @Param("rows") Integer rows);
 
-    List<Technology> searchByPrimaryKey(@Param("searchValue") String searchValue,@Param("offset") Integer offset, @Param("rows")Integer rows);
+    List<Technology> searchByPrimaryKey(@Param("searchValue") String searchValue, @Param("offset") Integer offset, @Param("rows") Integer rows);
 
-    List<Technology> searchByName(@Param("searchValue") String searchValue,@Param("offset") Integer offset, @Param("rows")Integer rows);
+    List<Technology> searchByName(@Param("searchValue") String searchValue, @Param("offset") Integer offset, @Param("rows") Integer rows);
 
-    int deleteBatch( int [] ids);
+    int deleteBatch(int[] ids);
 
     String searchByName2(@Param("searchValue") String searchValue);
 
