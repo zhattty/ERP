@@ -27,6 +27,4 @@ public interface TechnologyService {
     boolean update(Technology technology);
 
     boolean deleteBatch(int []ids);
-
-    Technology selectTechnologyById(String technologyName);
 }

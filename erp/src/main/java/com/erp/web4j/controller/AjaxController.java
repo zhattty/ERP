@@ -1,6 +1,6 @@
 package com.erp.web4j.controller;
 
-import com.erp.web4j.bean.Msg;
+//import com.erp.web4j.bean.Msg;
 import com.erp.web4j.bean.SysUser;
 import com.erp.web4j.service.SysUserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,6 +16,7 @@ import javax.servlet.http.HttpServletResponse;
  * Created by ZhangYao
  * Date 2019/4/4 Time 10:31
  */
+/*
 @Controller
 public class AjaxController {
 
@@ -42,3 +43,4 @@ public class AjaxController {
         return msg;
     }
 }
+*/

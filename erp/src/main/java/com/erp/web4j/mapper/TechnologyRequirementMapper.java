@@ -1,6 +1,5 @@
 package com.erp.web4j.mapper;
 
-import com.erp.web4j.bean.Technology;
 import com.erp.web4j.bean.TechnologyRequirement;
 import org.apache.ibatis.annotations.Param;
 
@@ -21,11 +20,5 @@ public interface TechnologyRequirementMapper {
 
     List<TechnologyRequirement> listOrders(@Param("offset") Integer offset,@Param("rows") Integer rows);
 
-    Integer countOrderRecords();
-
-    int deleteBatch(int[] ids);
-
-    List<Technology> searchByName(@Param("searchValue") String searchValue,@Param("offset") Integer offset, @Param("rows")Integer rows);
-
-    List<Technology> searchByPrimaryKey(@Param("searchValue") String searchValue,@Param("offset") Integer offset, @Param("rows")Integer rows);
+    int countOrderRecords();
 }

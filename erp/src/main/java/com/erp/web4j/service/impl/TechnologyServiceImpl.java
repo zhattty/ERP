@@ -78,11 +78,5 @@ public class TechnologyServiceImpl implements TechnologyService {
         }
     }
 
-    @Override
-    public Technology selectTechnologyById(String technologyName) {
-        Technology technology =  technologyMapper.searchByName3(technologyName);
-        return technology;
-    }
-
 
 }
