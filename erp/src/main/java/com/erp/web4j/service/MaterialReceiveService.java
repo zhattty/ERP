@@ -29,7 +29,7 @@ public interface MaterialReceiveService {
      */
     Map<String, Object> listMaterialReceiveByPage(Integer pageNum, Integer pageSize);
 
-    boolean deleteMaterialReceives(@Param("ids") String[] ids);
+    boolean deleteMaterialReceives(String[] ids);
 
     boolean updateMaterialReceive(MaterialReceive materialReceive);
 
@@ -37,4 +37,5 @@ public interface MaterialReceiveService {
 
     Map<String, Object> searchMaterialReceiveByReceiveId(String receiveId, Integer pageNum, Integer pageSize);
 
+    MaterialReceive findMaterialReceive(String receiveId);
 }

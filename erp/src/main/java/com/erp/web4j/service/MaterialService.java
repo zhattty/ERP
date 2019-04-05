@@ -2,6 +2,7 @@ package com.erp.web4j.service;
 
 import com.erp.web4j.bean.Material;
 
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -60,4 +61,11 @@ public interface MaterialService {
      * @return
      */
     Map<String, Object> searchMaterialByType(String searchValue, Integer pageNum, Integer pageSize);
+
+    Material getMaterial(String materialId);
+
+
+    List<Material> selectAllMaterials();
+
+
 }
