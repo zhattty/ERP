@@ -2,7 +2,7 @@ package com.erp.web4j.service;
 
 /**
  * Created by ZhangYao
- * Date 2019/4/4 Time 11:00
+ * Date 2019/4/5 Time 10:11
  */
-public class SysUserService {
+public interface WorkService {
 }
