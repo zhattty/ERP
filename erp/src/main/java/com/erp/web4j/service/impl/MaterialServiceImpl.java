@@ -19,7 +19,7 @@ import java.util.Map;
  * Description:
  *
  * @author mighty
- * @version 1.0
+ * @version 3.0
  * @date 2019/4/3  22:35
  */
 @Service
@@ -35,17 +35,10 @@ public class MaterialServiceImpl implements MaterialService {
     }
 
     @Override
-    public Map<String, Object> listMaterialByPage(Integer pageNum, Integer pageSize) {
-        /*分页设置*/
-        Integer num = pageNum!=null ? pageNum:1;
-        Integer size = pageSize!=null ? pageSize:10;
-        Page onePage = PageHelper.startPage(num,size,true);
+    public List<Material> listMaterialByPage(Integer pageNum, Integer pageSize) {
 
-        Map<String, Object> map = new HashMap<>();
         List<Material> materials= materialMapper.selectAll();
-        map.put("total",onePage.getTotal());
-        map.put("rows",materials);
-        return map;
+        return materials;
     }
 
     @Override
@@ -68,30 +61,16 @@ public class MaterialServiceImpl implements MaterialService {
         return i==1;
     }
 
-    @Override
-    public Map<String, Object> searchMaterialById(String searchValue, Integer pageNum, Integer pageSize) {
-        Integer num = pageNum!=null ? pageNum:1;
-        Integer size = pageSize!=null ? pageSize:10;
-        Page onePage = PageHelper.startPage(num,size,true);
-
-        Map<String, Object> map = new HashMap<>();
-        List<Material> materials= materialMapper.selectLikeID(searchValue);
-        map.put("total",onePage.getTotal());
-        map.put("rows",materials);
-        return map;
-    }
+   @Override
+   public List<Material> searchMaterialById(String searchValue, Integer pageNum, Integer pageSize) {
+       List<Material> materials= materialMapper.selectLikeID(searchValue);
+       return materials;
+   }
 
     @Override
-    public Map<String, Object> searchMaterialByType(String searchValue, Integer pageNum, Integer pageSize) {
-        Integer num = pageNum!=null ? pageNum:1;
-        Integer size = pageSize!=null ? pageSize:10;
-        Page onePage = PageHelper.startPage(num,size,true);
-
-        Map<String, Object> map = new HashMap<>();
+    public List<Material> searchMaterialByType(String searchValue, Integer pageNum, Integer pageSize) {
         List<Material> materials= materialMapper.selectByType(searchValue);
-        map.put("total",onePage.getTotal());
-        map.put("rows",materials);
-        return map;
+        return materials;
     }
 
     @Override

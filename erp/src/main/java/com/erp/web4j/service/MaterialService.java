@@ -3,11 +3,10 @@ package com.erp.web4j.service;
 import com.erp.web4j.bean.Material;
 
 import java.util.List;
-import java.util.Map;
 
 /**
  * ClassName: MaterialService
- * Description:
+ * Description: 物料 service接口
  *
  * @author mighty
  * @version 1.0
@@ -28,7 +27,7 @@ public interface MaterialService {
      * @param pageSize
      * @return
      */
-    Map<String, Object> listMaterialByPage(Integer pageNum, Integer pageSize);
+    List<Material> listMaterialByPage(Integer pageNum, Integer pageSize);
 
     /**
      * 根据id批量删除materials
@@ -51,7 +50,7 @@ public interface MaterialService {
      * @param pageSize
      * @return
      */
-    Map<String, Object> searchMaterialById(String searchValue, Integer pageNum, Integer pageSize);
+    List<Material> searchMaterialById(String searchValue, Integer pageNum, Integer pageSize);
 
     /***
      * 根据type查询并分页
@@ -60,11 +59,20 @@ public interface MaterialService {
      * @param pageSize
      * @return
      */
-    Map<String, Object> searchMaterialByType(String searchValue, Integer pageNum, Integer pageSize);
+    List<Material> searchMaterialByType(String searchValue, Integer pageNum, Integer pageSize);
 
+    /**
+     * 公共查询id接口
+     * @param materialId
+     * @return
+     */
     Material getMaterial(String materialId);
 
 
+    /**
+     * 查询 所有
+     * @return
+     */
     List<Material> selectAllMaterials();
 
 

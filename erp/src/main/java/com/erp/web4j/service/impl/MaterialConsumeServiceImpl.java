@@ -7,6 +7,8 @@ import com.github.pagehelper.Page;
 import com.github.pagehelper.PageHelper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Propagation;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.HashMap;
 import java.util.List;
@@ -32,44 +34,32 @@ public class MaterialConsumeServiceImpl implements MaterialConsumeService {
     }
 
     @Override
-    public Map<String, Object> listMaterialConsumeByPage(Integer pageNum, Integer pageSize) {
-        Integer num = pageNum!=null ? pageNum:1;
-        Integer size = pageSize!=null ? pageSize:10;
-        Page onePage = PageHelper.startPage(num,size,true);
+    public List<MaterialConsume> listMaterialConsumeByPage(Integer pageNum, Integer pageSize) {
 
-        Map<String, Object> map = new HashMap<>();
         List<MaterialConsume> materialConsumes= materialConsumeMapper.selectAll();
-        map.put("total",onePage.getTotal());
-        map.put("rows",materialConsumes);
-        return map;
+
+        return materialConsumes;
     }
 
     @Override
-    public Map<String, Object> searchMaterialConsumeBymaterialId(String materialId, Integer pageNum, Integer pageSize) {
-        Integer num = pageNum!=null ? pageNum:1;
-        Integer size = pageSize!=null ? pageSize:10;
-        Page onePage = PageHelper.startPage(num,size,true);
-        Map<String, Object> map = new HashMap<>();
+    public List<MaterialConsume> searchMaterialConsumeBymaterialId(String materialId, Integer pageNum, Integer pageSize) {
+
         List<MaterialConsume> materialConsumes = materialConsumeMapper.selectBymaterialId(materialId, pageNum, pageSize);
-        map.put("total",onePage.getTotal());
-        map.put("rows",materialConsumes);
-        return map;
+
+        return materialConsumes;
 
     }
 
     @Override
-    public Map<String, Object> searchMaterialConsumeByConsumeId(String consumeId, Integer pageNum, Integer pageSize) {
-        Integer num = pageNum!=null ? pageNum:1;
-        Integer size = pageSize!=null ? pageSize:10;
-        Page onePage = PageHelper.startPage(num,size,true);
-        Map<String, Object> map = new HashMap<>();
+    public List<MaterialConsume> searchMaterialConsumeByConsumeId(String consumeId, Integer pageNum, Integer pageSize) {
+
         List<MaterialConsume> materialConsumes = materialConsumeMapper.selectByConsumeId(consumeId, pageNum, pageSize);
-        map.put("total",onePage.getTotal());
-        map.put("rows",materialConsumes);
-        return map;
+
+        return materialConsumes;
     }
 
     @Override
+    @Transactional(readOnly = false, propagation = Propagation.REQUIRES_NEW,rollbackFor = Exception.class)
     public boolean deleteMaterialConsume(String[] ids) {
         int ret = materialConsumeMapper.deleteByPrimaryKeyBantch(ids);
         return ret>0;
@@ -82,15 +72,10 @@ public class MaterialConsumeServiceImpl implements MaterialConsumeService {
     }
 
     @Override
-    public Map<String, Object> searchMaterialConsumeByWorkId(String workId, Integer pageNum, Integer pageSize) {
-        Integer num = pageNum!=null ? pageNum:1;
-        Integer size = pageSize!=null ? pageSize:10;
-        Page onePage = PageHelper.startPage(num,size,true);
-        Map<String, Object> map = new HashMap<>();
+    public List<MaterialConsume> searchMaterialConsumeByWorkId(String workId, Integer pageNum, Integer pageSize) {
+
         List<MaterialConsume> materialConsumes = materialConsumeMapper.selectByWorkId(workId, pageNum, pageSize);
-        map.put("total",onePage.getTotal());
-        map.put("rows",materialConsumes);
-        return map;
+        return materialConsumes;
     }
 
     @Override
