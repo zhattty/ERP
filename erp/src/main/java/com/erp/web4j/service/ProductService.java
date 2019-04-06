@@ -36,4 +36,6 @@ public interface ProductService {
     List<Product> searchProductByType(String searchValue, Integer page, Integer rows);
 
     int countRecordsByType(String searchValue);
+
+    Product selectProductById(String productId);
 }

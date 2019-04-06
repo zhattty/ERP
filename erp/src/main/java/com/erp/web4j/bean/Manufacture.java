@@ -15,6 +15,36 @@ public class Manufacture {
 
     private Date endDate;
 
+    private CustomOrder customOrder;
+
+    private CustomOrder cOrder;
+
+    public CustomOrder getcOrder() {
+        return cOrder;
+    }
+
+    public void setcOrder(CustomOrder cOrder) {
+        this.cOrder = cOrder;
+    }
+
+    private Technology technology;
+
+    public CustomOrder getCustomOrder() {
+        return customOrder;
+    }
+
+    public void setCustomOrder(CustomOrder customOrder) {
+        this.customOrder = customOrder;
+    }
+
+    public Technology getTechnology() {
+        return technology;
+    }
+
+    public void setTechnology(Technology technology) {
+        this.technology = technology;
+    }
+
     public String getManufactureSn() {
         return manufactureSn;
     }
@@ -61,5 +91,19 @@ public class Manufacture {
 
     public void setEndDate(Date endDate) {
         this.endDate = endDate;
+    }
+
+    @Override
+    public String toString() {
+        return "Manufacture{" +
+                "manufactureSn='" + manufactureSn + '\'' +
+                ", orderId='" + orderId + '\'' +
+                ", technologyId='" + technologyId + '\'' +
+                ", launchQuantity=" + launchQuantity +
+                ", beginDate=" + beginDate +
+                ", endDate=" + endDate +
+                ", customOrder=" + customOrder +
+                ", technology=" + technology +
+                '}';
     }
 }

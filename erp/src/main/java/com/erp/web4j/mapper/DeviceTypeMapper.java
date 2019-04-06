@@ -16,8 +16,13 @@ public interface DeviceTypeMapper {
     int updateByPrimaryKeySelective(DeviceType record);
 
     int updateByPrimaryKey(DeviceType record);
+
     List<DeviceType> selectAllDevice();
+
     List<DeviceType> toSearchDeviceTypeList(String searchvalue);
+
     List<DeviceType> searchDeviceTypeName(String diviceTypeName);
+
+
 
 }

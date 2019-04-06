@@ -1,21 +1,19 @@
 package com.erp.web4j.service.impl;
 
-import com.erp.web4j.bean.Material;
 import com.erp.web4j.bean.MaterialReceive;
 
+import com.erp.web4j.bean.QueryVo;
 import com.erp.web4j.mapper.MaterialReceiveMapper;
 import com.erp.web4j.service.MaterialReceiveService;
+
 import com.github.pagehelper.Page;
 import com.github.pagehelper.PageHelper;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 /**
  * ClassName: MaterialReceiveServiceImpl
@@ -27,6 +25,7 @@ import java.util.Map;
  */
 @Service
 public class MaterialReceiveServiceImpl implements MaterialReceiveService {
+
     @Autowired
     MaterialReceiveMapper materialReceiveMapper;
 
@@ -37,28 +36,22 @@ public class MaterialReceiveServiceImpl implements MaterialReceiveService {
     }
 
     @Override
-    public Map<String, Object> listMaterialReceiveByPage(Integer pageNum, Integer pageSize) {
-        Integer num = pageNum!=null ? pageNum:1;
-        Integer size = pageSize!=null ? pageSize:10;
-        Page onePage = PageHelper.startPage(num,size,true);
+    public QueryVo<MaterialReceive> listMaterialReceiveByPage(Integer pageNum, Integer pageSize) {
 
-        Map<String, Object> map = new HashMap<>();
+        QueryVo<MaterialReceive> queryVo = new QueryVo<>();
+        Page onePage = PageHelper.startPage(pageNum,pageSize,true);
         List<MaterialReceive> materials= materialReceiveMapper.selectAll();
-        map.put("total",onePage.getTotal());
-        map.put("rows",materials);
-        return map;
+        /*包装*/
+        queryVo.setTotal((int)onePage.getTotal());
+        queryVo.setRows(materials);
+        return queryVo;
     }
 
     @Override
     @Transactional(readOnly = false, propagation = Propagation.REQUIRES_NEW,rollbackFor = Exception.class)
     public boolean deleteMaterialReceives(String[] ids) {
         int results = materialReceiveMapper.deleteByPrimaryKeyBanch(ids);
-        if(results>0) {
-            return true;
-        }
-        else {
-            return false;
-        }
+        return results>0;
     }
 
     @Override
@@ -68,29 +61,32 @@ public class MaterialReceiveServiceImpl implements MaterialReceiveService {
     }
 
     @Override
-    public Map<String, Object> searchMaterialReceiveBymaterialId(String materialId, Integer pageNum, Integer pageSize) {
-        Integer num = pageNum!=null ? pageNum:1;
-        Integer size = pageSize!=null ? pageSize:10;
-        Page onePage = PageHelper.startPage(num,size,true);
+    public QueryVo<MaterialReceive> searchMaterialReceiveBymaterialId(String materialId, Integer pageNum, Integer pageSize) {
 
-        Map<String, Object> map = new HashMap<>();
+        QueryVo<MaterialReceive> queryVo = new QueryVo<>();
+        Page onePage = PageHelper.startPage(pageNum,pageSize,true);
         List<MaterialReceive> materialReceives = materialReceiveMapper.selectLikeMaterialId(materialId);
-        map.put("total",onePage.getTotal());
-        map.put("rows",materialReceives);
-        return map;
+        /*包装*/
+        queryVo.setTotal((int)onePage.getTotal());
+        queryVo.setRows(materialReceives);
+        return queryVo;
     }
 
     @Override
-    public Map<String, Object> searchMaterialReceiveByReceiveId(String receiveId, Integer pageNum, Integer pageSize) {
-        Integer num = pageNum!=null ? pageNum:1;
-        Integer size = pageSize!=null ? pageSize:10;
-        Page onePage = PageHelper.startPage(num,size,true);
+    public QueryVo<MaterialReceive> searchMaterialReceiveByReceiveId(String receiveId, Integer pageNum, Integer pageSize) {
 
-        Map<String, Object> map = new HashMap<>();
+        QueryVo<MaterialReceive> queryVo = new QueryVo<>();
+        Page onePage = PageHelper.startPage(pageNum,pageSize,true);
         List<MaterialReceive> materialReceives = materialReceiveMapper.selectLikePrimaryKey(receiveId);
-        map.put("total",onePage.getTotal());
-        map.put("rows",materialReceives);
-        return map;
+        /*包装*/
+        queryVo.setTotal((int)onePage.getTotal());
+        queryVo.setRows(materialReceives);
+        return queryVo;
 
+    }
+
+    @Override
+    public MaterialReceive findMaterialReceive(String receiveId) {
+        return materialReceiveMapper.selectByPrimaryKey(receiveId);
     }
 }

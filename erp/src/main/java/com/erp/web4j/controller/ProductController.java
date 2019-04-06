@@ -6,6 +6,7 @@ import com.erp.web4j.bean.StatusJson;
 import com.erp.web4j.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -104,7 +105,7 @@ public class ProductController {
         if (result == 1){
             statusJson.setStatus("200");
         }else {
-            statusJson.setMsg("插入失败");
+            statusJson.setMsg("更新失败");
         }
         return statusJson;
     }
@@ -184,5 +185,12 @@ public class ProductController {
         customOrderQueryVo.setTotal(records);
         System.out.println(customOrderQueryVo);
         return customOrderQueryVo;
+    }
+
+    @RequestMapping("get/{productId}")
+    @ResponseBody
+    public Product getProductById(@PathVariable String productId){
+        Product product = productService.selectProductById(productId);
+        return product;
     }
 }

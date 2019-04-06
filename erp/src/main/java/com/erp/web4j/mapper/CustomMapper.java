@@ -22,7 +22,7 @@ public interface CustomMapper {
 
     Integer countAllCustomRecords();
 
-    List<Custom> listAllCustomsWithOffsetAndLimit(@Param("offset")Integer offset, @Param("limit") Integer limit);
+    List<Custom> listAllCustomsWithOffsetAndLimit(@Param("offset") Integer offset, @Param("limit") Integer limit);
 
     Integer countCustomById(String customId);
 

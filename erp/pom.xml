@@ -147,6 +147,18 @@
       <version>1.4.0</version>
     </dependency>
 
+    <!--参数校验-->
+    <dependency>
+      <groupId>org.hibernate</groupId>
+      <artifactId>hibernate-validator</artifactId>
+      <version>5.1.0.Final</version>
+    </dependency>
+    <dependency>
+      <groupId>javax.validation</groupId>
+      <artifactId>validation-api</artifactId>
+      <version>1.1.0.Final</version>
+    </dependency>
+
     <!--测试包-->
     <dependency>
       <groupId>junit</groupId>
@@ -172,10 +184,7 @@
       <version>2.10.0</version>
     </dependency>
 
-
   </dependencies>
-
-
 
 
   <build>

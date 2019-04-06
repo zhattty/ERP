@@ -25,7 +25,7 @@ public interface CustomOrderMapper {
 
     Integer deleteByIds(@Param("ids") int[] ids);
 
-    List<CustomOrder> listOrdersById(@Param("order_id") String s,@Param("offset") Integer offset, @Param("rows") Integer rows);
+    List<CustomOrder> listOrdersById(@Param("order_id") String s, @Param("offset") Integer offset, @Param("rows") Integer rows);
 
     Integer countOrderRecordsById(String s);
 
@@ -40,4 +40,6 @@ public interface CustomOrderMapper {
                                               @Param("rows") Integer rows);
 
     Integer countOrderRecordsByProductName(String s);
+
+    List<CustomOrder> listAllOrders();
 }

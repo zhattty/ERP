@@ -225,4 +225,56 @@
       department_id = #{departmentId,jdbcType=VARCHAR}
     where emp_id = #{empId,jdbcType=VARCHAR}
   </update>
+
+  <select id="countOrderRecords" resultType="int">
+    select count(*) from employee;
+  </select>
+
+  <select id="listOrders" resultMap="AssociationResultMap">
+    select
+    e.birthday,
+    e.degree,
+    e.education,
+    e.education_form,
+    e.emp_id,
+    e.emp_name,
+    e.graduate_school,
+    e.id_code,
+    e.join_date,
+    e.major,
+    e.sex,
+    e.status,
+    d.department_name as departmentName
+    from employee e left join department d
+    on e.department_id = d.department_id
+    limit #{rows}  offset #{offset}
+  </select>
+
+  <resultMap id="AssociationResultMap" type="employee">
+    <result column="emp_name" jdbcType="VARCHAR" property="empName" />
+    <result column="sex" jdbcType="CHAR" property="sex" />
+    <result column="id_code" jdbcType="VARCHAR" property="idCode" />
+    <result column="birthday" jdbcType="DATE" property="birthday" />
+    <result column="join_date" jdbcType="DATE" property="joinDate" />
+    <result column="status" jdbcType="VARCHAR" property="status" />
+    <result column="education" jdbcType="VARCHAR" property="education" />
+    <result column="degree" jdbcType="VARCHAR" property="degree" />
+    <result column="major" jdbcType="VARCHAR" property="major" />
+    <result column="graduate_school" jdbcType="VARCHAR" property="graduateSchool" />
+    <result column="education_form" jdbcType="VARCHAR" property="educationForm" />
+    <association property="department" javaType="department">
+        <result column="departmentName" property="departmentName"/>
+    </association>
+  </resultMap>
+
+
+
+  <delete id="deletBatch" parameterType="int" >
+    delete  from employee
+    where employee_id in (
+    <foreach collection="array" item="id" separator=",">
+      #{id}
+    </foreach>
+    )
+  </delete>
 </mapper>

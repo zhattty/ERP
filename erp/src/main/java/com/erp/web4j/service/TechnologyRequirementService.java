@@ -53,7 +53,7 @@ public interface TechnologyRequirementService {
      * @param rows
      * @return
      */
-    List<Technology> searchByName(String searchValue, Integer page, Integer rows);
+    List<TechnologyRequirement> searchByName(String searchValue, Integer page, Integer rows);
 
     /**
      * 根据主键查找
@@ -62,7 +62,7 @@ public interface TechnologyRequirementService {
      * @param rows
      * @return
      */
-    List<Technology> searchByPrimaryKey(String searchValue, Integer page, Integer rows);
+    List<TechnologyRequirement> searchByPrimaryKey(String searchValue, Integer page, Integer rows);
 
     /*List<Technology> findTechnology(Integer page, Integer rows);*/
 }

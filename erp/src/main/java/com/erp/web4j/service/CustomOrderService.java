@@ -10,7 +10,7 @@ import java.util.List;
  */
 
 public interface CustomOrderService {
-    List<CustomOrder> listOrders(Integer page,Integer rows);
+    List<CustomOrder> listOrders(Integer page, Integer rows);
 
     int countOrderRecords();
 
@@ -31,4 +31,8 @@ public interface CustomOrderService {
     Integer countOrderRecordsByProductName(String searchValue);
 
     List<CustomOrder> listOrdersByProductName(String searchValue, Integer page, Integer rows);
+
+    CustomOrder selectCustomById(String orderId);
+
+    List<CustomOrder> listAllOrders();
 }

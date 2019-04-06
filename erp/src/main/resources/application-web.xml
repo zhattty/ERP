@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xmlns:context="http://www.springframework.org/schema/context"
@@ -6,13 +7,15 @@
         http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd
         http://www.springframework.org/schema/context  https://www.springframework.org/schema/context/spring-context.xsd
         http://www.springframework.org/schema/mvc  https://www.springframework.org/schema/mvc/spring-mvc.xsd">
+
     <context:component-scan base-package="com.erp.web4j.controller"/>
     <!--mvc的配置-->
     <mvc:annotation-driven conversion-service="conversionService"/>
     <!--文件上传-->
-    <bean class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+    <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
         <property name="defaultEncoding" value="utf-8"/>
         <property name="maxUploadSize" value="5242880"/>
+        <property name="preserveFilename" value="false"/>
     </bean>
     <!--springmvc的视图解析器-->
 
@@ -23,14 +26,29 @@
     <mvc:resources mapping="/css/**" location="/WEB-INF/css/"/>
     <mvc:resources mapping="/js/**" location="/WEB-INF/js/"/>
     <mvc:resources mapping="/image/**" location="/WEB-INF/image/"/>
+    <!--<mvc:resources mapping="/file/**" location="/WEB-INF/file/"/>
+    <mvc:resources mapping="/pic/**" location="/pic/"/>-->
    <!-- <mvc:resources mapping="/file/**" location="/WEB-INF/file/"/>-->
     <bean id="conversionService" class="org.springframework.format.support.FormattingConversionServiceFactoryBean">
         <property name="converters">
             <list>
-                <bean class="com.erp.web4j.util.DateConverter"/>
+                <bean class="com.erp.web4j.converter.DateConvert"/>
+                <bean class="com.erp.web4j.util.DateConverterWithoutHour"/>
             </list>
         </property>
     </bean>
 
 
+    <mvc:interceptors>
+        <mvc:interceptor>
+            <mvc:mapping path="/**"/>
+            <mvc:exclude-mapping path="/css/**"/>
+            <mvc:exclude-mapping path="/js/**"/>
+            <mvc:exclude-mapping path="/image/**"/>
+            <mvc:exclude-mapping path="/validatecode.jsp"/>
+            <mvc:exclude-mapping path="/login"/>
+            <mvc:exclude-mapping path="/ajaxLogin"/>
+            <bean class="com.erp.web4j.interceptor.SysUserInterceptor" id="sysUserInterceptor"/>
+        </mvc:interceptor>
+    </mvc:interceptors>
 </beans>

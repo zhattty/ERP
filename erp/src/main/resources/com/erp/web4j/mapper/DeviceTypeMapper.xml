@@ -168,7 +168,6 @@
       device_type_warranty = #{deviceTypeWarranty,jdbcType=TIMESTAMP}
     where device_type_id = #{deviceTypeId,jdbcType=VARCHAR}
   </update>
-
   <resultMap id="deviceTypeMap" type="deviceType">
     <id column="device_type_id" jdbcType="VARCHAR" property="deviceTypeId" />
     <result column="device_type_name" jdbcType="VARCHAR" property="deviceTypeName" />

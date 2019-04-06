@@ -1,8 +1,7 @@
 package com.erp.web4j.service;
 
 import com.erp.web4j.bean.MaterialConsume;
-
-import java.util.Map;
+import com.erp.web4j.bean.QueryVo;
 
 /**
  * ClassName: MaterialConsumeService
@@ -13,15 +12,71 @@ import java.util.Map;
  * @date 2019/4/4  23:59
  */
 public interface MaterialConsumeService {
+    /**
+     * 新增
+     * @param materialConsume
+     * @return
+     */
     boolean addMaterialConsume(MaterialConsume materialConsume);
 
-    Map<String, Object> listMaterialConsumeByPage(Integer pageNum, Integer pageSize);
+    /**
+     * 查询 所有
+     * @param consumeId
+     * @return
+     */
+    MaterialConsume findMaterialConsume(String consumeId);
 
-    Map<String, Object> searchMaterialConsumeBymaterialId(String searchValue, Integer pageNum, Integer pageSize);
+    /**
+     * 分页 查询
+     * @param pageNum
+     * @param pageSize
+     * @return
+     */
+    QueryVo<MaterialConsume> listMaterialConsumeByPage(Integer pageNum, Integer pageSize);
 
-    Map<String, Object> searchMaterialConsumeByConsumeId(String searchValue, Integer pageNum, Integer pageSize);
+    /**
+     * 查询 条件：物料信息编号
+     * @param searchValue
+     * @param pageNum
+     * @param pageSize
+     * @return
+     */
+    QueryVo<MaterialConsume> searchMaterialConsumeBymaterialId(String searchValue, Integer pageNum, Integer pageSize);
 
+    /**
+     * 查询 条件：物料消耗信息编号
+     * @param searchValue
+     * @param pageNum
+     * @param pageSize
+     * @return
+     */
+    QueryVo<MaterialConsume> searchMaterialConsumeByConsumeId(String searchValue, Integer pageNum, Integer pageSize);
+
+    /**
+     * 查询 条件：物料消耗信息编号
+     * @param searchValue
+     * @param pageNum
+     * @param pageSize
+     * @return
+     */
+
+
+    QueryVo<MaterialConsume> searchMaterialConsumeByWorkId(String searchValue, Integer pageNum, Integer pageSize);
+    /**
+     * 批量删除
+     * @param ids
+     * @return
+     */
     boolean deleteMaterialConsume(String[] ids);
 
+    /**
+     * 更新
+     * @param materialConsume
+     * @return
+     */
     boolean updateMaterialConsume(MaterialConsume materialConsume);
+
+
+
+
 }

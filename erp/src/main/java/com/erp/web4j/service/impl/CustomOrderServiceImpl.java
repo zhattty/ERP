@@ -79,4 +79,14 @@ public class CustomOrderServiceImpl implements CustomOrderService {
     public List<CustomOrder> listOrdersByProductName(String searchValue, Integer page, Integer rows) {
         return customOrderMapper.listOrdersByProductName("%"+searchValue+"%",(page-1)*rows,rows);
     }
+
+    @Override
+    public CustomOrder selectCustomById(String orderId) {
+        return customOrderMapper.selectByPrimaryKey(orderId);
+    }
+
+    @Override
+    public List<CustomOrder> listAllOrders() {
+        return customOrderMapper.listAllOrders();
+    }
 }

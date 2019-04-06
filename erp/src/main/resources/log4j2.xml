@@ -20,11 +20,11 @@
             <PatternLayout pattern="%d{HH:mm:ss.SSS} %-5level %class{36}.%M @%L :-> %msg%xEx%n"/>
         </Console>
 
-        <!--这个会打印出所有的信息，每次大小超过size，则这size大小的日志会自动存入按年份-月份建立的文件夹下面并进行压缩，作为存档-->
+        <!--&lt;!&ndash;这个会打印出所有的信息，每次大小超过size，则这size大小的日志会自动存入按年份-月份建立的文件夹下面并进行压缩，作为存档&ndash;&gt;
         <RollingFile name="RollingFileInfo" fileName="${Log_Home}/info.${date:yyyy-MM-dd}.log" immediateFlush="true"
                      filePattern="${Log_Home}/$${date:yyyy-MM}/info-%d{MM-dd-yyyy}-%i.log.gz">
             <PatternLayout pattern="%d{yyyy-MM-dd 'at' HH:mm:ss z} %-5level %class{36}.%M @%L :-> %msg%xEx%n"/>
-            <!--控制台只输出level及以上级别的信息（onMatch），其他的直接拒绝（onMismatch）-->
+            &lt;!&ndash;控制台只输出level及以上级别的信息（onMatch），其他的直接拒绝（onMismatch）&ndash;&gt;
             <filters>
                 <ThresholdFilter level="error" onMatch="DENY" onMismatch="NEUTRAL"/>
                 <ThresholdFilter level="info" onMatch="ACCEPT" onMismatch="DENY"/>
@@ -33,9 +33,9 @@
                 <TimeBasedTriggeringPolicy modulate="true" interval="1"/>
                 <SizeBasedTriggeringPolicy size="10MB"/>
             </Policies>
-        </RollingFile>
+        </RollingFile>-->
 
-        <!--   这个会打印出所有的信息，每次大小超过size，则这size大小的日志会自动存入按年份-月份建立的文件夹下面并进行压缩，作为存档 -->
+        <!--&lt;!&ndash;   这个会打印出所有的信息，每次大小超过size，则这size大小的日志会自动存入按年份-月份建立的文件夹下面并进行压缩，作为存档 &ndash;&gt;
         <RollingFile name="RollingFileDebug" fileName="${Log_Home}/debug.${date:yyyy-MM-dd}.log" immediateFlush="true"
                      filePattern="${Log_Home}/$${date:yyyy-MM}/debug-%d{MM-dd-yyyy}-%i.log.gz">
             <PatternLayout pattern="%d{yyyy-MM-dd 'at' HH:mm:ss z} %-5level %class{36}.%M @%L :-> %msg%xEx%n"/>
@@ -47,9 +47,9 @@
                 <TimeBasedTriggeringPolicy modulate="true" interval="1"/>
                 <SizeBasedTriggeringPolicy size="10MB"/>
             </Policies>
-        </RollingFile>
+        </RollingFile>-->
 
-        <!-- 这个会打印出所有的信息，每次大小超过size，则这size大小的日志会自动存入按年份-月份建立的文件夹下面并进行压缩，作为存档 -->
+        <!--&lt;!&ndash; 这个会打印出所有的信息，每次大小超过size，则这size大小的日志会自动存入按年份-月份建立的文件夹下面并进行压缩，作为存档 &ndash;&gt;
         <RollingFile name="RollingFileError" fileName="${Log_Home}/error.${date:yyyy-MM-dd}.log" immediateFlush="true"
                      filePattern="${Log_Home}/$${date:yyyy-MM}/error-%d{MM-dd-yyyy}-%i.log.gz">
             <PatternLayout pattern="%d{yyyy-MM-dd 'at' HH:mm:ss z} %-5level %class{36}.%M @%L :-> %msg%xEx%n"/>
@@ -58,7 +58,7 @@
                 <TimeBasedTriggeringPolicy modulate="true" interval="1"/>
                 <SizeBasedTriggeringPolicy size="10MB"/>
             </Policies>
-        </RollingFile>
+        </RollingFile>-->
 
     </appenders>
     <!--trace<debug<info<warn<error<fatal-->
@@ -80,16 +80,20 @@
         <logger name="org.springframework.web" level="info">
         </logger>
         <!--重点，自己配置自己需要的地方-->
-        <logger name="com.erp.web4j" level="debug" includeLocation="true" additivity="false">
+        <logger name="com.erp.web4j" level="info" includeLocation="true" additivity="false">
             <appender-ref ref="ErrorLog"/>
             <appender-ref ref="Console"/>
         </logger>
         <logger name="druid.sql.Statement" level="debug" additivity="false">
             <appender-ref ref="Console"/>
         </logger>
+        <logger name="druid.sql.ResultType" level="debug" additivity="false">
+            <appender-ref ref="Console"/>
+        </logger>
         <logger name="druid.sql.ResultSet" level="debug" additivity="false">
             <appender-ref ref="Console"/>
         </logger>
+
 
         <!--建立一个默认的root的logger-->
         <root level="info">
