@@ -54,7 +54,7 @@ public class WorkController {
     public String showAdd(){
         return "work_add";
     }
-    // 此处没有其他人的getData暂时无法完成insert
+    // 姝ゅ娌℃湁鍏朵粬浜虹殑getData鏆傛椂鏃犳硶瀹屾垚insert
 
     @RequestMapping("edit")
     public String edit(){
@@ -65,12 +65,12 @@ public class WorkController {
     @ResponseBody
     public StatusJson updateWorkById(Work work){
         StatusJson statusJson = new StatusJson();
-        //校验
+        //鏍￠獙
         int result = workService.updateWorkById(work);
         if (result == 1){
             statusJson.setStatus("200");
         }else {
-            statusJson.setMsg("更新失败");
+            statusJson.setMsg("鏇存柊澶辫触");
         }
         return statusJson;
     }
@@ -81,14 +81,14 @@ public class WorkController {
     public StatusJson deleteWorkByIds(@RequestParam("ids")String[] ids){
         StatusJson statusJson = new StatusJson();
         if (ids == null || ids.length == 0){
-            statusJson.setMsg("请勾选需要删除的对象");
+            statusJson.setMsg("璇峰嬀閫夐渶瑕佸垹闄ょ殑瀵硅薄");
             return statusJson;
         }
         int count = workService.deleteWorkByIds(ids);
         if (count == ids.length){
             statusJson.setStatus("200");
         }else {
-            statusJson.setMsg("删除失败");
+            statusJson.setMsg("鍒犻櫎澶辫触");
         }
         return statusJson;
     }

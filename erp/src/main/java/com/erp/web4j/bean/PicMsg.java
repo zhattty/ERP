@@ -5,16 +5,17 @@ package com.erp.web4j.bean;
  * Date 2019/4/6 Time 0:35
  */
 public class PicMsg {
-    private String error;
-    private String url;
+    private Integer error;
 
-    public String getError() {
+    public Integer getError() {
         return error;
     }
 
-    public void setError(String error) {
+    public void setError(Integer error) {
         this.error = error;
     }
+
+    private String url;
 
     public String getUrl() {
         return url;

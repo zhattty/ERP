@@ -12,9 +12,10 @@
     <!--mvc的配置-->
     <mvc:annotation-driven conversion-service="conversionService"/>
     <!--文件上传-->
-    <bean class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+    <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
         <property name="defaultEncoding" value="utf-8"/>
         <property name="maxUploadSize" value="5242880"/>
+        <property name="preserveFilename" value="false"/>
     </bean>
     <!--springmvc的视图解析器-->
 
@@ -26,6 +27,7 @@
     <mvc:resources mapping="/js/**" location="/WEB-INF/js/"/>
     <mvc:resources mapping="/image/**" location="/WEB-INF/image/"/>
     <mvc:resources mapping="/file/**" location="/WEB-INF/file/"/>
+    <mvc:resources mapping="/pic/**" location="/pic/"/>
     <bean id="conversionService" class="org.springframework.format.support.FormattingConversionServiceFactoryBean">
         <property name="converters">
             <list>
@@ -34,4 +36,14 @@
             </list>
         </property>
     </bean>
+
+    <mvc:interceptors>
+        <mvc:interceptor>
+            <mvc:mapping path="/**"/>
+            <mvc:exclude-mapping path="/login"/>
+            <mvc:exclude-mapping path="/ajaxLogin"/>
+            <bean class="com.erp.web4j.interceptor.SysUserInterceptor" id="sysUserInterceptor"/>
+        </mvc:interceptor>
+    </mvc:interceptors>
+
 </beans>

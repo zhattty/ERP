@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 /**
  * Created by ZhangYao
@@ -26,8 +27,17 @@ public class AjaxController {
     @ResponseBody
     public Msg ajaxLogin(@RequestParam("username") String username,
                          @RequestParam("password") String password,
+                         String randomcode,
                          HttpServletRequest request){
         Msg msg = new Msg();
+        HttpSession session = request.getSession();
+        String validateCode = (String) session.getAttribute("validateCode");
+        if (validateCode != null){
+            if (!validateCode.equals(randomcode)){
+                msg.setMsg("authentication_error");
+                return msg;
+            }
+        }
         SysUser sysUser = sysUserService.selectSysUserByUsername(username);
         if (sysUser == null){
 
@@ -37,8 +47,19 @@ public class AjaxController {
         if (!sysUser.getUsername().equals(password)){
             msg.setMsg("password_error");
             return msg;
+        }else if(!"1".equals(sysUser.getLocked())){
+            msg.setMsg("authentication_error");
+            return msg;
+        }else {
+            sysUser.setRolename("超级管理员");
+            session.setAttribute("activeUser",sysUser);
+            msg.setMsg("success");
         }
-        msg.setMsg("success");
         return msg;
+    }
+    @RequestMapping("logout")
+    public String logout(HttpServletRequest request){
+        request.getSession().invalidate();
+        return "login";
     }
 }

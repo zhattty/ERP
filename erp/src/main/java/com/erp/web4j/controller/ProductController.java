@@ -105,7 +105,7 @@ public class ProductController {
         if (result == 1){
             statusJson.setStatus("200");
         }else {
-            statusJson.setMsg("插入失败");
+            statusJson.setMsg("更新失败");
         }
         return statusJson;
     }
