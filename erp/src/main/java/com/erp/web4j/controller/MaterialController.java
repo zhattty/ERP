@@ -1,22 +1,28 @@
 package com.erp.web4j.controller;
 
-import com.erp.web4j.bean.Material;
-import com.erp.web4j.bean.MaterialConsume;
-import com.erp.web4j.bean.MaterialReceive;
-import com.erp.web4j.bean.ResponseMsg;
+import com.erp.web4j.bean.*;
 import com.erp.web4j.service.MaterialConsumeService;
 import com.erp.web4j.service.MaterialReceiveService;
 import com.erp.web4j.service.MaterialService;
+import com.github.pagehelper.Page;
+import com.github.pagehelper.PageHelper;
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.validation.BindingResult;
+import org.springframework.validation.FieldError;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 import javax.servlet.http.HttpServletRequest;
+import javax.validation.Valid;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
 /**
  * ClassName: MaterialController
- * Description:
+ * Description:  物料模块的controller
  *
  * @author mighty
  * @version 1.0
@@ -24,6 +30,7 @@ import java.util.Map;
  */
 @Controller
 public class MaterialController {
+    public static Log log = LogFactory.getLog(MaterialController.class);
 
     @Autowired
     private MaterialService materialService;
@@ -36,7 +43,7 @@ public class MaterialController {
 
     /***
      *
-     * ---------------------- Material Controller  ----------------------
+     * *********************************** Material Controller  ****************************************
      */
     @RequestMapping("/material/find")
     public String findMaterial() {
@@ -45,37 +52,59 @@ public class MaterialController {
 
 
     /***
-     * function: list all materials by page 查询所有
-     * */
+     * 分页查询所有的物料信息
+     * @param pageNum   当前页
+     * @param pageSize  页的容量
+     * @return json
+     */
     @RequestMapping("/material/list")
     @ResponseBody
-    public Map<String, Object> list(@RequestParam("page") Integer pageNum, @RequestParam("rows") Integer pageSize){
-        Map<String, Object> map=  materialService.listMaterialByPage(pageNum, pageSize);
-        return map;
+    public QueryVo<Material> list(@RequestParam("page") Integer pageNum, @RequestParam("rows") Integer pageSize){
+        QueryVo<Material> queryVo = new QueryVo<>();
+        Integer num = pageNum!=null ? pageNum:1;
+        Integer size = pageSize!=null ? pageSize:10;
+        Page onePage = PageHelper.startPage(num,size,true);
+        List<Material> materials = materialService.listMaterialByPage(pageNum, pageSize);
+        /*包装*/
+        queryVo.setTotal((int)onePage.getTotal());
+        queryVo.setRows(materials);
+        return queryVo;
     }
 
-    /**
-     * function: search materials by id or type 按条件查询
-     * @param searchValue
-     * @param name
-     * @param pageNum
-     * @param pageSize
-     * @return json
+    /***
+     * 按不同条件分页查询物料信息
+     * @param searchValue   查询的值
+     * @param name          查询条件
+     * @param pageNum       第几页
+     * @param pageSize      每页的容量
+     * @return
      */
     @RequestMapping("material/search_material_by_{name}")
     @ResponseBody
-    public Map<String, Object> search(String searchValue, @PathVariable("name") String name, @RequestParam("page") Integer pageNum, @RequestParam("rows") Integer pageSize){
-        Map<String, Object> map = null;
+    public QueryVo<Material> search(String searchValue, @PathVariable("name") String name, @RequestParam("page") Integer pageNum, @RequestParam("rows") Integer pageSize){
+        QueryVo<Material> queryVo = new QueryVo<>();
+        Integer num = pageNum!=null ? pageNum:1;
+        Integer size = pageSize!=null ? pageSize:10;
+        Page onePage = PageHelper.startPage(num,size,true);
+        List<Material> materials = new ArrayList<>();
         if("materialId".equals(name)) {
-
-            map=  materialService.searchMaterialById(searchValue,pageNum, pageSize);
+            materials =   materialService.searchMaterialById(searchValue,pageNum, pageSize);
         }
         if("materialType".equals(name)) {
-            map = materialService.searchMaterialByType(searchValue,pageNum,pageSize);
+            materials = materialService.searchMaterialByType(searchValue,pageNum,pageSize);
         }
-        return map;
+
+        queryVo.setTotal((int)onePage.getTotal());
+        queryVo.setRows(materials);
+        return queryVo;
+
     }
 
+    /***
+     * 根据物料id查询物料
+     * @param materialId
+     * @return
+     */
     @RequestMapping("/material/get/{name}")
     @ResponseBody
     public Material selectMaterialById(@PathVariable("name") String materialId){
@@ -83,6 +112,10 @@ public class MaterialController {
         return material;
     }
 
+    /**
+     * 通用接口  查询所有的物料
+     * @return
+     */
     @RequestMapping("material/get_data")
     @ResponseBody
     public List<Material> selectAll(){
@@ -116,31 +149,39 @@ public class MaterialController {
     }
 
     /***
-     * function：insert the material   添加
+     * 参数校验并添加物料
      * @param material
-     * @return class message parased to json
+     * @return
      */
     @RequestMapping(value = "material/insert",produces = "application/json; charset=utf-8")
     @ResponseBody
-    public ResponseMsg insertMaterial(Material material) {
+    public ResponseMsg insertMaterial(@Valid Material material, BindingResult bindingResult) {
+        if(bindingResult.hasErrors()) {
+            String msg = "";
+            for (FieldError fieldError : bindingResult.getFieldErrors()) {
+                msg += fieldError.getField() +":" +  fieldError.getDefaultMessage() + "\r\n";
+            }
+            return new ResponseMsg(null, msg, "");
+        }
         Material select = materialService.getMaterial(material.getMaterialId());
         if(select!=null) {
             return new ResponseMsg(null,"物料编号已存在，请重新输入","");
         }
         else {
-            boolean b = materialService.addMaterial(material);
-            if (b) {
-                return new ResponseMsg(200,"添加成功！","");
+            boolean ret = materialService.addMaterial(material);
+            if (ret) {
+                return ResponseMsg.OK;
+            }
+            return ResponseMsg.FAIL;
 
-            }
-            else{
-                return new ResponseMsg(null,"添加失败！","");
-            }
         }
 
     }
 
-
+    /**
+     * 删除的权限控制
+     * @return
+     */
     @RequestMapping("/material/delete_judge")
     @ResponseBody
     public ResponseMsg initDeleteMaterial() {
@@ -149,7 +190,7 @@ public class MaterialController {
     }
 
     /***
-     * function: delelte batch by id， 批量删除
+     * 批量删除 物料
      * @param ids
      * @return
      */
@@ -157,17 +198,17 @@ public class MaterialController {
     @ResponseBody
     public ResponseMsg deleteMaterial(String[] ids) {
         boolean ret = materialService.deleteMaterials(ids);
-        ResponseMsg responseMsg = new ResponseMsg();
 
         if(ret) {
-            responseMsg.setStatus(200);
-            responseMsg.setMsg("");
+            return ResponseMsg.OK;
         }
-
-        return responseMsg;
-
+        return ResponseMsg.FAIL;
     }
 
+    /**
+     * 编辑的权限校验
+     * @return
+     */
     @RequestMapping("material/edit_judge")
     @ResponseBody
     public ResponseMsg initEditMaterial() {
@@ -185,36 +226,45 @@ public class MaterialController {
     }
 
     /***
-     * function: update Material 更新
+     * function: 更新 物料
      * @param material
      * @return
      */
     @RequestMapping("material/update_all")
     @ResponseBody
-    public ResponseMsg updateMaterial(Material material) {
+    public ResponseMsg updateMaterial(@Valid Material material, BindingResult bindingResult) {
+        if(bindingResult.hasErrors()) {
+            String msg = "";
+            for (FieldError fieldError : bindingResult.getFieldErrors()) {
+                msg += fieldError.getDefaultMessage();
+            }
+            return new ResponseMsg(null,msg,"");
+        }
         boolean ret = materialService.updateMaterial(material);
-        ResponseMsg msg = new ResponseMsg();
         if(ret) {
-            msg.setStatus(200);
+            return ResponseMsg.OK;
         }
         else {
-            msg.setMsg("更新失败，请重试");
+            return ResponseMsg.FAIL;
         }
-        return msg;
     }
 
+    /**
+     * 修改 物料的备注
+     * @param material
+     * @return
+     */
     @RequestMapping("material/update_note")
     @ResponseBody
     public  ResponseMsg updateNote(Material material) {
         boolean ret = materialService.updateMaterial(material);
-        ResponseMsg msg = new ResponseMsg();
         if(ret) {
-            msg.setStatus(200);
+            return ResponseMsg.OK;
         }
         else {
-            msg.setMsg("更新失败，请重试");
+            return ResponseMsg.FAIL;
         }
-        return msg;
+
     }
 
 
@@ -227,35 +277,49 @@ public class MaterialController {
     }
 
     /***
-     * function: list all materialReceives by page 查询所有
+     *  分页查询 物料接收 信息
      * */
     @RequestMapping("/materialReceive/list")
     @ResponseBody
-    public Map<String, Object> materialReceiveLsit(@RequestParam("page") Integer pageNum, @RequestParam("rows") Integer pageSize){
-        Map<String, Object> map=  materialReceiveService.listMaterialReceiveByPage(pageNum, pageSize);
-        return map;
+    public QueryVo<MaterialReceive> materialReceiveLsit(@RequestParam("page") Integer pageNum, @RequestParam("rows") Integer pageSize){
+        QueryVo<MaterialReceive> queryVo = new QueryVo<>();
+        Integer num = pageNum!=null ? pageNum:1;
+        Integer size = pageSize!=null ? pageSize:10;
+        Page onePage = PageHelper.startPage(num,size,true);
+        List<MaterialReceive> materialReceives = materialReceiveService.listMaterialReceiveByPage(pageNum, pageSize);
+        /*包装*/
+        queryVo.setTotal((int)onePage.getTotal());
+        queryVo.setRows(materialReceives);
+        return queryVo;
     }
 
     /**
-     * function: search materials by id or type 按条件查询
-     * @param searchValue
-     * @param name
+     * 按条件分页查询 物料接收信息
+     * @param searchValue 查询的条件
+     * @param name        查询哪种类型
      * @param pageNum
      * @param pageSize
      * @return json
      */
     @RequestMapping("materialReceive/search_materialReceive_by_{name}")
     @ResponseBody
-    public Map<String, Object> searchReceive(String searchValue, @PathVariable("name") String name, @RequestParam("page") Integer pageNum, @RequestParam("rows") Integer pageSize){
-        Map<String, Object> map = null;
+    public QueryVo<MaterialReceive> searchReceive(String searchValue, @PathVariable("name") String name, @RequestParam("page") Integer pageNum, @RequestParam("rows") Integer pageSize){
+        QueryVo<MaterialReceive> queryVo = new QueryVo<>();
+        Integer num = pageNum!=null ? pageNum:1;
+        Integer size = pageSize!=null ? pageSize:10;
+        Page onePage = PageHelper.startPage(num,size,true);
+        List<MaterialReceive> materialReceives = null;
         if("materialId".equals(name)) {
 
-            map=  materialReceiveService.searchMaterialReceiveBymaterialId(searchValue,pageNum, pageSize);
+            materialReceives=  materialReceiveService.searchMaterialReceiveBymaterialId(searchValue,pageNum, pageSize);
         }
         if("receiveId".equals(name)) {
-            map = materialReceiveService.searchMaterialReceiveByReceiveId(searchValue,pageNum,pageSize);
+            materialReceives = materialReceiveService.searchMaterialReceiveByReceiveId(searchValue,pageNum,pageSize);
         }
-        return map;
+        /*包装*/
+        queryVo.setTotal((int)onePage.getTotal());
+        queryVo.setRows(materialReceives);
+        return queryVo;
     }
 
     /***
@@ -284,13 +348,22 @@ public class MaterialController {
     }
 
     /***
-     * function：insert the MaterialReceive   添加
-     * @param materialReceive
-     * @return class message parased to json
+     * function：添加 物料接收 信息
+     * @param materialReceive  信息
+     * @return json
      */
     @RequestMapping(value = "materialReceive/insert",produces = "application/json; charset=utf-8")
     @ResponseBody
-    public ResponseMsg insertMaterialReceive(MaterialReceive materialReceive) {
+    public ResponseMsg insertMaterialReceive(@Valid MaterialReceive materialReceive,BindingResult bindingResult ) {
+
+        if(bindingResult.hasErrors()) {
+            String msg = "";
+            for (FieldError fieldError : bindingResult.getFieldErrors()) {
+                msg += fieldError.getDefaultMessage();
+                log.info(msg);
+            }
+            return new ResponseMsg(null,msg,"");
+        }
         MaterialReceive select = materialReceiveService.findMaterialReceive(materialReceive.getReceiveId());
 
         if(select!=null) {
@@ -298,12 +371,13 @@ public class MaterialController {
         }
         else {
             boolean b = materialReceiveService.addMaterialReceive(materialReceive);
+
             if (b) {
-                return new ResponseMsg(200,"添加成功！","");
+                return ResponseMsg.OK;
 
             }
             else{
-                return new ResponseMsg(null,"添加失败！","");
+                return ResponseMsg.FAIL;
             }
         }
     }
@@ -316,7 +390,7 @@ public class MaterialController {
     }
 
     /***
-     * function: delelte batch by id， 批量删除
+     * function:  批量删除 物料接收信息
      * @param ids
      * @return
      */
@@ -327,10 +401,9 @@ public class MaterialController {
         ResponseMsg responseMsg = new ResponseMsg();
 
         if(ret) {
-            responseMsg.setStatus(200);
-            responseMsg.setMsg("");
+            return ResponseMsg.OK;
         }
-        return responseMsg;
+        return ResponseMsg.FAIL;
 
     }
 
@@ -351,23 +424,28 @@ public class MaterialController {
     }
 
     /***
-     * function: update MaterialReceive 更新
+     * 更新 物料接收 信息
      * @param materialReceive
      * @return
      */
     @RequestMapping(value = {"/materialReceive/update_all","/materialReceive/update_note"})
     @ResponseBody
-    public ResponseMsg updateMaterialReceive(MaterialReceive materialReceive) {
-
+    public ResponseMsg updateMaterialReceive(@Valid MaterialReceive materialReceive, BindingResult bindingResult) {
+        if(bindingResult.hasErrors()) {
+            String msg = "";
+            for (FieldError fieldError : bindingResult.getFieldErrors()) {
+                msg += fieldError.getDefaultMessage();
+            }
+            return new ResponseMsg(null,msg,"");
+        }
         boolean ret = materialReceiveService.updateMaterialReceive(materialReceive);
-        ResponseMsg msg = new ResponseMsg();
+
         if(ret) {
-            msg.setStatus(200);
+            return ResponseMsg.OK;
         }
         else {
-            msg.setMsg("更新失败，请重试");
+            return ResponseMsg.FAIL;
         }
-        return msg;
     }
 
     /**
@@ -378,39 +456,58 @@ public class MaterialController {
         return "materialConsume_list";
     }
 
-    /***
-     * function: list all materialConsumes by page 查询所有
-     * */
+    /**
+     * 分页查询所有的 物料消耗 信息
+     * @param pageNum
+     * @param pageSize
+     * @return
+     */
     @RequestMapping("/materialConsume/list")
     @ResponseBody
-    public Map<String, Object> materialConsumeLsit(@RequestParam("page") Integer pageNum, @RequestParam("rows") Integer pageSize){
-        Map<String, Object> map=  materialConsumeService.listMaterialConsumeByPage(pageNum, pageSize);
-        return map;
+    public QueryVo<MaterialConsume> materialConsumeLsit(@RequestParam("page") Integer pageNum, @RequestParam("rows") Integer pageSize){
+
+        QueryVo<MaterialConsume> queryVo = new QueryVo<>();
+        Integer num = pageNum!=null ? pageNum:1;
+        Integer size = pageSize!=null ? pageSize:10;
+        Page onePage = PageHelper.startPage(num,size,true);
+        List<MaterialConsume> materialConsumes = materialConsumeService.listMaterialConsumeByPage(pageNum, pageSize);
+        /*包装*/
+        queryVo.setTotal((int)onePage.getTotal());
+        queryVo.setRows(materialConsumes);
+        return queryVo;
     }
 
+
     /**
-     * function: search materialConsumes by id 按条件查询
-     * @param searchValue
-     * @param name  path中的后缀
+     * function: 按条件分页查询
+     * @param searchValue   查询的条件
+     * @param name  materialId、consumeId、workId
      * @param pageNum
      * @param pageSize
      * @return json
      */
     @RequestMapping("materialConsume/search_materialConsume_by_{name}")
     @ResponseBody
-    public Map<String, Object> searchConsume(String searchValue, @PathVariable("name") String name, @RequestParam("page") Integer pageNum, @RequestParam("rows") Integer pageSize){
-        Map<String, Object> map = null;
+    public QueryVo<MaterialConsume> searchConsume(String searchValue, @PathVariable("name") String name, @RequestParam("page") Integer pageNum, @RequestParam("rows") Integer pageSize){
+        QueryVo<MaterialConsume> queryVo = new QueryVo<>();
+        Integer num = pageNum!=null ? pageNum:1;
+        Integer size = pageSize!=null ? pageSize:10;
+        Page onePage = PageHelper.startPage(num,size,true);
+        List<MaterialConsume> materialConsumes = null;
         if("materialId".equals(name)) {
 
-            map=  materialConsumeService.searchMaterialConsumeBymaterialId(searchValue,pageNum, pageSize);
+            materialConsumes =  materialConsumeService.searchMaterialConsumeBymaterialId(searchValue,pageNum, pageSize);
         }
         if("consumeId".equals(name)) {
-            map = materialConsumeService.searchMaterialConsumeByConsumeId(searchValue,pageNum,pageSize);
+            materialConsumes = materialConsumeService.searchMaterialConsumeByConsumeId(searchValue,pageNum,pageSize);
         }
         if("workId".equals(name)) {
-            map = materialConsumeService.searchMaterialConsumeByWorkId(searchValue,pageNum, pageSize);
+            materialConsumes = materialConsumeService.searchMaterialConsumeByWorkId(searchValue,pageNum, pageSize);
         }
-        return map;
+        /*包装*/
+        queryVo.setTotal((int)onePage.getTotal());
+        queryVo.setRows(materialConsumes);
+        return queryVo;
     }
 
     /***
@@ -439,13 +536,20 @@ public class MaterialController {
     }
 
     /***
-     * function：insert the MaterialConsume   添加
+     * function：添加 物料消耗 信息
      * @param materialConsume
      * @return class message parased to json
      */
     @RequestMapping(value = "materialConsume/insert",produces = "application/json; charset=utf-8")
     @ResponseBody
-    public ResponseMsg insertMaterialConsume(MaterialConsume materialConsume) {
+    public ResponseMsg insertMaterialConsume(@Valid MaterialConsume materialConsume,BindingResult bindingResult) {
+        if(bindingResult.hasErrors()) {
+            String msg = "";
+            for (FieldError fieldError : bindingResult.getFieldErrors()) {
+                msg += fieldError.getDefaultMessage();
+            }
+            return new ResponseMsg(null,msg,"");
+        }
         MaterialConsume select = materialConsumeService.findMaterialConsume(materialConsume.getConsumeId());
 
         if(select!=null) {
@@ -471,21 +575,18 @@ public class MaterialController {
     }
 
     /***
-     * function: delelte batch by id， 批量删除
-     * @param ids
+     * function: 批量删除 物料消耗
+     * @param ids 要批量删除的id
      * @return
      */
     @RequestMapping("materialConsume/delete_batch")
     @ResponseBody
     public ResponseMsg deleteMaterialConsume(String[] ids) {
         boolean ret = materialConsumeService.deleteMaterialConsume(ids);
-        ResponseMsg responseMsg = new ResponseMsg();
-
         if(ret) {
-            responseMsg.setStatus(200);
-            responseMsg.setMsg("");
+            return ResponseMsg.OK;
         }
-        return responseMsg;
+        return ResponseMsg.FAIL;
 
     }
 
@@ -506,27 +607,20 @@ public class MaterialController {
     }
 
     /***
-     * function: update MaterialConsume 更新
+     * 更新 物料消耗 信息
      * @param materialConsume
      * @return
      */
     @RequestMapping(value = {"/materialConsume/update_all","/materialConsume/update_note"})
     @ResponseBody
     public ResponseMsg updateMaterialConsume(MaterialConsume materialConsume) {
-
         boolean ret = materialConsumeService.updateMaterialConsume(materialConsume);
-        ResponseMsg msg = new ResponseMsg();
         if(ret) {
-            msg.setStatus(200);
+            return ResponseMsg.OK;
         }
         else {
-            msg.setMsg("更新失败，请重试");
+            return ResponseMsg.FAIL;
         }
-        return msg;
     }
-
-
-
-
 
 }

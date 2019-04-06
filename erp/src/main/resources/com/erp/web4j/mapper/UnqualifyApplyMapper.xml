@@ -36,6 +36,76 @@
     from unqualify_apply
     where unqualify_apply_id = #{unqualifyApplyId,jdbcType=VARCHAR}
   </select>
+  
+
+
+  <select id="countUnqualifyRecords" resultType="_int">
+    select count(*) from unqualify_apply
+  </select>
+
+  <resultMap id="unqualifyMap" type="unqualifyApply">
+    <result column="unqualify_apply_id" property="unqualifyApplyId" />
+    <result column="unqualify_item"  property="unqualifyItem" />
+    <result column="unqualify_count"  property="unqualifyCount" />
+    <result column="assembly_date"  property="assemblyDate" />
+    <result column="apply_date"  property="applyDate" />
+    <result column="note"  property="note" />
+    <result column="product_name" property="productName"/>
+    <result column="emp_name" property="empName"/>
+  </resultMap>
+
+  <select id="queryUnqualifyApply" resultMap="unqualifyMap">
+    select
+    ua.unqualify_apply_id,pro.product_name,ua.unqualify_item,ua.unqualify_count,ua.assembly_date,emp.emp_name,ua.apply_date,ua.note
+    from unqualify_apply ua
+    left join product  pro on ua.product_id = pro.product_id
+    left join employee emp on ua.emp_id = emp.emp_id
+  </select>
+
+  <select id="countUnqualifyRecordsById" resultType="_int">
+    select count(*) from unqualify_apply where unqualify_apply_id = #{id}
+  </select>
+
+
+
+  <resultMap id="unqualifyApplyMap" type="unqualifyApply">
+    <result column="unqualify_apply_id" property="unqualifyApplyId" />
+    <result column="unqualify_item"  property="unqualifyItem" />
+    <result column="unqualify_count"  property="unqualifyCount" />
+    <result column="assembly_date"  property="assemblyDate" />
+    <result column="apply_date"  property="applyDate" />
+    <result column="note"  property="note" />
+    <result column="emp_name" property="empName"/>
+  </resultMap>
+
+  <select id="listUnqualifyApply" resultMap="unqualifyApplyMap">
+    select
+    ua.unqualify_apply_id,ua.unqualify_item,ua.unqualify_count,ua.assembly_date,emp.emp_name,ua.apply_date,ua.note
+    from unqualify_apply ua
+    left join product  pro on ua.product_id = pro.product_id
+    left join employee emp on ua.emp_id = emp.emp_id
+    where ua.unqualify_apply_id like #{id}
+    limit #{rows} offset #{offset}
+  </select>
+
+  <select id="listUnqualifyApplyByProductName" resultMap="unqualifyMap">
+    select
+      ua.unqualify_apply_id,pro.product_name,ua.unqualify_item,ua.unqualify_count,ua.assembly_date,emp.emp_name,ua.apply_date,ua.note
+    from unqualify_apply ua
+    left join product  pro on ua.product_id = pro.product_id
+    left join employee emp on ua.emp_id = emp.emp_id
+    where pro.product_name like #{productName}
+    limit #{rows} offset #{offset}
+  </select>
+
+  <select id="countUnqualifyRecordsByProductName" resultType="_int">
+    select count(*)
+     from  unqualify_apply ua
+    left join product  pro on ua.product_id = pro.product_id
+    left join employee emp on ua.emp_id = emp.emp_id
+    where pro.product_name = #{productName}
+  </select>
+
   <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
     <!--
       WARNING - @mbg.generated
@@ -44,6 +114,13 @@
     -->
     delete from unqualify_apply
     where unqualify_apply_id = #{unqualifyApplyId,jdbcType=VARCHAR}
+  </delete>
+
+  <delete id="deleteByIds">
+    delete from unqualify_apply where unqualify_apply_id in
+    <foreach collection="ids" item="id" open="(" close=")" separator=",">
+      #{id}
+    </foreach>
   </delete>
   <insert id="insert" parameterType="com.erp.web4j.bean.UnqualifyApply">
     <!--
