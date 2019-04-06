@@ -1,6 +1,7 @@
 package com.erp.web4j.service;
 
 import com.erp.web4j.bean.Material;
+import com.erp.web4j.bean.QueryVo;
 
 import java.util.List;
 
@@ -27,7 +28,7 @@ public interface MaterialService {
      * @param pageSize
      * @return
      */
-    List<Material> listMaterialByPage(Integer pageNum, Integer pageSize);
+    QueryVo<Material> listMaterialByPage(Integer pageNum, Integer pageSize);
 
     /**
      * 根据id批量删除materials
@@ -50,7 +51,7 @@ public interface MaterialService {
      * @param pageSize
      * @return
      */
-    List<Material> searchMaterialById(String searchValue, Integer pageNum, Integer pageSize);
+    QueryVo<Material> searchMaterialById(String searchValue, Integer pageNum, Integer pageSize);
 
     /***
      * 根据type查询并分页
@@ -59,7 +60,7 @@ public interface MaterialService {
      * @param pageSize
      * @return
      */
-    List<Material> searchMaterialByType(String searchValue, Integer pageNum, Integer pageSize);
+    QueryVo<Material> searchMaterialByType(String searchValue, Integer pageNum, Integer pageSize);
 
     /**
      * 公共查询id接口

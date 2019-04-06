@@ -1,8 +1,7 @@
 package com.erp.web4j.service;
 
 import com.erp.web4j.bean.MaterialReceive;
-
-import java.util.List;
+import com.erp.web4j.bean.QueryVo;
 
 /**
  * ClassName: MaterialReceiveService
@@ -26,7 +25,7 @@ public interface MaterialReceiveService {
      * @param pageSize
      * @return
      */
-    List<MaterialReceive> listMaterialReceiveByPage(Integer pageNum, Integer pageSize);
+    QueryVo<MaterialReceive> listMaterialReceiveByPage(Integer pageNum, Integer pageSize);
 
     /**
      * 删除
@@ -49,7 +48,7 @@ public interface MaterialReceiveService {
      * @param pageSize
      * @return
      */
-    List<MaterialReceive> searchMaterialReceiveBymaterialId(String materialId, Integer pageNum, Integer pageSize);
+    QueryVo<MaterialReceive> searchMaterialReceiveBymaterialId(String materialId, Integer pageNum, Integer pageSize);
 
     /***
      * 查询 条件：物料接收信息编号
@@ -58,7 +57,7 @@ public interface MaterialReceiveService {
      * @param pageSize
      * @return
      */
-    List<MaterialReceive> searchMaterialReceiveByReceiveId(String receiveId, Integer pageNum, Integer pageSize);
+    QueryVo<MaterialReceive> searchMaterialReceiveByReceiveId(String receiveId, Integer pageNum, Integer pageSize);
 
     /**
      * 查询 信息

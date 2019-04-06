@@ -18,7 +18,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
 
 /**
  * ClassName: MaterialController
@@ -59,16 +58,13 @@ public class MaterialController {
      */
     @RequestMapping("/material/list")
     @ResponseBody
-    public QueryVo<Material> list(@RequestParam("page") Integer pageNum, @RequestParam("rows") Integer pageSize){
-        QueryVo<Material> queryVo = new QueryVo<>();
-        Integer num = pageNum!=null ? pageNum:1;
-        Integer size = pageSize!=null ? pageSize:10;
-        Page onePage = PageHelper.startPage(num,size,true);
-        List<Material> materials = materialService.listMaterialByPage(pageNum, pageSize);
-        /*包装*/
-        queryVo.setTotal((int)onePage.getTotal());
-        queryVo.setRows(materials);
-        return queryVo;
+    public QueryVo<Material> list(@RequestParam(value = "page", defaultValue = "1") Integer pageNum,
+                                  @RequestParam(value = "rows", defaultValue = "10") Integer pageSize){
+
+        Integer num = pageNum>1 ? pageNum: 1;
+        Integer size = pageSize>0 ? pageSize: 10;
+        return materialService.listMaterialByPage(num, size);
+
     }
 
     /***
@@ -81,21 +77,21 @@ public class MaterialController {
      */
     @RequestMapping("material/search_material_by_{name}")
     @ResponseBody
-    public QueryVo<Material> search(String searchValue, @PathVariable("name") String name, @RequestParam("page") Integer pageNum, @RequestParam("rows") Integer pageSize){
+    public QueryVo<Material> search(String searchValue, @PathVariable(value = "name", required = true) String name,
+                                    @RequestParam(value = "page", defaultValue = "1") Integer pageNum,
+                                    @RequestParam(value = "rows", defaultValue = "10") Integer pageSize){
+
         QueryVo<Material> queryVo = new QueryVo<>();
-        Integer num = pageNum!=null ? pageNum:1;
-        Integer size = pageSize!=null ? pageSize:10;
-        Page onePage = PageHelper.startPage(num,size,true);
-        List<Material> materials = new ArrayList<>();
+        Integer num = pageNum>1 ? pageNum: 1;
+        Integer size = pageSize>0 ? pageSize: 10;
+
         if("materialId".equals(name)) {
-            materials =   materialService.searchMaterialById(searchValue,pageNum, pageSize);
+            queryVo =   materialService.searchMaterialById(searchValue,num, size);
         }
         if("materialType".equals(name)) {
-            materials = materialService.searchMaterialByType(searchValue,pageNum,pageSize);
+            queryVo = materialService.searchMaterialByType(searchValue,num, size);
         }
 
-        queryVo.setTotal((int)onePage.getTotal());
-        queryVo.setRows(materials);
         return queryVo;
 
     }
@@ -108,8 +104,7 @@ public class MaterialController {
     @RequestMapping("/material/get/{name}")
     @ResponseBody
     public Material selectMaterialById(@PathVariable("name") String materialId){
-        Material material =  materialService.getMaterial(materialId);
-        return material;
+        return   materialService.getMaterial(materialId);
     }
 
     /**
@@ -119,8 +114,7 @@ public class MaterialController {
     @RequestMapping("material/get_data")
     @ResponseBody
     public List<Material> selectAll(){
-        List<Material> materials = materialService.selectAllMaterials();
-        return materials;
+        return materialService.selectAllMaterials();
     }
 
     /***
@@ -281,16 +275,12 @@ public class MaterialController {
      * */
     @RequestMapping("/materialReceive/list")
     @ResponseBody
-    public QueryVo<MaterialReceive> materialReceiveLsit(@RequestParam("page") Integer pageNum, @RequestParam("rows") Integer pageSize){
-        QueryVo<MaterialReceive> queryVo = new QueryVo<>();
-        Integer num = pageNum!=null ? pageNum:1;
-        Integer size = pageSize!=null ? pageSize:10;
-        Page onePage = PageHelper.startPage(num,size,true);
-        List<MaterialReceive> materialReceives = materialReceiveService.listMaterialReceiveByPage(pageNum, pageSize);
-        /*包装*/
-        queryVo.setTotal((int)onePage.getTotal());
-        queryVo.setRows(materialReceives);
-        return queryVo;
+    public QueryVo<MaterialReceive> materialReceiveList(@RequestParam(value = "page", defaultValue = "1") Integer pageNum,
+                                                        @RequestParam(value = "rows", defaultValue = "10") Integer pageSize){
+        Integer num = pageNum>1 ? pageNum: 1;
+        Integer size = pageSize>0 ? pageSize: 10;
+
+        return materialReceiveService.listMaterialReceiveByPage(num, size);
     }
 
     /**
@@ -303,23 +293,23 @@ public class MaterialController {
      */
     @RequestMapping("materialReceive/search_materialReceive_by_{name}")
     @ResponseBody
-    public QueryVo<MaterialReceive> searchReceive(String searchValue, @PathVariable("name") String name, @RequestParam("page") Integer pageNum, @RequestParam("rows") Integer pageSize){
-        QueryVo<MaterialReceive> queryVo = new QueryVo<>();
-        Integer num = pageNum!=null ? pageNum:1;
-        Integer size = pageSize!=null ? pageSize:10;
+    public QueryVo<MaterialReceive> searchReceive(String searchValue, @PathVariable(value = "name", required = true) String name,
+                                                  @RequestParam(value = "page", defaultValue = "1") Integer pageNum,
+                                                  @RequestParam(value = "rows", defaultValue = "10") Integer pageSize){
+
+        Integer num = pageNum>1 ? pageNum: 1;
+        Integer size = pageSize>0 ? pageSize: 10;
         Page onePage = PageHelper.startPage(num,size,true);
-        List<MaterialReceive> materialReceives = null;
+        QueryVo<MaterialReceive> materialReceives = null;
         if("materialId".equals(name)) {
 
-            materialReceives=  materialReceiveService.searchMaterialReceiveBymaterialId(searchValue,pageNum, pageSize);
+            materialReceives=  materialReceiveService.searchMaterialReceiveBymaterialId(searchValue,num,size);
         }
         if("receiveId".equals(name)) {
-            materialReceives = materialReceiveService.searchMaterialReceiveByReceiveId(searchValue,pageNum,pageSize);
+            materialReceives = materialReceiveService.searchMaterialReceiveByReceiveId(searchValue,num,size);
         }
-        /*包装*/
-        queryVo.setTotal((int)onePage.getTotal());
-        queryVo.setRows(materialReceives);
-        return queryVo;
+
+        return materialReceives;
     }
 
     /***
@@ -464,17 +454,13 @@ public class MaterialController {
      */
     @RequestMapping("/materialConsume/list")
     @ResponseBody
-    public QueryVo<MaterialConsume> materialConsumeLsit(@RequestParam("page") Integer pageNum, @RequestParam("rows") Integer pageSize){
+    public QueryVo<MaterialConsume> materialConsumeLsit(@RequestParam(value = "page", defaultValue = "1") Integer pageNum,
+                                                        @RequestParam(value = "rows", defaultValue = "10") Integer pageSize){
 
-        QueryVo<MaterialConsume> queryVo = new QueryVo<>();
-        Integer num = pageNum!=null ? pageNum:1;
-        Integer size = pageSize!=null ? pageSize:10;
-        Page onePage = PageHelper.startPage(num,size,true);
-        List<MaterialConsume> materialConsumes = materialConsumeService.listMaterialConsumeByPage(pageNum, pageSize);
-        /*包装*/
-        queryVo.setTotal((int)onePage.getTotal());
-        queryVo.setRows(materialConsumes);
-        return queryVo;
+        Integer num = pageNum>1 ? pageNum: 1;
+        Integer size = pageSize>0 ? pageSize: 10;
+
+        return  materialConsumeService.listMaterialConsumeByPage(num, size);
     }
 
 
@@ -488,26 +474,25 @@ public class MaterialController {
      */
     @RequestMapping("materialConsume/search_materialConsume_by_{name}")
     @ResponseBody
-    public QueryVo<MaterialConsume> searchConsume(String searchValue, @PathVariable("name") String name, @RequestParam("page") Integer pageNum, @RequestParam("rows") Integer pageSize){
-        QueryVo<MaterialConsume> queryVo = new QueryVo<>();
-        Integer num = pageNum!=null ? pageNum:1;
-        Integer size = pageSize!=null ? pageSize:10;
+    public QueryVo<MaterialConsume> searchConsume(String searchValue, @PathVariable(value = "name", required = true) String name,
+                                                  @RequestParam(value = "page", defaultValue = "1") Integer pageNum,
+                                                  @RequestParam(value = "rows", defaultValue = "10") Integer pageSize){
+        Integer num = pageNum>1 ? pageNum: 1;
+        Integer size = pageSize>0 ? pageSize: 10;
         Page onePage = PageHelper.startPage(num,size,true);
-        List<MaterialConsume> materialConsumes = null;
+        QueryVo<MaterialConsume> materialConsumesVo = null;
         if("materialId".equals(name)) {
 
-            materialConsumes =  materialConsumeService.searchMaterialConsumeBymaterialId(searchValue,pageNum, pageSize);
+            materialConsumesVo =  materialConsumeService.searchMaterialConsumeBymaterialId(searchValue,num, size);
         }
         if("consumeId".equals(name)) {
-            materialConsumes = materialConsumeService.searchMaterialConsumeByConsumeId(searchValue,pageNum,pageSize);
+            materialConsumesVo = materialConsumeService.searchMaterialConsumeByConsumeId(searchValue,num,size);
         }
         if("workId".equals(name)) {
-            materialConsumes = materialConsumeService.searchMaterialConsumeByWorkId(searchValue,pageNum, pageSize);
+            materialConsumesVo = materialConsumeService.searchMaterialConsumeByWorkId(searchValue,num, size);
         }
-        /*包装*/
-        queryVo.setTotal((int)onePage.getTotal());
-        queryVo.setRows(materialConsumes);
-        return queryVo;
+
+        return materialConsumesVo;
     }
 
     /***

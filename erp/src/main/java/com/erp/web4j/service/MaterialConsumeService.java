@@ -1,8 +1,7 @@
 package com.erp.web4j.service;
 
 import com.erp.web4j.bean.MaterialConsume;
-
-import java.util.List;
+import com.erp.web4j.bean.QueryVo;
 
 /**
  * ClassName: MaterialConsumeService
@@ -33,7 +32,7 @@ public interface MaterialConsumeService {
      * @param pageSize
      * @return
      */
-    List<MaterialConsume> listMaterialConsumeByPage(Integer pageNum, Integer pageSize);
+    QueryVo<MaterialConsume> listMaterialConsumeByPage(Integer pageNum, Integer pageSize);
 
     /**
      * 查询 条件：物料信息编号
@@ -42,7 +41,7 @@ public interface MaterialConsumeService {
      * @param pageSize
      * @return
      */
-    List<MaterialConsume> searchMaterialConsumeBymaterialId(String searchValue, Integer pageNum, Integer pageSize);
+    QueryVo<MaterialConsume> searchMaterialConsumeBymaterialId(String searchValue, Integer pageNum, Integer pageSize);
 
     /**
      * 查询 条件：物料消耗信息编号
@@ -51,7 +50,7 @@ public interface MaterialConsumeService {
      * @param pageSize
      * @return
      */
-    List<MaterialConsume> searchMaterialConsumeByConsumeId(String searchValue, Integer pageNum, Integer pageSize);
+    QueryVo<MaterialConsume> searchMaterialConsumeByConsumeId(String searchValue, Integer pageNum, Integer pageSize);
 
     /**
      * 查询 条件：物料消耗信息编号
@@ -62,7 +61,7 @@ public interface MaterialConsumeService {
      */
 
 
-    List<MaterialConsume> searchMaterialConsumeByWorkId(String searchValue, Integer pageNum, Integer pageSize);
+    QueryVo<MaterialConsume> searchMaterialConsumeByWorkId(String searchValue, Integer pageNum, Integer pageSize);
     /**
      * 批量删除
      * @param ids
