@@ -7,6 +7,7 @@ import com.erp.web4j.service.CustomOrderService;
 import com.erp.web4j.util.FilePathHelper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -171,5 +172,16 @@ public class CustomOrderController {
         customOrderQueryVo.setTotal(records);
         System.out.println(customOrderQueryVo);
         return customOrderQueryVo;
+    }
+    @RequestMapping("get/{orderId}")
+    @ResponseBody
+    public CustomOrder selectCustomById(@PathVariable String orderId){
+        return customOrderService.selectCustomById(orderId);
+    }
+
+    @RequestMapping("get_data")
+    @ResponseBody
+    public List<CustomOrder> getCustomOrderInfo(){
+        return customOrderService.listAllOrders();
     }
 }

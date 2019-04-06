@@ -143,4 +143,110 @@
       end_date = #{endDate,jdbcType=TIMESTAMP}
     where manufacture_sn = #{manufactureSn,jdbcType=VARCHAR}
   </update>
+  <resultMap id="PartResultMap" type="manufacture">
+    <id column="manufacture_sn" jdbcType="VARCHAR" property="manufactureSn" />
+    <result column="order_id" jdbcType="VARCHAR" property="orderId" />
+    <result column="technology_id" jdbcType="VARCHAR" property="technologyId" />
+    <result column="launch_quantity" jdbcType="INTEGER" property="launchQuantity" />
+    <result column="begin_date" jdbcType="TIMESTAMP" property="beginDate" />
+    <result column="end_date" jdbcType="TIMESTAMP" property="endDate" />
+    <association property="cOrder" javaType="customOrder">
+      <result column="cid" property="orderId"/>
+    </association>
+    <association property="technology" javaType="technology">
+      <result column="tid" property="technologyId"/>
+      <result column="technology_name" property="technologyName"/>
+    </association>
+  </resultMap>
+  <select id="listPageManufacture" resultMap="PartResultMap">
+    select
+    manufacture_sn, m.order_id, m.technology_id, launch_quantity, begin_date, end_date,
+    c.order_id as cid,
+    t.technology_id as tid, t.technology_name
+    from manufacture as m
+    left join c_order as c on m.order_id = c.order_id
+    left join technology as t on m.technology_id = t.technology_id
+    limit #{limit} offset #{offset}
+  </select>
+
+  <select id="countAllManufactureRecords" resultType="_int">
+    select count(*) from manufacture
+  </select>
+
+  <delete id="deleteByIds" >
+    delete from manufacture
+    where manufacture_sn in
+    <foreach collection="ids" item="id" close=")" separator="," open="(">
+      #{id}
+    </foreach>
+  </delete>
+
+  <select id="listPageManufactureBySn" resultMap="PartResultMap">
+    select
+    manufacture_sn, m.order_id, m.technology_id, launch_quantity, begin_date, end_date,
+    c.order_id as cid,
+    t.technology_id as tid, t.technology_name
+    from manufacture as m
+    left join c_order as c on m.order_id = c.order_id
+    left join technology as t on m.technology_id = t.technology_id
+    where manufacture_sn like #{sn}
+    limit #{limit} offset #{offset}
+  </select>
+
+  <select id="countManufactureRecordsBySn" resultType="_int">
+    select count(*) from manufacture
+    where manufacture_sn like #{sn}
+  </select>
+  <select id="listPageManufactureByOrderId" resultMap="PartResultMap">
+    select
+    manufacture_sn, m.order_id, m.technology_id, launch_quantity, begin_date, end_date,
+    c.order_id as cid,
+    t.technology_id as tid, t.technology_name
+    from manufacture as m
+    left join c_order as c on m.order_id = c.order_id
+    left join technology as t on m.technology_id = t.technology_id
+    where m.order_id like #{orderId}
+    limit #{limit} offset #{offset}
+  </select>
+
+  <select id="countManufactureRecordsByOrderId" resultType="_int">
+    select count(*) from manufacture
+    where order_id like #{orderId}
+  </select>
+
+  <select id="listPageManufactureByTechnologyName" resultMap="PartResultMap">
+    select
+    manufacture_sn, m.order_id, m.technology_id, launch_quantity, begin_date, end_date,
+    c.order_id as cid,
+    t.technology_id as tid, t.technology_name
+    from manufacture as m
+    left join c_order as c on m.order_id = c.order_id
+    left join technology as t on m.technology_id = t.technology_id
+    where t.technology_name like #{tName}
+    limit #{limit} offset #{offset}
+  </select>
+
+  <select id="countManufactureRecordsByTechnologyName" resultType="_int">
+    select count(*) from manufacture as m
+    left join technology as t on m.technology_id = t.technology_id
+    where technology_name like #{tName}
+  </select>
+
+  <select id="selectBySn" resultMap="PartResultMap">
+    select
+    manufacture_sn, m.order_id, m.technology_id, launch_quantity, begin_date, end_date,
+    c.order_id as cid,
+    t.technology_id as tid, t.technology_name
+    from manufacture as m
+    left join c_order as c on m.order_id = c.order_id
+    left join technology as t on m.technology_id = t.technology_id
+    where manufacture_sn = #{sn}
+  </select>
+
+  <select id="listManufacture" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from manufacture
+  </select>
+
 </mapper>

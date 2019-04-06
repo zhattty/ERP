@@ -27,4 +27,45 @@ public class UnqualifyServiceImpl implements UnqualifyService {
     public Integer countUnqualifyRecords() {
         return unqualifyApplyMapper.countUnqualifyRecords();
     }
+
+    @Override
+    public int insertUnqualifyApply(UnqualifyApply unqualifyApply) {
+
+        int insert = unqualifyApplyMapper.insertSelective(unqualifyApply);
+        return insert;
+    }
+
+    @Override
+    public int updateUnqualifyApply(UnqualifyApply unqualifyApply) {
+        int update = unqualifyApplyMapper.updateByPrimaryKeySelective(unqualifyApply);
+        return update;
+    }
+
+    @Override
+    public int deleteUnqualifyApply(int[] ids) {
+
+       return unqualifyApplyMapper.deleteByIds(ids);
+
+    }
+
+    @Override
+    public int countUnqualifyRecordsById(String id) {
+
+        return  unqualifyApplyMapper.countUnqualifyRecordsById(id);
+    }
+
+    @Override
+    public ArrayList<UnqualifyApply> listUnqualifyApply(String searchValue, Integer page, Integer rows) {
+        return unqualifyApplyMapper.listUnqualifyApply("%"+searchValue+"%",(page-1)*rows,rows);
+    }
+
+    @Override
+    public ArrayList<UnqualifyApply> listUnqualifyApplyByProductName(String searchValue, Integer page, Integer rows) {
+        return unqualifyApplyMapper.listUnqualifyApplyByProductName("%"+searchValue+"%",(page-1)*rows,rows);
+    }
+
+    @Override
+    public int countUnqualifyRecordsByProductName(String searchValue) {
+        return unqualifyApplyMapper.countUnqualifyRecordsByProductName(searchValue);
+    }
 }

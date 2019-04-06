@@ -31,4 +31,8 @@ public interface CustomOrderService {
     Integer countOrderRecordsByProductName(String searchValue);
 
     List<CustomOrder> listOrdersByProductName(String searchValue, Integer page, Integer rows);
+
+    CustomOrder selectCustomById(String orderId);
+
+    List<CustomOrder> listAllOrders();
 }

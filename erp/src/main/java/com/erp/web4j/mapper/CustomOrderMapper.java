@@ -40,4 +40,6 @@ public interface CustomOrderMapper {
                                               @Param("rows") Integer rows);
 
     Integer countOrderRecordsByProductName(String s);
+
+    List<CustomOrder> listAllOrders();
 }

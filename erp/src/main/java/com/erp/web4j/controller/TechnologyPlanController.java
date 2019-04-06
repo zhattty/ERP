@@ -124,7 +124,7 @@ public class TechnologyPlanController {
      */
     @RequestMapping("search_technologyPlan_by_technologyPlanId")
     @ResponseBody
-    public QueryVo<TechnologyPlan> search_technology_by_technologyId(String  searchValue, Integer page, @Param("rows")Integer rows){
+    public QueryVo<TechnologyPlan> search_technology_by_technologyId(String  searchValue, Integer page, Integer rows){
         if (page == null || page <= 0){
             page = 1;
         }
@@ -149,7 +149,7 @@ public class TechnologyPlanController {
      */
     @RequestMapping("search_technologyPlan_by_technologyName")
     @ResponseBody
-    public List<TechnologyPlan> searchTechnologyByTechnologyName(@RequestParam("searchValue")String  searchValue,@Param("page") Integer page,@Param("rows")Integer rows){
+    public List<TechnologyPlan> searchTechnologyByTechnologyName(@RequestParam("searchValue")String  searchValue, Integer page,Integer rows){
         if (page == null || page <= 0){
             page = 1;
         }
