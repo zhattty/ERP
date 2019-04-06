@@ -1,6 +1,8 @@
 package com.erp.web4j.service.impl;
 
 import com.erp.web4j.bean.Material;
+import com.erp.web4j.bean.MaterialReceive;
+import com.erp.web4j.bean.QueryVo;
 import com.erp.web4j.mapper.MaterialMapper;
 import com.erp.web4j.service.MaterialService;
 import com.github.pagehelper.Page;
@@ -10,9 +12,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 /**
  * ClassName: MaterialServiceImpl
@@ -35,22 +35,22 @@ public class MaterialServiceImpl implements MaterialService {
     }
 
     @Override
-    public List<Material> listMaterialByPage(Integer pageNum, Integer pageSize) {
+    public QueryVo<Material> listMaterialByPage(Integer pageNum, Integer pageSize) {
 
+        QueryVo<Material> queryVo = new QueryVo<>();
+        Page onePage = PageHelper.startPage(pageNum,pageSize,true);
         List<Material> materials= materialMapper.selectAll();
-        return materials;
+        /*包装*/
+        queryVo.setTotal((int)onePage.getTotal());
+        queryVo.setRows(materials);
+        return queryVo;
     }
 
     @Override
     @Transactional(readOnly = false, propagation = Propagation.REQUIRES_NEW,rollbackFor = Exception.class)
     public boolean deleteMaterials(String[] ids) {
         int results = materialMapper.deleteByPrimaryKeyBanch(ids);
-        if(results>0) {
-            return true;
-        }
-        else {
-            return false;
-        }
+        return results>0;
     }
 
 
@@ -62,27 +62,36 @@ public class MaterialServiceImpl implements MaterialService {
     }
 
    @Override
-   public List<Material> searchMaterialById(String searchValue, Integer pageNum, Integer pageSize) {
-       List<Material> materials= materialMapper.selectLikeID(searchValue);
-       return materials;
+   public QueryVo<Material> searchMaterialById(String searchValue, Integer pageNum, Integer pageSize) {
+
+       QueryVo<Material> queryVo = new QueryVo<>();
+       Page onePage = PageHelper.startPage(pageNum,pageSize,true);
+       List<Material> materials = materialMapper.selectLikeID(searchValue);
+       /*包装*/
+       queryVo.setTotal((int)onePage.getTotal());
+       queryVo.setRows(materials);
+       return queryVo;
    }
 
     @Override
-    public List<Material> searchMaterialByType(String searchValue, Integer pageNum, Integer pageSize) {
-        List<Material> materials= materialMapper.selectByType(searchValue);
-        return materials;
+    public QueryVo<Material> searchMaterialByType(String searchValue, Integer pageNum, Integer pageSize) {
+        QueryVo<Material> queryVo = new QueryVo<>();
+        Page onePage = PageHelper.startPage(pageNum,pageSize,true);
+        List<Material> materials = materialMapper.selectByType(searchValue);
+        /*包装*/
+        queryVo.setTotal((int)onePage.getTotal());
+        queryVo.setRows(materials);
+        return queryVo;
     }
 
     @Override
     public Material getMaterial(String materialId) {
-        Material material = materialMapper.selectByPrimaryKey(materialId);
-        return material;
+        return materialMapper.selectByPrimaryKey(materialId);
     }
 
     @Override
     public List<Material> selectAllMaterials() {
-        List<Material> materials = materialMapper.selectAll();
-        return materials;
+        return materialMapper.selectAll();
     }
 
 
