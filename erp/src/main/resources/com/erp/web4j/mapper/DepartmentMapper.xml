@@ -108,4 +108,15 @@
       note = #{note,jdbcType=VARCHAR}
     where department_id = #{departmentId,jdbcType=VARCHAR}
   </update>
+
+  <select id="countOrderRecords" resultType="int">
+    select count(*) from department;
+  </select>
+  
+  
+  <select id="listOrders" resultMap="BaseResultMap">
+    select <include refid="Base_Column_List"/> from department;
+  </select>
+
+
 </mapper>

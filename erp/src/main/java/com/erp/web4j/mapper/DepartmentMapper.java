@@ -2,6 +2,8 @@ package com.erp.web4j.mapper;
 
 import com.erp.web4j.bean.Department;
 
+import java.util.List;
+
 public interface DepartmentMapper {
     int deleteByPrimaryKey(String departmentId);
 
@@ -14,4 +16,8 @@ public interface DepartmentMapper {
     int updateByPrimaryKeySelective(Department record);
 
     int updateByPrimaryKey(Department record);
+
+    Integer countOrderRecords();
+
+    List<Department> listOrders();
 }
