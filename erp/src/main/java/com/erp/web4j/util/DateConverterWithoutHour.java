@@ -11,11 +11,11 @@ import java.util.regex.Pattern;
  * Created by wawawa
  * Date 2019/4/4 Time 22:03
  */
-public class DateConverter implements Converter<String, Date> {
+public class DateConverterWithoutHour implements Converter<String, Date> {
 
     @Override
     public Date convert(String source) {
-        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
         sdf.setLenient(false);
         try {
             Date date = sdf.parse(source);

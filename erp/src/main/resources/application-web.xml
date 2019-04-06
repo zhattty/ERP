@@ -29,8 +29,8 @@
     <bean id="conversionService" class="org.springframework.format.support.FormattingConversionServiceFactoryBean">
         <property name="converters">
             <list>
-                <!--<bean class="com.erp.web4j.util.DateConverter"/>-->
                 <bean class="com.erp.web4j.converter.DateConvert"/>
+                <bean class="com.erp.web4j.util.DateConverterWithoutHour"/>
             </list>
         </property>
     </bean>
