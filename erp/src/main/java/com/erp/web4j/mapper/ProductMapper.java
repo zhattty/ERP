@@ -10,7 +10,7 @@ public interface ProductMapper {
 
     int insertSelective(Product record);
 
-    Product selectByPrimaryKey(int PrimaryKey);
+    Product selectByPrimaryKey(String PrimaryKey);
 
     List<Product> listAllProducts();
 

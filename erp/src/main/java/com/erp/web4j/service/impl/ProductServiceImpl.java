@@ -82,4 +82,9 @@ public class ProductServiceImpl implements ProductService {
     public int countRecordsByType(String searchValue) {
         return productMapper.countRecordsByType("%"+searchValue+"%");
     }
+
+    @Override
+    public Product selectProductById(String productId) {
+        return productMapper.selectByPrimaryKey(productId);
+    }
 }

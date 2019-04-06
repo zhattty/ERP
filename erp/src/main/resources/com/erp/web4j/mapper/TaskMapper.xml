@@ -130,4 +130,70 @@
       working_hours = #{workingHours,jdbcType=DECIMAL}
     where task_id = #{taskId,jdbcType=VARCHAR}
   </update>
+
+  <select id="listPageTask" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from task
+    limit #{limit} offset #{offset}
+  </select>
+
+  <select id="countAllTaskRecords" resultType="_int">
+    select count(*) from task
+  </select>
+
+  <select id="countTaskById" resultType="_int">
+    select count(*) from task where task_id = #{taskId}
+  </select>
+
+  <delete id="deleteTaskByIds">
+    delete from task
+    where task_id in
+    <foreach collection="ids" item="id" open="(" close=")" separator=",">
+      #{id}
+    </foreach>
+  </delete>
+
+  <select id="listPageTaskByTaskId" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List"/>
+    from task
+    where task_id like #{taskId}
+    limit #{limit} offset #{offset}
+  </select>
+
+  <select id="countTaskRecordsByTaskId" resultType="_int">
+    select count(*)
+    from task
+    where task_id like #{taskId}
+  </select>
+
+  <select id="listPageTaskByWorkId" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List"/>
+    from task
+    where work_id like #{workId}
+    limit #{limit} offset #{offset}
+  </select>
+
+  <select id="countTaskRecordsByWorkId" resultType="_int">
+    select count(*)
+    from task
+    where work_id like #{workId}
+  </select>
+
+  <select id="listPageTaskBySn" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List"/>
+    from task
+    where manufacture_sn like #{sn}
+    limit #{limit} offset #{offset}
+  </select>
+
+  <select id="countTaskRecordsBySn" resultType="_int">
+    select count(*)
+    from task
+    where manufacture_sn like #{sn}
+  </select>
+
 </mapper>
