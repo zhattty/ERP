@@ -22,4 +22,6 @@ public interface DepartmentService {
     List<Department> searchByDepartmentId(String searchValue, Integer page, Integer rows);
 
     List<Department> searchByDepartmentName(String searchValue, Integer page, Integer rows);
+
+    List<Department> findDepartment(int page, int rows);
 }

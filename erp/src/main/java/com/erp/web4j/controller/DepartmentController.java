@@ -1,10 +1,7 @@
 package com.erp.web4j.controller;
 
-import com.erp.web4j.bean.Department;
+import com.erp.web4j.bean.*;
 import com.erp.web4j.bean.Process;
-import com.erp.web4j.bean.QueryVo;
-import com.erp.web4j.bean.StatusJson;
-import com.erp.web4j.bean.TechnologyPlan;
 import com.erp.web4j.service.DepartmentService;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -153,5 +150,11 @@ public class DepartmentController {
     }
 
 
+    @RequestMapping("get_data")
+    @ResponseBody
+    public List<Department> getData() {
+        return departmentService.findDepartment(1, 30);
+
+    }
 }
 

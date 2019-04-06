@@ -136,5 +136,9 @@
     from department where department_name = #{searchValue} limit #{rows} offset #{offset}
   </select>
 
+<select id="findDepartment" resultMap="BaseResultMap">
+  select <include refid="Base_Column_List"/> from department limit #{rows} offset #{offset}
+</select>
+
 
 </mapper>

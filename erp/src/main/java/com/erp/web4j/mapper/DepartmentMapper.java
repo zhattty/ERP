@@ -27,4 +27,6 @@ public interface DepartmentMapper {
     List<Department> searchByDepartmentId(@Param("searchValue")String searchValue, @Param("offset") Integer offset,@Param("rows") Integer rows);
 
     List<Department> searchByDepartmentName(@Param("searchValue")String searchValue, @Param("offset")Integer offset, @Param("rows")Integer rows);
+
+    List<Department> findDepartment(@Param("offset") int offset, @Param("rows") int rows);
 }

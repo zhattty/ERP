@@ -55,4 +55,11 @@ public class DepartmentServiceImpl implements DepartmentService {
     public List<Department> searchByDepartmentName(String searchValue, Integer page, Integer rows) {
         return departmentMapper.searchByDepartmentName(searchValue,(page-1)*rows,rows);
     }
+
+    @Override
+    public List<Department> findDepartment(int page, int rows) {
+        return departmentMapper.findDepartment((page-1)*rows,rows);
+    }
+
+
 }
