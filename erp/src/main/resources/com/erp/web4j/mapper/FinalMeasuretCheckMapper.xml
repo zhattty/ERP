@@ -35,6 +35,65 @@
     from final_measuret_check
     where f_measure_check_id = #{fMeasureCheckId,jdbcType=VARCHAR}
   </select>
+
+  <select id="countMeasureCheckRecords" resultType="_int">
+    select count(*) from final_measuret_check
+  </select>
+
+  <select id="queryCountById" resultType="_int">
+    select count(*)
+    from final_measuret_check fmc
+     left join employee emp on fmc.emp_id = emp.emp_id
+    where fmc.f_measure_check_id like #{searchValue}
+    limit #{rows} offset #{offset}
+  </select>
+
+
+
+  <resultMap id="measureMap" type="finalMeasuretCheck">
+    <result column="f_measure_check_id" property="fMeasureCheckId" />
+    <result column="order_id" property="orderId" />
+    <result column="check_item" property="checkItem" />
+    <result column="cdate" property="cdate" />
+    <result column="measure_data" property="measureData" />
+    <result column="emp_name" property="empName" />
+    <result column="result" property="result" />
+    <result column="note" property="note" />
+  </resultMap>
+
+  <select id="queryMeasureChecklist" resultMap="measureMap">
+    SELECT
+    fmc.f_measure_check_id, fmc.order_id, fmc.check_item, fmc.cdate, fmc.measure_data, emp.emp_name, fmc.result, fmc.note
+    FROM final_measuret_check fmc
+    left JOIN employee emp on fmc. emp_id = emp.emp_id
+  </select>
+
+
+
+  <select id="queryFinalMeasureCheckListById" resultMap="measureMap">
+    SELECT
+    fmc.f_measure_check_id, fmc.order_id, fmc.check_item, fmc.cdate, fmc.measure_data, emp.emp_name, fmc.result, fmc.note
+    FROM final_measuret_check fmc
+    left JOIN employee emp on fmc. emp_id = emp.emp_id
+    where fmc.f_measure_check_id like #{searchValue}
+    limit #{rows} offset #{offset}
+  </select>
+
+  <select id="queryFinalMeasureCheckListByOrderId" resultMap="measureMap">
+    select
+     fmc.f_measure_check_id, fmc.order_id, fmc.check_item, fmc.cdate, fmc.measure_data, emp.emp_name, fmc.result, fmc.note
+    FROM final_measuret_check fmc
+    left JOIN employee emp on fmc. emp_id = emp.emp_id
+    where fmc.order_id like #{searchValue}
+    limit #{rows} offset #{offset}
+  </select>
+
+  <select id="queryCountByOrderId" resultType="_int">
+    select count(*)
+    from final_measuret_check fmc
+    where fmc.order_id like #{searchValue}
+  </select>
+
   <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
     <!--
       WARNING - @mbg.generated
@@ -43,6 +102,13 @@
     -->
     delete from final_measuret_check
     where f_measure_check_id = #{fMeasureCheckId,jdbcType=VARCHAR}
+  </delete>
+
+  <delete id="deleteByIds">
+    delete from final_measuret_check where f_measure_check_id in
+    <foreach collection="ids" separator="," item="id" open="(" close=")">
+      #{id}
+    </foreach>
   </delete>
   <insert id="insert" parameterType="com.erp.web4j.bean.FinalMeasuretCheck">
     <!--
