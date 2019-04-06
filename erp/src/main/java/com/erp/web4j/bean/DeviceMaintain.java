@@ -9,6 +9,7 @@ public class DeviceMaintain {
     private String deviceFaultId;
 
     private String deviceMaintainEmpId;
+    private  String deviceMaintainEmp;
 
     private Date deviceMaintainDate;
 
@@ -17,6 +18,14 @@ public class DeviceMaintain {
     private BigDecimal deviceMaintainCost;
 
     private String note;
+
+    public String getDeviceMaintainEmp() {
+        return deviceMaintainEmp;
+    }
+
+    public void setDeviceMaintainEmp(String deviceMaintainEmp) {
+        this.deviceMaintainEmp = deviceMaintainEmp;
+    }
 
     public String getDeviceMaintainId() {
         return deviceMaintainId;

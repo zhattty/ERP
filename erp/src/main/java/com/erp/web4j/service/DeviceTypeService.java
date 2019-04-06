@@ -1,5 +1,6 @@
 package com.erp.web4j.service;
 
+import com.erp.web4j.bean.Device;
 import com.erp.web4j.bean.DeviceType;
 
 import java.util.List;
@@ -11,6 +12,8 @@ public interface DeviceTypeService {
    boolean deleteByPrimaryKey(String[] deviceTypeIds);
    List<DeviceType> toSearchDeviceTypeList(String searchvalue);
    List<DeviceType> searchDeviceTypeName(String diviceTypeName);
+   DeviceType selectByPrimaryKey(String deviceTypeId);
+   boolean updateByPrimaryKeySelective(DeviceType record);
 
 
 }

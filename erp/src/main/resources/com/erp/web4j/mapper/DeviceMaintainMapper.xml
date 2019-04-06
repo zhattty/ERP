@@ -157,4 +157,46 @@
       note = #{note,jdbcType=VARCHAR}
     where device_maintain_id = #{deviceMaintainId,jdbcType=VARCHAR}
   </update>
+
+  <resultMap id="findAll" type="com.erp.web4j.bean.DeviceMaintain">
+    <id column="device_maintain_id" jdbcType="VARCHAR" property="deviceMaintainId" />
+    <result column="device_fault_id" jdbcType="VARCHAR" property="deviceFaultId" />
+    <result column="device_maintain_emp_id" jdbcType="VARCHAR" property="deviceMaintainEmpId" />
+    <result column="emp_name" jdbcType="VARCHAR" property="deviceMaintainEmp" />
+
+    <result column="device_maintain_date" jdbcType="TIMESTAMP" property="deviceMaintainDate" />
+    <result column="device_maintain_result" jdbcType="VARCHAR" property="deviceMaintainResult" />
+    <result column="device_maintain_cost" jdbcType="DECIMAL" property="deviceMaintainCost" />
+    <result column="note" jdbcType="VARCHAR" property="note" />
+  </resultMap>
+  <select id="findAllDeviceMaintain" resultMap="findAll">
+    select device_maintain_id, device_fault_id,
+      device_maintain_emp_id,emp_name, device_maintain_date,
+      device_maintain_result, device_maintain_cost,
+      note from device_maintain dm left join employee e on dm.device_maintain_emp_id=e.emp_id
+  </select>
+
+  <delete id="deleteDeviceMaintain">
+    delete from device_maintain
+    where device_maintain_id in (<foreach collection="array" separator="," item="id">
+    #{id}
+  </foreach>)
+
+  </delete>
+
+  <select id="searchDeviceMaintain" resultMap="findAll">
+     select device_maintain_id, device_fault_id,
+      device_maintain_emp_id,emp_name, device_maintain_date,
+      device_maintain_result, device_maintain_cost,
+      note from device_maintain dm left join employee e on dm.device_maintain_emp_id=e.emp_id where device_maintain_id=#{searchValue}
+
+  </select>
+
+  <select id="toSearchDeviceMaintainByDeviceFaultId" resultMap="findAll">
+    select device_maintain_id, device_fault_id,
+      device_maintain_emp_id,emp_name, device_maintain_date,
+      device_maintain_result, device_maintain_cost,
+      note from device_maintain dm left join employee e on dm.device_maintain_emp_id=e.emp_id where device_fault_id=#{searchValue}
+
+  </select>
 </mapper>

@@ -1,5 +1,6 @@
 package com.erp.web4j.service.deviceimpl;
 
+import com.erp.web4j.bean.Device;
 import com.erp.web4j.bean.DeviceType;
 import com.erp.web4j.mapper.DeviceMapper;
 import com.erp.web4j.mapper.DeviceTypeMapper;
@@ -44,7 +45,7 @@ public class DeviceTypeServiceImpl implements DeviceTypeService {
         int i = 0;
         for (String deviceTypeId : deviceTypeIds) {
             deviceTypeMapper.deleteByPrimaryKey(deviceTypeId);
-            System.out.println("删除成功");
+
             i++;
         }
         if(i == deviceTypeIds.length){
@@ -68,6 +69,18 @@ public class DeviceTypeServiceImpl implements DeviceTypeService {
         List<DeviceType> deviceTypesList = deviceTypeMapper.searchDeviceTypeName(diviceTypeName);
 
         return deviceTypesList;
+    }
+
+    @Override
+    public DeviceType selectByPrimaryKey(String deviceTypeId) {
+        DeviceType deviceType = deviceTypeMapper.selectByPrimaryKey(deviceTypeId);
+        return deviceType;
+    }
+
+    @Override
+    public boolean updateByPrimaryKeySelective(DeviceType record) {
+        int i = deviceTypeMapper.updateByPrimaryKey(record);
+        return i == 1;
     }
 
 

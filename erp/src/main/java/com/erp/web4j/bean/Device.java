@@ -10,6 +10,8 @@ public class Device {
 
     private String deviceTypeId;
 
+    private String deviceTypeName;
+
     private String deviceStatusId;
 
     private String deviceStatus;
@@ -24,10 +26,28 @@ public class Device {
 
     private String deviceKeeperId;
 
+    private  String deviceKeeper;
+
     private String note;
 
     public String getDeviceId() {
         return deviceId;
+    }
+
+    public String getDeviceTypeName() {
+        return deviceTypeName;
+    }
+
+    public void setDeviceTypeName(String deviceTypeName) {
+        this.deviceTypeName = deviceTypeName;
+    }
+
+    public String getDeviceKeeper() {
+        return deviceKeeper;
+    }
+
+    public void setDeviceKeeper(String deviceKeeper) {
+        this.deviceKeeper = deviceKeeper;
     }
 
     public void setDeviceId(String deviceId) {

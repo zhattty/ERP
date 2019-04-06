@@ -1,6 +1,9 @@
 package com.erp.web4j.mapper;
 
 import com.erp.web4j.bean.DeviceFault;
+import org.apache.ibatis.annotations.Param;
+
+import java.util.List;
 
 public interface DeviceFaultMapper {
     int deleteByPrimaryKey(String deviceFaultId);
@@ -14,4 +17,9 @@ public interface DeviceFaultMapper {
     int updateByPrimaryKeySelective(DeviceFault record);
 
     int updateByPrimaryKey(DeviceFault record);
+    List<DeviceFault> selectAllDeviceFault();
+    int deleteDeviceFault(@Param("ids") String[] ids);
+    List<DeviceFault> searchDeviceFault(String deviceFaultId);
+    List<DeviceFault> searchDeviceFaultByDeviceName(String deviceName);
+
 }
