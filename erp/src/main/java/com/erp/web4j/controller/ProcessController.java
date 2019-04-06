@@ -123,7 +123,7 @@ public class ProcessController {
 
     @RequestMapping("search_process_by_processId")
     @ResponseBody
-    public List<Process> searchProcessByProcessId(String  searchValue, Integer page,@Param("rows")Integer rows){
+    public List<Process> searchProcessByProcessId(String  searchValue, Integer page,Integer rows){
         if (page == null || page <= 0){
             page = 1;
         }
@@ -143,7 +143,7 @@ public class ProcessController {
      */
     @RequestMapping("search_process_by_technologyPlanId")
     @ResponseBody
-    public List<Process> searchTechnologyByTechnologyName(@RequestParam("searchValue")String  searchValue,@Param("page") Integer page,@Param("rows")Integer rows){
+    public List<Process> searchTechnologyByTechnologyName(@RequestParam String  searchValue,@RequestParam Integer page,@RequestParam Integer rows){
         if (page == null || page <= 0){
             page = 1;
         }

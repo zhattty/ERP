@@ -15,4 +15,11 @@ public interface DepartmentService {
 
     boolean insert(Department department);
 
+    boolean update(Department department);
+
+    boolean deleteBatch(int[] ids);
+
+    List<Department> searchByDepartmentId(String searchValue, Integer page, Integer rows);
+
+    List<Department> searchByDepartmentName(String searchValue, Integer page, Integer rows);
 }

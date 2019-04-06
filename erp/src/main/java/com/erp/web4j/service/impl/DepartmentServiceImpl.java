@@ -31,4 +31,28 @@ public class DepartmentServiceImpl implements DepartmentService {
     public boolean insert(Department department) {
         return departmentMapper.insert(department)==1;
     }
+
+    @Override
+    public boolean update(Department department) {
+        return departmentMapper.updateByPrimaryKey(department)==1;
+    }
+
+    @Override
+    public boolean deleteBatch(int[] ids) {
+        int i = departmentMapper.deletBatch(ids);
+        if(i == ids.length){
+            return true;
+        }
+        return false;
+    }
+
+    @Override
+    public List<Department> searchByDepartmentId(String searchValue, Integer page, Integer rows) {
+        return departmentMapper.searchByDepartmentId(searchValue,(page-1)*rows,rows);
+    }
+
+    @Override
+    public List<Department> searchByDepartmentName(String searchValue, Integer page, Integer rows) {
+        return departmentMapper.searchByDepartmentName(searchValue,(page-1)*rows,rows);
+    }
 }

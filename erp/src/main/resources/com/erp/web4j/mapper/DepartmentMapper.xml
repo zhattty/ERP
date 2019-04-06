@@ -118,5 +118,22 @@
     select <include refid="Base_Column_List"/> from department;
   </select>
 
+  <delete id="deletBatch" parameterType="int" >
+    delete  from department
+    where department_id in (
+    <foreach collection="array" item="id" separator=",">
+      #{id}
+    </foreach>
+    )
+  </delete>
+
+  <select id="searchByDepartmentId" resultMap="BaseResultMap">
+    select <include refid="Base_Column_List"/>
+    from department where department_id = #{searchValue} limit #{rows} offset #{offset}
+  </select>
+  <select id="searchByDepartmentName" resultMap="BaseResultMap">
+    select <include refid="Base_Column_List"/>
+    from department where department_name = #{searchValue} limit #{rows} offset #{offset}
+  </select>
 
 </mapper>

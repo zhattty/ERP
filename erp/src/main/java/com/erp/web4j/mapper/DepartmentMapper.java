@@ -1,6 +1,7 @@
 package com.erp.web4j.mapper;
 
 import com.erp.web4j.bean.Department;
+import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 
@@ -20,4 +21,10 @@ public interface DepartmentMapper {
     Integer countOrderRecords();
 
     List<Department> listOrders();
+
+    Integer deletBatch(int[] ids);
+
+    List<Department> searchByDepartmentId(@Param("searchValue")String searchValue, @Param("offset") Integer offset,@Param("rows") Integer rows);
+
+    List<Department> searchByDepartmentName(@Param("searchValue")String searchValue, @Param("offset")Integer offset, @Param("rows")Integer rows);
 }

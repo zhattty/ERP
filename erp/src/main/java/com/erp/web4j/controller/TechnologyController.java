@@ -60,7 +60,7 @@ class TechnologyController {
      */
     @RequestMapping("search_technology_by_technologyId")
     @ResponseBody
-    public List<Technology> search_technology_by_technologyId(String  searchValue, Integer page,@Param("rows")Integer rows){
+    public List<Technology> search_technology_by_technologyId(String  searchValue, Integer page,Integer rows){
         if (page == null || page <= 0){
             page = 1;
         }
@@ -80,7 +80,7 @@ class TechnologyController {
      */
     @RequestMapping("search_technology_by_technologyName")
     @ResponseBody
-    public List<Technology> search_technology_by_technologyName(@RequestParam("searchValue")String  searchValue,@Param("page") Integer page,@Param("rows")Integer rows){
+    public List<Technology> search_technology_by_technologyName(@RequestParam("searchValue")String  searchValue, Integer page,Integer rows){
         if (page == null || page <= 0){
             page = 1;
         }
