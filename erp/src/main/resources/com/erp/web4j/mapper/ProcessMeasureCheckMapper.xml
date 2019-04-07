@@ -36,6 +36,43 @@
     from process_measure_check
     where p_measure_check_id = #{pMeasureCheckId,jdbcType=VARCHAR}
   </select>
+  <resultMap id="listMap" type="ProcessMeasureCheck">
+    <result column="p_measure_check_id" property="pMeasureCheckId" />
+    <result column="process_id" property="processId" />
+    <result column="check_item"  property="checkItem" />
+    <result column="cdate"  property="cdate" />
+    <result column="measure_data" property="measureData" />
+    <result column="emp_id"  property="empId" />
+    <result column="result" property="result" />
+    <result column="note" property="note" />
+    <result column="emp_name" property="empName"/>
+  </resultMap>
+  <select id="selectAllList" resultMap="listMap">
+    select pmc.p_measure_check_id, pmc.process_id, pmc.check_item, pmc.cdate, pmc.measure_data, pmc.emp_id, pmc.result,
+    pmc.note,emp.emp_name
+    from process_measure_check pmc
+    LEFT join employee emp on emp.emp_id = pmc.emp_id
+    limit #{rows} offset #{offset}
+  </select>
+  <select id="queryCount" resultType="_int">
+    select count(*)
+    from process_measure_check
+  </select>
+  <select id="queryCountByCheckId"  resultMap="listMap">
+    select pmc.p_measure_check_id, pmc.process_id, pmc.check_item, pmc.cdate, pmc.measure_data, pmc.emp_id, pmc.result,
+    pmc.note,emp.emp_name
+    from process_measure_check pmc
+    LEFT join employee emp on emp.emp_id = pmc.emp_id
+    where pmc.p_measure_check_id like #{searchValue}
+    limit #{rows} offset #{offset}
+  </select>
+  <select id="queryCountNumberByCheckId" resultType="_int">
+    select count(*)
+    from process_measure_check
+    where p_measure_check_id like #{searchValue}
+  </select>
+
+
   <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
     <!--
       WARNING - @mbg.generated
@@ -44,6 +81,12 @@
     -->
     delete from process_measure_check
     where p_measure_check_id = #{pMeasureCheckId,jdbcType=VARCHAR}
+  </delete>
+  <delete id="deleteByIds">
+    delete from process_measure_check where p_measure_check_id in
+    <foreach collection="ids" separator="," item="id" open="(" close=")">
+      #{id}
+    </foreach>
   </delete>
   <insert id="insert" parameterType="com.erp.web4j.bean.ProcessMeasureCheck">
     <!--
