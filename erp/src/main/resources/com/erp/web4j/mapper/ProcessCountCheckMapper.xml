@@ -40,6 +40,48 @@
     from process_count_check
     where p_count_check_id = #{pCountCheckId,jdbcType=VARCHAR}
   </select>
+  <resultMap id="listMap" type="ProcessCountCheck">
+    <id column="p_count_check_id"  property="pCountCheckId" />
+    <result column="process_id" property="processId" />
+    <result column="check_item"  property="checkItem" />
+    <result column="sample" property="sample" />
+    <result column="check_number"  property="checkNumber" />
+    <result column="unqualify" property="unqualify" />
+    <result column="qualify"  property="qualify" />
+    <result column="cdate" property="cdate" />
+    <result column="measure_data"  property="measureData" />
+    <result column="emp_id"  property="empId" />
+    <result column="result"  property="result" />
+    <result column="note"  property="note" />
+    <result column="emp_name" property="empName"/>
+  </resultMap>
+  <select id="selectAllList" resultMap="listMap">
+    select
+    pcc.p_count_check_id, pcc.process_id, pcc.check_item, pcc.sample, pcc.check_number, pcc.unqualify, pcc.qualify,
+    pcc.cdate, pcc.measure_data, pcc.emp_id, pcc.result, pcc.note,emp.emp_name
+    from process_count_check pcc
+    left join employee emp on emp.emp_id = pcc.emp_id
+     limit #{rows} offset #{offset}
+  </select>
+  <select id="queryCount" resultType="_int">
+    select count(*)
+    from process_count_check
+  </select>
+  <select id="queryCountByCheckId" resultMap="listMap">
+     select
+     pcc.p_count_check_id, pcc.process_id, pcc.check_item, pcc.sample, pcc.check_number, pcc.unqualify, pcc.qualify,
+    pcc.cdate, pcc.measure_data, pcc.emp_id, pcc.result, pcc.note,emp.emp_name
+    from process_count_check pcc
+    left join employee emp on emp.emp_id = pcc.emp_id
+    where pcc.p_count_check_id like #{searchValue}
+    limit #{rows} offset #{offset}
+  </select>
+  <select id="queryCountNumberByCheckId" resultType="_int">
+    select count(*)
+    from process_count_check
+    where p_count_check_id like #{searchValue}
+  </select>
+
   <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
     <!--
       WARNING - @mbg.generated
@@ -48,6 +90,13 @@
     -->
     delete from process_count_check
     where p_count_check_id = #{pCountCheckId,jdbcType=VARCHAR}
+  </delete>
+  <delete id="deleteByIds">
+    delete from process_count_check
+    where p_count_check_id in
+    <foreach collection="ids" separator="," item="id" open="("  close=")">
+      #{id}
+    </foreach>
   </delete>
   <insert id="insert" parameterType="com.erp.web4j.bean.ProcessCountCheck">
     <!--
