@@ -7,6 +7,7 @@ import com.erp.web4j.bean.TechnologyPlan;
 import com.erp.web4j.service.EmployeeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -112,5 +113,16 @@ public class EmployeeController {
         }
     }
 
+    @RequestMapping("get/{employeeId}")
+    @ResponseBody
+    public Employee selectEmployeeById(@PathVariable String employeeId){
+        Employee employee = employeeService.selectEmployeeById(employeeId);
+        return employee;
+    }
 
+    @RequestMapping("get_data")
+    @ResponseBody
+    public List<Employee> getEmployeeList(){
+        return employeeService.listEmployee();
+    }
 }

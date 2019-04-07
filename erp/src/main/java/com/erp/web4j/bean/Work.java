@@ -1,14 +1,21 @@
 package com.erp.web4j.bean;
 
+import javax.validation.constraints.NotNull;
+
 public class Work {
+    @NotNull(message = "作业编号不能为空")
     private String workId;
 
+    @NotNull(message = "工序号不能为空")
     private String processNumber;
 
+    @NotNull(message = "产品不能为空")
     private String productId;
 
+    @NotNull(message = "工序不能为空")
     private String processId;
 
+    @NotNull(message = "设备不能为空")
     private String deviceId;
 
     private Integer rating;

@@ -49,4 +49,6 @@ public interface WorkMapper {
     int countWorkRecordsByDeviceName(String s);
 
     List<Work> listWork();
+
+    int countWorkRecordsByIdExplicit(String workId);
 }

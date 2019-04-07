@@ -18,4 +18,8 @@ public interface EmployeeService {
     boolean update(Employee employee);
 
     boolean deleteBatch(int[] ids);
+
+    Employee selectEmployeeById(String employeeId);
+
+    List<Employee> listEmployee();
 }

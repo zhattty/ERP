@@ -87,4 +87,14 @@ public class WorkServiceImpl implements WorkService {
     public List<Work> listWork() {
         return workMapper.listWork();
     }
+
+    @Override
+    public boolean checkWorkId(String workId) {
+        return workMapper.countWorkRecordsByIdExplicit(workId) > 0;
+    }
+
+    @Override
+    public int insertWork(Work work) {
+        return workMapper.insert(work);
+    }
 }

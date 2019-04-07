@@ -36,4 +36,8 @@ public interface WorkService {
     Work selectWorkById(String workId);
 
     List<Work> listWork();
+
+    boolean checkWorkId(String workId);
+
+    int insertWork(Work work);
 }

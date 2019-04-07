@@ -41,4 +41,14 @@ public class EmployeeServiceImpl implements EmployeeService {
     public boolean deleteBatch(int[] ids) {
         return employeeMapper.deletBatch(ids) == ids.length ? true:false;
     }
+
+    @Override
+    public Employee selectEmployeeById(String employeeId) {
+        return employeeMapper.selectByPrimaryKey(employeeId);
+    }
+
+    @Override
+    public List<Employee> listEmployee() {
+        return employeeMapper.listEmployee();
+    }
 }

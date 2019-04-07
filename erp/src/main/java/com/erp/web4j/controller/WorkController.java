@@ -10,11 +10,13 @@ import org.springframework.stereotype.Controller;
 import org.springframework.transaction.annotation.Isolation;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import javax.validation.Valid;
 import java.util.List;
 
 /**
@@ -38,7 +40,7 @@ public class WorkController {
         if (page == null || page <= 0){
             page = 1;
         }
-        if (rows<=0){
+        if (rows <= 0){
             rows = 10;
         }
         List<Work> works = workService.listPageWork(page, rows);
@@ -55,6 +57,30 @@ public class WorkController {
         return "work_add";
     }
     // 此处没有其他人的getData暂时无法完成insert
+
+    @RequestMapping("insert")
+    @ResponseBody
+    public StatusJson insertWork(@Valid Work work, BindingResult bindingResult){
+        StatusJson statusJson = new StatusJson();
+        if (bindingResult.hasErrors()){
+            statusJson.setMsg(bindingResult.getFieldError().getDefaultMessage());
+            return statusJson;
+        }
+
+        String workId = work.getWorkId();
+        boolean isExsit = workService.checkWorkId(workId);
+        if (isExsit){
+            statusJson.setMsg("作业编号重复请更换重试");
+            return statusJson;
+        }
+        int result = workService.insertWork(work);
+        if (result == 1){
+            statusJson.setStatus("200");
+        }else {
+            statusJson.setMsg("插入失败");
+        }
+        return statusJson;
+    }
 
     @RequestMapping("edit")
     public String edit(){
@@ -101,7 +127,7 @@ public class WorkController {
         if (page == null || page <= 0){
             page = 1;
         }
-        if (rows<=0){
+        if (rows <= 0){
             rows = 10;
         }
         List<Work> works = workService.searchWorkById(searchValue, page, rows);
@@ -141,7 +167,7 @@ public class WorkController {
         if (page == null || page <= 0){
             page = 1;
         }
-        if (rows<=0){
+        if (rows <= 0){
             rows = 10;
         }
         List<Work> works = workService.searchWorkByProductName(searchValue, page, rows);

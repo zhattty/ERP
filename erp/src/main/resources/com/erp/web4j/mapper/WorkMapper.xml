@@ -285,4 +285,8 @@
     from work
   </select>
 
+  <select id="countWorkRecordsByIdExplicit" resultType="_int">
+    select count(*) from work where work_id = #{workId}
+  </select>
+
 </mapper>

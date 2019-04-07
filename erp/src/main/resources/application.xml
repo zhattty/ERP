@@ -16,7 +16,7 @@
 
    <bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource">
         <property name="driverClassName" value="com.mysql.cj.jdbc.Driver"/>
-        <property name="url" value="jdbc:mysql://localhost:3306/erp?serverTimezone=GMT"/>
+        <property name="url" value="jdbc:mysql://localhost:3306/production_ssm?serverTimezone=GMT"/>
         <property name="username" value="root"/>
         <property name="password" value="123456"/>
         <property name="filters" value="stat" />

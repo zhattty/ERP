@@ -23,4 +23,6 @@ public interface EmployeeMapper {
     List<Employee> listOrders(@Param("offset") int offset,@Param("rows") Integer rows);
 
     Integer deletBatch(int[] ids);
+
+    List<Employee> listEmployee();
 }
