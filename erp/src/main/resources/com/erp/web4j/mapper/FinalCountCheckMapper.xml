@@ -73,7 +73,7 @@
   <select id="queryListByCheckId" resultMap="finalCountCheckMap">
     select
       fcc.f_count_check_id, fcc.order_id, fcc.check_item, fcc.sample, fcc.check_number, fcc.unqualify, fcc.qualify,
-      fcc.cdate, fcc.measure_data, emp.emp_name, fcc.result, fcc.note
+      fcc.cdate, fcc.measure_data, emp.emp_name, fcc.result, fcc.note,fcc.emp_id
     from final_count_check fcc
     left join employee emp on fcc.emp_id=emp.emp_id
     where fcc.f_count_check_id like #{searchValue}
@@ -87,7 +87,7 @@
   <select id="queryListByOrderId" resultMap="finalCountCheckMap">
      select
       fcc.f_count_check_id, fcc.order_id, fcc.check_item, fcc.sample, fcc.check_number, fcc.unqualify, fcc.qualify,
-      fcc.cdate, fcc.measure_data, emp.emp_name, fcc.result, fcc.note
+      fcc.cdate, fcc.measure_data, emp.emp_name, fcc.result, fcc.note,fcc.emp_id
     from final_count_check fcc
     left join employee emp on fcc.emp_id=emp.emp_id
     where fcc.order_id like #{searchValue}

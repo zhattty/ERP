@@ -59,11 +59,12 @@
     <result column="emp_name" property="empName" />
     <result column="result" property="result" />
     <result column="note" property="note" />
+    <result column="emp_id" property="empId"/>
   </resultMap>
 
   <select id="queryMeasureChecklist" resultMap="measureMap">
     SELECT
-    fmc.f_measure_check_id, fmc.order_id, fmc.check_item, fmc.cdate, fmc.measure_data, emp.emp_name, fmc.result, fmc.note
+    fmc.f_measure_check_id, fmc.order_id, fmc.check_item, fmc.cdate, fmc.measure_data, emp.emp_name, fmc.result, fmc.note,fmc.emp_id
     FROM final_measuret_check fmc
     left JOIN employee emp on fmc. emp_id = emp.emp_id
   </select>
@@ -72,7 +73,7 @@
 
   <select id="queryFinalMeasureCheckListById" resultMap="measureMap">
     SELECT
-    fmc.f_measure_check_id, fmc.order_id, fmc.check_item, fmc.cdate, fmc.measure_data, emp.emp_name, fmc.result, fmc.note
+    fmc.f_measure_check_id, fmc.order_id, fmc.check_item, fmc.cdate, fmc.measure_data, emp.emp_name, fmc.result, fmc.note,fmc.emp_id
     FROM final_measuret_check fmc
     left JOIN employee emp on fmc. emp_id = emp.emp_id
     where fmc.f_measure_check_id like #{searchValue}
@@ -81,7 +82,7 @@
 
   <select id="queryFinalMeasureCheckListByOrderId" resultMap="measureMap">
     select
-     fmc.f_measure_check_id, fmc.order_id, fmc.check_item, fmc.cdate, fmc.measure_data, emp.emp_name, fmc.result, fmc.note
+     fmc.f_measure_check_id, fmc.order_id, fmc.check_item, fmc.cdate, fmc.measure_data, emp.emp_name, fmc.result, fmc.note,fmc.emp_id
     FROM final_measuret_check fmc
     left JOIN employee emp on fmc. emp_id = emp.emp_id
     where fmc.order_id like #{searchValue}

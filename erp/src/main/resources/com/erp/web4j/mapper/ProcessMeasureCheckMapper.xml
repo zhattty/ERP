@@ -46,10 +46,11 @@
     <result column="result" property="result" />
     <result column="note" property="note" />
     <result column="emp_name" property="empName"/>
+    <result column="emp_id" property="empId"/>
   </resultMap>
   <select id="selectAllList" resultMap="listMap">
     select pmc.p_measure_check_id, pmc.process_id, pmc.check_item, pmc.cdate, pmc.measure_data, pmc.emp_id, pmc.result,
-    pmc.note,emp.emp_name
+    pmc.note,emp.emp_name,pmc.emp_id
     from process_measure_check pmc
     LEFT join employee emp on emp.emp_id = pmc.emp_id
     limit #{rows} offset #{offset}
@@ -60,7 +61,7 @@
   </select>
   <select id="queryCountByCheckId"  resultMap="listMap">
     select pmc.p_measure_check_id, pmc.process_id, pmc.check_item, pmc.cdate, pmc.measure_data, pmc.emp_id, pmc.result,
-    pmc.note,emp.emp_name
+    pmc.note,emp.emp_name,pmc.emp_id
     from process_measure_check pmc
     LEFT join employee emp on emp.emp_id = pmc.emp_id
     where pmc.p_measure_check_id like #{searchValue}

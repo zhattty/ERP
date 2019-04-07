@@ -54,11 +54,12 @@
     <result column="result"  property="result" />
     <result column="note"  property="note" />
     <result column="emp_name" property="empName"/>
+      <result column="emp_id" property="empId"/>
   </resultMap>
   <select id="selectAllList" resultMap="listMap">
     select
     pcc.p_count_check_id, pcc.process_id, pcc.check_item, pcc.sample, pcc.check_number, pcc.unqualify, pcc.qualify,
-    pcc.cdate, pcc.measure_data, pcc.emp_id, pcc.result, pcc.note,emp.emp_name
+    pcc.cdate, pcc.measure_data, pcc.emp_id, pcc.result, pcc.note,emp.emp_name,pcc.emp_id
     from process_count_check pcc
     left join employee emp on emp.emp_id = pcc.emp_id
      limit #{rows} offset #{offset}
@@ -70,7 +71,7 @@
   <select id="queryCountByCheckId" resultMap="listMap">
      select
      pcc.p_count_check_id, pcc.process_id, pcc.check_item, pcc.sample, pcc.check_number, pcc.unqualify, pcc.qualify,
-    pcc.cdate, pcc.measure_data, pcc.emp_id, pcc.result, pcc.note,emp.emp_name
+    pcc.cdate, pcc.measure_data, pcc.emp_id, pcc.result, pcc.note,emp.emp_name,pcc.emp_id
     from process_count_check pcc
     left join employee emp on emp.emp_id = pcc.emp_id
     where pcc.p_count_check_id like #{searchValue}
